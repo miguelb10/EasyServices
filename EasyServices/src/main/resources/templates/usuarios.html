@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Insert title here</title>
+</head>
+<body>
+<table class="table table-striped">
+			<tr>
+				<th>Id</th>
+				<th>Nombre</th>
+			</tr>
+			<tr th:each="u : ${usuarios}">
+				<td th:text="${u.idusuario}">Id</td>
+				<td th:text="${u.username}">Id</td>
+			</tr>
+		</table>
+
+</body>
+</html>

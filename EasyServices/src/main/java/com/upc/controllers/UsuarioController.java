@@ -9,6 +9,7 @@ import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.SessionAttributes;
 
 import com.upc.entity.Usuario;
 import com.upc.service.UsuarioService;
@@ -24,11 +25,13 @@ public class UsuarioController {
 			@ModelAttribute("usuario") Usuario usuario,
 			HttpSession session, ModelMap modelMap) {
 		if(usuarioService.findByUsernameAndPassword(usuario.getUsername(), usuario.getPassword()) != null){
-			session.setAttribute("username", usuario.getUsername());
-			return "clienteprincipal";
+			usuario.setIdusuario(usuario.getIdusuario());
+			session.setAttribute("nombre_completo", usuario.getNombre_completo());
+			session.setAttribute("username", usuario.getUsername());			
+			return "principalcli";
 		}else{
 			modelMap.put("error", "Usuario invalido");
-			return "index";			
+			return "index1";			
 		}
 	}	
 	/*@RequestMapping("login")

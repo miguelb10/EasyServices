@@ -1,0 +1,9 @@
+
+Žsquid:S00116"ZRename this field "nombre_completo" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(íƒ§¡8òþ÷™½,H#RMINORZ
+CODE_SMELL
+‡squid:S00100+"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(õîÙ¤ÿÿÿÿÿ8òþ÷™½,H!RMINORZ
+CODE_SMELL
+‡squid:S00100."NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(€÷é»üÿÿÿÿ8òþ÷™½,H"RMINORZ
+CODE_SMELL
+Šsquid:S00117."QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(€÷é»üÿÿÿÿ8òþ÷™½,H$RMINORZ
+CODE_SMELL

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
+<head lang="es">
 <!--Author: HAMP -->
-<head lang="es" th:fragment="head"><!-- Indica que es un fragment de nombre head -->
 	<!-- En este fragmento solo coloco los CSS y JS de bootstrap y jquery-->
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
     <!-- StyleCSS -->
@@ -17,6 +17,57 @@
 	<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
 </head>
 <body>
+<div th:fragment="header">
+	<nav class="navbar navbar-inverse navbar-fixed-top">
+		<div class="container">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle collapsed"
+					data-toggle="collapse" data-target="#navbar" aria-expanded="false"
+					aria-controls="navbar">
+					<span class="sr-only">Toggle navigation</span> <span
+						class="icon-bar"></span> <span class="icon-bar"></span> <span
+						class="icon-bar"></span>
+				</button>
+				<a class="navbar-brand" href="#" th:href="@{/index_easyservices}">EasyServices</a>
+			</div>
+			<div id="navbar" class="navbar-collapse collapse">
+				<ul class="nav navbar-nav">
+					<li class=""><a href="#" th:href="@{/}">Inicio</a></li>
+					<li class=""><a href="#" th:href="@{/index_ubicanos}">Ubicanos</a></li>
+					<li class=""><a href="#" th:href="@{/index_acerca}">Acerca de nosotros</a></li>
+					<li class=""><a href="#" th:href="@{/index_buscar}">Buscar</a></li>
+				</ul>
+				<ul class="nav navbar-nav navbar-right">
+					<li class="dropdown"><a href="#" class="dropdown-toggle"
+						data-toggle="dropdown" role="button"> Ingresar<span
+							class="caret"></span>
+					</a>
+						<div class="dropdown-menu" id="formLogin">
+							<div class="row" style="width: 300px; padding: 10px">
+								<div class="container-fluid">
+									<form role="form" th:action="@{/login}" th:object="${usuario}" method="post">
+										<div class="form-group">
+											<label>Nombre de usuario</label>
+											<input class="form-control" th:field="*{username}" name="username" id="username" type="text" />
+										</div>										
+										<div class="form-group">
+											<label>Contraseña</label>
+											<input class="form-control" th:field="*{password}" name="password" id="password" type="password" />
+										</div>
+										<input type="submit" id="btnLogin" class="btn btn-success btn-sm" value="Entrar" />
+									
+									</form>
+									
+								</div>
+							</div>
+						</div>
+					</li>
+					<li onclick="javascript:window.location.href='register.jsp'"><a href="#" data-toggle="modal" data-target='#modalRegister'>Registrarse</a></li>	
+				</ul>
 
+			</div>
+		</div>
+	</nav>
+</div>
 </body>
 </html>

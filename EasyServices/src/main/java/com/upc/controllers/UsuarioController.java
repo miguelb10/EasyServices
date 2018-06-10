@@ -28,7 +28,7 @@ public class UsuarioController {
 			usuario.setNombre_completo(usersession.getNombre_completo());
 			session.setAttribute("username", usuario.getUsername());
 			session.setAttribute("nombre_completo", usuario.getNombre_completo());
-			return "principal";
+			return "usuario_sesion";
 		}else{
 			modelMap.put("error", "Usuario invalido");
 			return "index";			
@@ -53,4 +53,32 @@ public class UsuarioController {
 	}
 	
 
+	@RequestMapping("/index_registrar")
+	public String indexRegistrar(Model model) {
+		Usuario usuario=new Usuario();
+		model.addAttribute("usuario",usuario );
+		return "index_registrar";
+	}
+	
+	@RequestMapping("/usuario_perfiles")
+	public String usuarioPerfiles(Model model) {
+		Usuario usuario=new Usuario();
+		model.addAttribute("usuario",usuario );
+		return "usuario_perfiles";
+	}
+	
+	@RequestMapping("/usuario_preguntas")
+	public String usuarioPreguntas(Model model) {
+		Usuario usuario=new Usuario();
+		model.addAttribute("usuario",usuario );
+		return "usuario_preguntas";
+	}
+	
+	@RequestMapping("/usuario_configuracion")
+	public String usuarioConfiguracion(Model model) {
+		Usuario usuario=new Usuario();
+		model.addAttribute("usuario",usuario );
+		return "usuario_configuracion";
+	}
+	
 }

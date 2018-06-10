@@ -28,7 +28,7 @@ public class UsuarioController {
 			usuario.setNombre_completo(usersession.getNombre_completo());
 			session.setAttribute("username", usuario.getUsername());
 			session.setAttribute("nombre_completo", usuario.getNombre_completo());
-			return "clienteprincipal";
+			return "principal";
 		}else{
 			modelMap.put("error", "Usuario invalido");
 			return "index";			

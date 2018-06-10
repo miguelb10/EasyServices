@@ -16,6 +16,7 @@ public class Usuario {
 	private String username;
 	private String password;
 	private String descripcion;
+	private String nombre_completo;
 		
 	public Usuario() {
 		super();
@@ -45,4 +46,12 @@ public class Usuario {
 	public void setDescripcion(String descripcion) {
 		this.descripcion = descripcion;
 	}
+	public String getNombre_completo() {
+		return nombre_completo;
+	}
+	public void setNombre_completo(String nombre_completo) {
+		this.nombre_completo = nombre_completo;
+	}
+	
+	
 }

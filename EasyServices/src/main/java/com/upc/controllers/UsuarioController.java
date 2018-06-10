@@ -24,7 +24,10 @@ public class UsuarioController {
 			@ModelAttribute("usuario") Usuario usuario,
 			HttpSession session, ModelMap modelMap) {
 		if(usuarioService.findByUsernameAndPassword(usuario.getUsername(), usuario.getPassword()) != null){
+			Usuario usersession = usuarioService.findByUsernameAndPassword(usuario.getUsername(), usuario.getPassword());
+			usuario.setNombre_completo(usersession.getNombre_completo());
 			session.setAttribute("username", usuario.getUsername());
+			session.setAttribute("nombre_completo", usuario.getNombre_completo());
 			return "clienteprincipal";
 		}else{
 			modelMap.put("error", "Usuario invalido");

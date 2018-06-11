@@ -1,3 +1,5 @@
 
-}squid:CommentedOutCodeLine&"<This block of commented-out lines of code should be removed.(éõîõÿÿÿÿÿHîRMAJORZ
+}squid:CommentedOutCodeLine&"<This block of commented-out lines of code should be removed.(éõîõÿÿÿÿÿHÖRMAJORZ
+CODE_SMELL
+squid:S1192;"HDefine a constant instead of duplicating this literal "usuario" 4 times.(ñÖñÒ8õÌØ¾,H×RCRITICALZ
 CODE_SMELL

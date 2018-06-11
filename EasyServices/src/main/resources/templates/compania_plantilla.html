@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<title>Preguntas</title>
+<th:block th:include="fragments/stylesheader :: head"></th:block>
+</head>
+<body>
+	<div class="container">
+	<!-- Incluyo el fragmento header donde se encuentra el nav(menu) -->
+    <th:block th:include="fragments/headerCompania :: headerCompania"></th:block>
+    </div>
+	<br/>
+	<br/>
+	<div class="container" style="padding-top: 30px">
+		<div class="page-header">
+	        <h1>Mi Plantilla de Empleados</h1>
+                </div>                 
+                  <table border="0" class="table table-hover">
+				<tr>
+					<th>Nombre</th>
+					<th>Servicio</th>
+					<th>Sucursal</th>
+                    <th>Descripcion</th>                                  
+				</tr>      
+                    </table> 
+                </div>
+</body>
+</html>

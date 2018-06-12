@@ -23,7 +23,5 @@ Y
 )src/main/java/com/upc/entity/Usuario.java,6\1\61ef03a2ef5dcdcb2612d0380bb4cb3fea87c508
 b
 2src/main/resources/templates/fragments/header.html,9\6\9612bf54f885c2ec41cfb058cba37882fcb62733
-[
-+src/main/resources/templates/principal.html,5\a\5a0e7c0b2799a199b95c276a981e1139887fccdf
 i
 9src/main/resources/templates/fragments/headerUsuario.html,7\d\7dfe579d9acb76b2af937e4c012a0e846cd23b69

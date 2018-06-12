@@ -2,6 +2,7 @@ package com.upc.entity;
 
 import java.util.Date;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -24,9 +25,12 @@ public class Usuario {
 	
 	private String username;
 	private String password;
-	private String nombre_completo;
+	@Column(name="nombre_completo")
+	private String nombreCompleto;
+	@Column(name="DNI")
 	private int dni;
-	private Date fechaNacimiento;
+	@Column(name="fecha_nacimiento")
+	private String fechaNacimiento;
 	private String sexo;	
 	private String descripcion;
 		
@@ -46,13 +50,13 @@ public class Usuario {
 	}
 	public void setCiudad(Ciudad ciudad) {
 		this.ciudad = ciudad;
-	}
+	}	
 	
-	public String getNombre_completo() {
-		return nombre_completo;
+	public String getNombreCompleto() {
+		return nombreCompleto;
 	}
-	public void setNombre_completo(String nombre_completo) {
-		this.nombre_completo = nombre_completo;
+	public void setNombreCompleto(String nombreCompleto) {
+		this.nombreCompleto = nombreCompleto;
 	}
 	public int getDni() {
 		return dni;
@@ -60,10 +64,10 @@ public class Usuario {
 	public void setDni(int dni) {
 		this.dni = dni;
 	}
-	public Date getFechaNacimiento() {
+	public String getFechaNacimiento() {
 		return fechaNacimiento;
 	}
-	public void setFechaNacimiento(Date fechaNacimiento) {
+	public void setFechaNacimiento(String fechaNacimiento) {
 		this.fechaNacimiento = fechaNacimiento;
 	}
 	public String getSexo() {

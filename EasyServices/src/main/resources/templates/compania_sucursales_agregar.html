@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Registrar Sucursal</title>
+<th:block th:include="fragments/stylesheader :: head"></th:block>
+</head>
+<body>
+	<div class="container">
+	<!-- Incluyo el fragmento header donde se encuentra el nav(menu) -->
+    <th:block th:include="fragments/headerUsuario :: headerUsuario"></th:block>
+    </div>
+	<br/>
+	<br/>
+	<div id="main_content" style="padding: 15px;">
+	<div class="page-header">
+	        <h1>Agregar Nueva Sucursal</h1>
+        </div>
+            <form action="SCliente" method="POST" >
+                    <table>
+                        <tr>
+                            <td style="padding: 10px;">Nombre:</td>
+                            <td><input type="text" name="nombre" class="form-control" value="" required="required"/></td>
+                        </tr>
+                        <tr>
+                            <td style="padding: 10px;">Direccion:</td>
+                            <td><input type="text" name="direccion" class="form-control" value="" required="required"/></td>
+                        </tr>
+                        <tr>
+                            <td style="padding: 10px;">Descripcion:</td>
+                            <td><input type="text" name="descripcion" class="form-control" value="" required="required"/></td>
+                        </tr>
+                        <tr>
+							 <td><label>Ciudad:</label></td>
+							 <td><select th:field="*{ciudad}"  class="form-control">
+							        			<option th:each="u : ${ciudades}"
+							        					th:text="${u.nombre}"
+							        					th:value="${u.idciudad}">
+							        			</option>
+							        			</select>
+							        			<br/>
+							 </td>
+						</tr>
+                        <tr>
+                            <td colspan="2">
+                                <input type="submit" name="action" value="Registrar Sucursal" class="btn btn-success" />
+                            </td>
+                        </tr>
+                    </table>
+            </form>
+	</div>
+</body>
+</html>

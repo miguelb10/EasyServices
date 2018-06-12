@@ -15,7 +15,7 @@ public class CiudadServiceImpl implements CiudadService{
 	@Override
 	public Iterable<Ciudad> listAllCiudad() {
 		// TODO Auto-generated method stub
-		return null;
+		return ciudadRepository.findAll();
 	}
 
 	@Override

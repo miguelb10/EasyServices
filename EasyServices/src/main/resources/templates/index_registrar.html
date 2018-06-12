@@ -51,7 +51,7 @@
 							        	</tr>
 							        	<tr>
 							        		<td><label>Repetir Contraseña:</label></td>
-							        		<td><input type="password" name="passwordRepeat" th:field="*{password}" class="form-control" required="required"/><br/></td>
+							        		<td><input type="password" name="passwordRepeat"  class="form-control" required="required"/><br/></td>
 							        		<td><label>Fecha Nacimiento:</label></td>
 							        		<td><input type="date" name="fecha" th:field="*{fechaNacimiento}"  class="form-control" required="required"/><br/></td>
 							        	</tr>  
@@ -65,7 +65,17 @@
 							        		<td><label>Direccion:</label></td>
 							        		<td><input type="text" name="direccion" class="form-control" /><br/></td>
 							        	</tr>
-							        	
+							        	<tr>
+							        		<td><label>Ciudad:</label></td>
+							        		<td><select th:field="*{ciudad}"  class="form-control">
+							        			<option th:each="u : ${ciudades}"
+							        					th:text="${u.nombre}"
+							        					th:value="${u.idciudad}">
+							        			</option>
+							        			</select>
+							        			<br/>
+							        		</td>
+							        	</tr>
 							        </table>
 							        <hr>
 							        <center>

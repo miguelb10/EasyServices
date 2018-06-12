@@ -25,3 +25,11 @@ b
 2src/main/resources/templates/fragments/header.html,9\6\9612bf54f885c2ec41cfb058cba37882fcb62733
 i
 9src/main/resources/templates/fragments/headerUsuario.html,7\d\7dfe579d9acb76b2af937e4c012a0e846cd23b69
+`
+0src/main/resources/templates/usuario_sesion.html,6\3\6354b33e12279a71a0095f63a4564ca272feae2f
+a
+1src/main/java/com/upc/service/UsuarioService.java,c\1\c15ad754d250d8e8e37bf8dcb9cc9a6273dc738b
+e
+5src/main/java/com/upc/service/UsuarioServiceImpl.java,a\4\a4dda352b2be2fc026ff20aaf56bc5b17f175b22
+a
+1src/main/resources/templates/index_registrar.html,8\4\84f90f4382a1bd1de56c5e91601e74d6c596c0e6

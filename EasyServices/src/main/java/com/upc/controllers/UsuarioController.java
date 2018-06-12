@@ -14,6 +14,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.support.SessionStatus;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
+import com.upc.entity.Cliente;
 import com.upc.entity.Usuario;
 import com.upc.service.UsuarioService;
 
@@ -61,10 +62,11 @@ public class UsuarioController {
 		model.addAttribute("usuario", new Usuario());
 		return "index_registrar";
 	}
+	
 	@RequestMapping(value = "/usuarioRegistrar", method = RequestMethod.POST)
 	public String saveUsuario(Usuario usuario) {
 		usuarioService.saveUsuario(usuario);
-		return "redirect:/index";
+		return "redirect:/";
 	}
 	
 	@RequestMapping("/usuario_perfiles")

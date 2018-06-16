@@ -1,16 +1,27 @@
 
-ysquid:UselessImportCheck"3Remove this unused import 'javax.validation.Valid'.(æ¤ñ÷úÿÿÿÿ8Æµ¸¿,HƒRMINORZ
-CODE_SMELL
-œsquid:UselessImportCheck"[Remove this unused import 'org.springframework.web.servlet.mvc.support.RedirectAttributes'.(ìçÚË8Æµ¸¿,HRMINORZ
-CODE_SMELL
-}squid:CommentedOutCodeLine+"<This block of commented-out lines of code should be removed.(éõîõÿÿÿÿÿHáRMAJORZ
-CODE_SMELL
-„squid:S1192>"HDefine a constant instead of duplicating this literal "usuario" 4 times.(›õ×¶ûÿÿÿÿ8õÌØ¾,HRCRITICALZ
+ysquid:UselessImportCheck"3Remove this unused import 'com.upc.entity.Cliente'.(¨®•Íùÿÿÿÿ8üö¿,H¢RMINORZ
 CODE_SMELL
 squid:UselessImportCheck
-"IRemove this unused import 'org.springframework.validation.BindingResult'.(‹¶¸ùÿÿÿÿ8Æµ¸¿,H‚RMINORZ
+"IRemove this unused import 'org.springframework.validation.BindingResult'.(‹¶¸ùÿÿÿÿ8Æµ¸¿,H£RMINORZ
 CODE_SMELL
-•squid:UselessImportCheck"ORemove this unused import 'org.springframework.web.bind.support.SessionStatus'.(³×úÒøÿÿÿÿ8Æµ¸¿,H„RMINORZ
+ysquid:UselessImportCheck"3Remove this unused import 'javax.validation.Valid'.(æ¤ñ÷úÿÿÿÿ8Æµ¸¿,H¤RMINORZ
 CODE_SMELL
-ysquid:UselessImportCheck"3Remove this unused import 'com.upc.entity.Cliente'.(¨®•Íùÿÿÿÿ8üö¿,HšRMINORZ
+}squid:CommentedOutCodeLine+"<This block of commented-out lines of code should be removed.(–Š¢ŒúÿÿÿÿH¥RMAJORZ
+CODE_SMELL
+•squid:UselessImportCheck"ORemove this unused import 'org.springframework.web.bind.support.SessionStatus'.(³×úÒøÿÿÿÿ8Æµ¸¿,H¦RMINORZ
+CODE_SMELL
+œsquid:UselessImportCheck"[Remove this unused import 'org.springframework.web.servlet.mvc.support.RedirectAttributes'.(ìçÚË8Æµ¸¿,H§RMINORZ
+CODE_SMELL
+„squid:S1192<"HDefine a constant instead of duplicating this literal "usuario" 4 times.(›õ×¶ûÿÿÿÿ8õÌØ¾,H¨RCRITICALZ
+CODE_SMELL
+…squid:S1192)"NDefine a constant instead of duplicating this literal "usuarioSesion" 3 times.(ÛÄ¼Ï8êÄöµÀ,H©RCRITICALZ
+CODE_SMELL
+„squid:CommentedOutCodeLine("<This block of commented-out lines of code should be removed.(úíÓñúÿÿÿÿ8êÄöµÀ,HªRMAJORZ
+CODE_SMELL
+„squid:CommentedOutCodeLine^"<This block of commented-out lines of code should be removed.(·‡³ìıÿÿÿÿ8êÄöµÀ,H«RMAJORZ
+CODE_SMELL
+jsquid:S2441)"=Make "Usuario" serializable or don't store it in the session.(ÛÄ¼Ï8êÄöµÀ,H¬RMAJORZBUG
+|squid:UselessImportCheck";Remove this unused import 'com.upc.service.ClienteService'.(Ø™åŸ8êÄöµÀ,H­RMINORZ
+CODE_SMELL
+xsquid:UselessImportCheck"2Remove this unused import 'com.upc.entity.Ciudad'.(ú¡•€úÿÿÿÿ8êÄöµÀ,H®RMINORZ
 CODE_SMELL

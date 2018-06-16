@@ -40,9 +40,10 @@ public class ClienteServiceImpl implements ClienteService{
 	}
 
 	@Override
-	public Iterable<Cliente> getEmpresaByUsuario(Usuario usuario) {
+	public Cliente getClienteByUsuario(Usuario usuario) {
 		// TODO Auto-generated method stub
 		return clienteRepository.findByUsuario(usuario);
 	}
+
 
 }

@@ -1,5 +1,16 @@
 
-}squid:CommentedOutCodeLine&"<This block of commented-out lines of code should be removed.(éõîõÿÿÿÿÿHÖRMAJORZ
+ysquid:UselessImportCheck"3Remove this unused import 'javax.validation.Valid'.(æ¤ñ÷úÿÿÿÿ8Æµ¸¿,HƒRMINORZ
 CODE_SMELL
-squid:S1192;"HDefine a constant instead of duplicating this literal "usuario" 4 times.(ñÖñÒ8õÌØ¾,H×RCRITICALZ
+œsquid:UselessImportCheck"[Remove this unused import 'org.springframework.web.servlet.mvc.support.RedirectAttributes'.(ìçÚË8Æµ¸¿,HRMINORZ
+CODE_SMELL
+}squid:CommentedOutCodeLine+"<This block of commented-out lines of code should be removed.(éõîõÿÿÿÿÿHáRMAJORZ
+CODE_SMELL
+„squid:S1192>"HDefine a constant instead of duplicating this literal "usuario" 4 times.(›õ×¶ûÿÿÿÿ8õÌØ¾,HRCRITICALZ
+CODE_SMELL
+squid:UselessImportCheck
+"IRemove this unused import 'org.springframework.validation.BindingResult'.(‹¶¸ùÿÿÿÿ8Æµ¸¿,H‚RMINORZ
+CODE_SMELL
+•squid:UselessImportCheck"ORemove this unused import 'org.springframework.web.bind.support.SessionStatus'.(³×úÒøÿÿÿÿ8Æµ¸¿,H„RMINORZ
+CODE_SMELL
+ysquid:UselessImportCheck"3Remove this unused import 'com.upc.entity.Cliente'.(¨®•Íùÿÿÿÿ8üö¿,HšRMINORZ
 CODE_SMELL

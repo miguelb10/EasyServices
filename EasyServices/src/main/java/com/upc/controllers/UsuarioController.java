@@ -14,7 +14,11 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.support.SessionStatus;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
+<<<<<<< HEAD
 import com.upc.entity.Ciudad;
+=======
+import com.upc.entity.Cliente;
+>>>>>>> Miguel
 import com.upc.entity.Usuario;
 import com.upc.service.CiudadService;
 import com.upc.service.ClienteService;
@@ -58,6 +62,7 @@ public class UsuarioController {
 		model.addAttribute("ciudades", ciudadService.listAllCiudad());
 		return "index_registrar";
 	}
+	
 	@RequestMapping(value = "/usuarioRegistrar", method = RequestMethod.POST)
 	public String saveUsuario(Usuario usuario) {
 		usuarioService.saveUsuario(usuario);

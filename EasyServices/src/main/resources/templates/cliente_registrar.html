@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<title>Easy Services</title>
+<th:block th:include="fragments/stylesheader :: head"></th:block>
+</head>
+<body>
+	<div class="container">
+	<!-- Incluyo el fragmento header donde se encuentra el nav(menu) -->
+    <th:block th:include="fragments/headerUsuario :: headerUsuario"></th:block>
+    </div>
+	<br/>
+	<br/>
+	<div class="container" style="padding-top: 30px">
+		<div class="page-header">
+	        <h1>Ingrese sus datos para poder registrarse</h1>
+	    </div>
+	    <div class="row">
+	    	<div class="col-md-12">
+                <ul class="nav nav-tabs">
+                    <li class="active"><a href="#tab1" data-toggle="tab">Cliente</a></li>
+                    
+                </ul>
+                <div class="tab-content">
+                	<!--CLIENTE-->
+                    <div class="tab-pane fade in active" id="tab1">
+                    	<div id="main_content">
+							<div class="container">
+							    <h1><span class="glyphicon glyphicon-user"></span>Registrar nuevo <b>Cliente</b></h1>
+							    <div class="boxbg" >
+							        <hr/>
+							        <form id="client_form" th:action="@{/clienteRegistrar}" th:object="${cliente}" method="post">
+							        <table style="width: 100%;" >
+							        	
+							        	<tr>
+							        		<td><label>Correo:</label></td>
+							        		<td><input type="email" name="correo" th:field="*{correo}" class="form-control" required="required"/><br/></td>
+							        		
+							        	</tr>
+							        	<tr>
+							        		<td><label>Celular:</label></td>
+							        		<td><input type="number" name="celular" th:field="*{celular}"  class="form-control" required="required"/><br/></td>
+							        	</tr>  
+							        	<tr>
+							        		<td><label>Telefono:</label></td>	
+							        		<td><input type="number" name="telefono" th:field="*{telefono}"  class="form-control" required="required"/><br/></td>
+							       		</tr>   	
+							        	<tr>
+							        		<td><label>Direccion:</label></td>
+							        		<td><input type="text" name="direccion" class="form-control" /><br/></td>
+							        	</tr>
+							        </table>
+							        <hr>
+							        <center>
+							        	<input type="submit" class="btn btn-primary" name="action" value="Registrar Cliente"/>
+							        </center>
+							        </hr>
+							        </form>
+							    </div>
+							</div>
+						</div>
+                    </div>
+                   
+
+                    </div>
+                </div>
+	        </div>
+	     </div>
+       
+
+</body>
+</html>

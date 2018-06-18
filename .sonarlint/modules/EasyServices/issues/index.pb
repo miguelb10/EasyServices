@@ -57,3 +57,11 @@ e
 0src/main/resources/templates/crear_perfiles.html,0\7\07545d1a853ee343845d94f15319a375d8d6af71
 g
 7src/main/java/com/upc/repository/ClienteRepository.java,d\5\d5191b16df26ecad5f9cf054037bc9842886b109
+o
+?src/main/java/com/upc/controllers/PerfilCompaniaController.java,4\6\4617f950f0e8254401b02e6d140a46fdc34ef528
+c
+3src/main/resources/templates/cliente_registrar.html,7\a\7a9f2f867d2d0a548571c7db7f8f8ef783aae3df
+h
+8src/main/java/com/upc/controllers/ClienteController.java,f\4\f48873892930e9a9fcafd7eecb59ebf12ce4f4bb
+c
+3src/main/resources/templates/cliente_principal.html,b\b\bbd10367d9965439bfd96d44a056745e6f546531

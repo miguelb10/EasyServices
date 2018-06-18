@@ -11,64 +11,48 @@
 	</div>
 	<br />
 	<br />
-	<h1>Perfiles</h1>
-	<tr th:each="c : ${listaperfiles}">
-		<h1 th:text="${c}"></h1>
-	</tr>
 	<div class="container" style="padding-top: 30px">
 		<div class="page-header">
-			<h1>Perfiles Cliente</h1>
+			<h1>Perfiles</h1>
 		</div>
-		<table border="0" class="table table-hover">
-			<tr>
-				<th>Id</th>
-				<th>Ingresar</th>
-			</tr>
-		</table>
-	</div>
-	<div class="container" style="padding-top: 30px">
-		<div class="page-header">
-			<h1>Perfiles Empresa Compañia</h1>
+		<div class="row">
+			<div class="col-sm-4">
+				<div class="card">
+					<div class="card-body" style="text-align: center">
+						<h5 class="card-title">Cliente</h5>
+						<img src="../img/cliente.jpg" width="250" height="300" />
+						<form action="">
+							<br/>
+							<input class="btn btn-primary" type="submit" value="Cliente" />
+						</form>
+					</div>
+				</div>
+			</div>
+			<div class="col-sm-4">
+				<div class="card">
+					<div class="card-body" style="text-align: center">
+						<h5 class="card-title">Empresa</h5>
+						<img src="../img/empresa.png" width="250" height="300" />
+						<form action="">
+							<br/>
+							<input class="btn btn-primary" type="submit" value="Empresa" />
+						</form>
+					</div>
+				</div>
+			</div>
+			<div class="col-sm-4">
+				<div class="card">
+					<div class="card-body" style="text-align: center">
+						<h5 class="card-title">Empleado</h5>
+						<img src="../img/empleado.jpg" width="250" height="300" />
+						<form action="">
+							<br/>
+							<input class="btn btn-primary" type="submit" value="Empleado" />
+						</form>
+					</div>
+				</div>
+			</div>
 		</div>
-		<table border="0" class="table table-hover">
-			<tr>
-				<th>Id</th>
-				<th>Ingresar</th>
-			</tr>
-		</table>
-	</div>
-	<div class="container" style="padding-top: 30px">
-		<div class="page-header">
-			<h1>Perfiles Empresa Independiente</h1>
-		</div>
-		<table border="0" class="table table-hover">
-			<tr>
-				<th>Id</th>
-				<th>Ingresar</th>
-			</tr>
-		</table>
-	</div>
-	<div class="container" style="padding-top: 30px">
-		<div class="page-header">
-			<h1>Perfiles Empleado</h1>
-		</div>
-		<table border="0" class="table table-hover">
-			<tr>
-				<th>Id</th>
-				<th>Ingresar</th>
-			</tr>
-		</table>
-	</div>
-	<div class="container" style="padding-top: 30px">
-		<div class="page-header">
-			<h1>Perfiles Administrador</h1>
-		</div>
-		<table border="0" class="table table-hover">
-			<tr>
-				<th>Id</th>
-				<th>Ingresar</th>
-			</tr>
-		</table>
 	</div>
 </body>
 </html>

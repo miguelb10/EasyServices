@@ -74,14 +74,7 @@ public class UsuarioController {
 	}
 
 	@RequestMapping("/usuario_perfiles")
-	public String usuarioPerfiles(Model model, HttpSession session, ModelMap modelMap) {
-		
-		List<String> listaperfiles = new ArrayList<>();		
-		Cliente cliente = clienteService.getClienteByUsuario((Usuario) session.getAttribute("usuarioSesion"));
-		if (cliente != null)
-			listaperfiles.add("Perfil Cliente");
-		
-		model.addAttribute("listaperfiles", listaperfiles);
+	public String usuarioPerfiles(Model model, HttpSession session, ModelMap modelMap) {		
 		modelMap.addAttribute("usersession", session.getAttribute("usuarioSesion"));
 		return "usuario_perfiles";
 	}
@@ -102,8 +95,6 @@ public class UsuarioController {
 
 	@RequestMapping("/usuario_sesion")
 	public String usuarioSsion(Model model, HttpSession session) {
-		// Usuario usuario=new Usuario();
-		// model.addAttribute("usuario",usuario );
 		model.addAttribute("usersession", session.getAttribute("usuarioSesion"));
 		return "usuario_sesion";
 	}

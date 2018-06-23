@@ -53,8 +53,6 @@ b
 2src/main/resources/templates/usuario_perfiles.html,a\a\aae50fa6f5129666b49790065a3c059634de9e58
 e
 5src/main/java/com/upc/service/ClienteServiceImpl.java,e\a\ea250f6c8fb4d0e68b14d3702db7c12a0b78f05c
-`
-0src/main/resources/templates/crear_perfiles.html,0\7\07545d1a853ee343845d94f15319a375d8d6af71
 g
 7src/main/java/com/upc/repository/ClienteRepository.java,d\5\d5191b16df26ecad5f9cf054037bc9842886b109
 o

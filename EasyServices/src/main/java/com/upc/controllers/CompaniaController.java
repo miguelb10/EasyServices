@@ -18,7 +18,7 @@ import com.upc.service.PlantillaService;
 import com.upc.service.TipoEmpresaService;
 
 @Controller
-public class PerfilCompaniaController {
+public class CompaniaController {
 
 	@Autowired
 	private TipoEmpresaService tipoEmpresaService;

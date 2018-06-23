@@ -1,8 +1,5 @@
 package com.upc.controllers;
 
-import java.util.ArrayList;
-import java.util.List;
-
 import javax.servlet.http.HttpSession;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -15,7 +12,6 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import com.upc.entity.Cliente;
 import com.upc.entity.Usuario;
 import com.upc.service.CiudadService;
-import com.upc.service.ClienteService;
 import com.upc.service.UsuarioService;
 
 @Controller
@@ -25,8 +21,6 @@ public class UsuarioController {
 	private UsuarioService usuarioService;
 	@Autowired
 	private CiudadService ciudadService;
-	@Autowired
-	private ClienteService clienteService;
 
 	@RequestMapping(value = "login", method = RequestMethod.POST)
 	public String login(@ModelAttribute("usuario") Usuario usuario, HttpSession session, ModelMap modelMap) {

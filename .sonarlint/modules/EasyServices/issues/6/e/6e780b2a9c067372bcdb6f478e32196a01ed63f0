@@ -1,0 +1,9 @@
+
+squid:S1192Q"JDefine a constant instead of duplicating this literal "plantilla" 4 times.(œ†•›ùÿÿÿÿHåRCRITICALZ
+CODE_SMELL
+}squid:S1192k"NDefine a constant instead of duplicating this literal "listaSucursal" 4 times.( Ç§,HäRCRITICALZ
+CODE_SMELL
+Šsquid:S1192,"NDefine a constant instead of duplicating this literal "usuarioSesion" 3 times.(¥°àªøÿÿÿÿ8ÏÃÀïÂ,HÿRCRITICALZ
+CODE_SMELL
+ysquid:UselessImportCheck"3Remove this unused import 'com.upc.entity.Cliente'.(¨®•Íùÿÿÿÿ8ÏÃÀïÂ,H€RMINORZ
+CODE_SMELL

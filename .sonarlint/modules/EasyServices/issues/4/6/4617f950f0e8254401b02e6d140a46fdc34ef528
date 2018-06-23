@@ -1,9 +1,9 @@
 
-}squid:S1192M"NDefine a constant instead of duplicating this literal "listaSucursal" 4 times.( Ç§,HòRCRITICALZ
+}squid:S1192M"NDefine a constant instead of duplicating this literal "listaSucursal" 4 times.( Ç§,HRCRITICALZ
 CODE_SMELL
-squid:S11923"JDefine a constant instead of duplicating this literal "plantilla" 4 times.(œ†•›ùÿÿÿÿHóRCRITICALZ
+nsquid:UselessImportCheck"4Remove this unused import 'com.upc.entity.Servicio'.(¹ü¼‘HRMINORZ
 CODE_SMELL
-nsquid:UselessImportCheck"4Remove this unused import 'com.upc.entity.Servicio'.(¹ü¼‘HôRMINORZ
+squid:S11923"JDefine a constant instead of duplicating this literal "plantilla" 4 times.(œ†•›ùÿÿÿÿHRCRITICALZ
 CODE_SMELL
-}squid:UselessImportCheck"CRemove this unused import 'com.upc.repository.PlantillaRepository'.(šîü‹HõRMINORZ
+}squid:UselessImportCheck"CRemove this unused import 'com.upc.repository.PlantillaRepository'.(šîü‹HRMINORZ
 CODE_SMELL

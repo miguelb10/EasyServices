@@ -1,19 +1,15 @@
 
-jsquid:S2441%"=Make "Usuario" serializable or don't store it in the session.(ÛÄ¼Ï8å¬‚ÐÀ,HæRMAJORZBUG
-„squid:CommentedOutCodeLine$"<This block of commented-out lines of code should be removed.(úíÓñúÿÿÿÿ8êÄöµÀ,HçRMAJORZ
+jsquid:S2441"=Make "Usuario" serializable or don't store it in the session.(ÛÄ¼Ï8å¬‚ÐÀ,H•RMAJORZBUG
+ƒsquid:S1192 "LDefine a constant instead of duplicating this literal "usersession" 4 times.(—¼ñ8ŽÊÏÀ,H˜RCRITICALZ
 CODE_SMELL
-…squid:S1192%"NDefine a constant instead of duplicating this literal "usuarioSesion" 6 times.(ÛÄ¼Ï8êÄöµÀ,HâRCRITICALZ
+„squid:S11922"HDefine a constant instead of duplicating this literal "usuario" 5 times.(›õ×¶ûÿÿÿÿ8õÌØ¾,H–RCRITICALZ
 CODE_SMELL
-}squid:CommentedOutCodeLine'"<This block of commented-out lines of code should be removed.(–Š¢ŒúÿÿÿÿHéRMAJORZ
+…squid:S1192"NDefine a constant instead of duplicating this literal "usuarioSesion" 6 times.(ÛÄ¼Ï8êÄöµÀ,H‘RCRITICALZ
 CODE_SMELL
-jsquid:S2441D"=Make "Usuario" serializable or don't store it in the session.(ÛÄ¼Ï8êÄöµÀ,HáRMAJORZBUG
-‹squid:S1192)"ODefine a constant instead of duplicating this literal "usuario_sesion" 3 times.(´Ÿªùÿÿÿÿ8îæ²ÏÀ,HèRCRITICALZ
+jsquid:S2441>"=Make "Usuario" serializable or don't store it in the session.(ÛÄ¼Ï8êÄöµÀ,H’RMAJORZBUG
+}squid:CommentedOutCodeLine!"<This block of commented-out lines of code should be removed.(–Š¢ŒúÿÿÿÿHšRMAJORZ
 CODE_SMELL
-„squid:S11928"HDefine a constant instead of duplicating this literal "usuario" 3 times.(›õ×¶ûÿÿÿÿ8õÌØ¾,HåRCRITICALZ
+‹squid:S1192#"ODefine a constant instead of duplicating this literal "usuario_sesion" 3 times.(´Ÿªùÿÿÿÿ8îæ²ÏÀ,H“RCRITICALZ
 CODE_SMELL
-ƒsquid:S1192&"LDefine a constant instead of duplicating this literal "usersession" 4 times.(—¼ñ8ŽÊÏÀ,HäRCRITICALZ
-CODE_SMELL
-qsquid:UselessImportCheck"0Remove this unused import 'java.util.ArrayList'.(÷‰îƒ8Üì³‡Á,HðRMINORZ
-CODE_SMELL
-qsquid:UselessImportCheck"+Remove this unused import 'java.util.List'.(Õë±Äøÿÿÿÿ8Üì³‡Á,HñRMINORZ
+„squid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(úíÓñúÿÿÿÿ8êÄöµÀ,H”RMAJORZ
 CODE_SMELL

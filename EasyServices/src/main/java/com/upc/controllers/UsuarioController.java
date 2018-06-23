@@ -92,5 +92,12 @@ public class UsuarioController {
 		model.addAttribute("usersession", session.getAttribute("usuarioSesion"));
 		return "usuario_sesion";
 	}
+	@RequestMapping(value = "logout", method = RequestMethod.POST)
+	public String logout(Model model,ModelMap modelMap) {	
+		Usuario usuario=new Usuario();
+		modelMap.remove("usuario",usuario);
+		model.addAttribute("usuario",usuario );	
+		return "index";
+	}
 
 }

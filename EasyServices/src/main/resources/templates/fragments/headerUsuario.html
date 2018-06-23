@@ -22,7 +22,7 @@
 					<li class=""><a href="#" th:href="@{/usuario_configuracion}">Configuracion</a></li>
 				</ul>
 				<ul class="nav navbar-nav navbar-right">
-                                    <form id="cerrarForm" method="POST" action="SCliente">
+                                    <form role="form" id="cerrarForm" method="post" th:action="@{logout}">
                                         <input type="hidden" name="action" value="cerrar_sesion" />
                                     </form>
                                     <li onclick="cerrarForm.submit();">

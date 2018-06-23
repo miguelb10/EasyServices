@@ -1,6 +1,5 @@
 package com.upc.service;
 
-import com.upc.entity.Administrador;
 import com.upc.entity.Cliente;
 import com.upc.entity.Usuario;
 

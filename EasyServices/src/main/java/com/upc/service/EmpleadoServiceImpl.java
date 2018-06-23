@@ -38,9 +38,8 @@ public class EmpleadoServiceImpl implements EmpleadoService{
 	}
 
 	@Override
-	public Iterable<Empleado> getEmpresaByUsuario(Usuario usuario) {
+	public Empleado getEmpleadoByUsuario(Usuario usuario) {
 		// TODO Auto-generated method stub
 		return empleadoRepository.findByUsuario(usuario);
 	}
-
 }

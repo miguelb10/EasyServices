@@ -3,7 +3,6 @@ package com.upc.service;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.upc.entity.Administrador;
 import com.upc.entity.Cliente;
 import com.upc.entity.Usuario;
 import com.upc.repository.ClienteRepository;

@@ -16,8 +16,7 @@ import com.upc.service.CiudadService;
 import com.upc.service.ClienteService;
 
 @Controller
-public class ClienteController {
-	
+public class ClienteController {	
 
 	@Autowired
 	private CiudadService ciudadService;

@@ -1,6 +1,5 @@
 package com.upc.service;
 
-import com.upc.entity.Administrador;
 import com.upc.entity.Empleado;
 import com.upc.entity.Usuario;
 
@@ -10,5 +9,5 @@ public interface EmpleadoService {
 	Empleado saveEmpleado(Empleado empleado);
 	void deleteEmpleado(Integer id);
 
-	Iterable<Empleado> getEmpresaByUsuario(Usuario usuario);
+	Empleado getEmpleadoByUsuario(Usuario usuario);
 }

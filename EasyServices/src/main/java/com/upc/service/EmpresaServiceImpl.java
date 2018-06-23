@@ -1,12 +1,9 @@
 package com.upc.service;
 
-import java.util.List;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.upc.entity.Empresa;
-import com.upc.entity.TipoEmpresa;
 import com.upc.entity.Usuario;
 import com.upc.repository.EmpresaRepository;
 
@@ -41,10 +38,11 @@ public class EmpresaServiceImpl implements EmpresaService{
 	}
 
 	@Override
-	public Iterable<Empresa> getEmpresaByUsuarioAndTipoEmpresa(Usuario usuario, TipoEmpresa tipoEmpresa) {
+	public Empresa getEmpresaByUsuario(Usuario usuario) {
 		// TODO Auto-generated method stub
-		return empresaRepository.findByUsuarioAndTipoEmpresa(usuario, tipoEmpresa);
+		return empresaRepository.findByUsuario(usuario);
 	}
+
 
 
 

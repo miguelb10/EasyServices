@@ -1,27 +1,28 @@
 package com.upc.controllers;
 
+import javax.servlet.http.HttpSession;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
+import com.upc.entity.Empresa;
 import com.upc.entity.ListaSucursal;
 import com.upc.entity.Plantilla;
-import com.upc.entity.Servicio;
-import com.upc.repository.PlantillaRepository;
+import com.upc.entity.Usuario;
+import com.upc.service.CiudadService;
 import com.upc.service.EmpresaService;
 import com.upc.service.ListaEmpleadoSolicitudService;
 import com.upc.service.ListaSucursalService;
 import com.upc.service.PlantillaService;
-import com.upc.service.TipoEmpresaService;
 
 @Controller
 public class CompaniaController {
 
-	@Autowired
-	private TipoEmpresaService tipoEmpresaService;
 	@Autowired
 	private ListaEmpleadoSolicitudService listaEmpleadoSolicitudService;
 	@Autowired
@@ -30,7 +31,21 @@ public class CompaniaController {
 	private ListaSucursalService listaSucursalService;
 	@Autowired
 	private EmpresaService empresaService;
+	@Autowired
+	private CiudadService ciudadService;
 	
+	@RequestMapping("/EmpresaCompaniaPerfil")
+	public String findCompania(Model model, HttpSession session, ModelMap modelMap) {
+		Empresa compa = empresaService.getEmpresaByUsuario((Usuario) session.getAttribute("usuarioSesion"));
+		if(compa != null){
+			return "compania_sesion";
+			
+		}else {
+			model.addAttribute("empresa", new Empresa());
+			model.addAttribute("ciudades", ciudadService.listAllCiudad());
+			return "empresa_registrar";			
+		}		
+	}
 	
 	//ListaSolicitudesCompañia
 	@RequestMapping(value= "/EmpresaCompañia/Solicitud/{id}", method = RequestMethod.GET)

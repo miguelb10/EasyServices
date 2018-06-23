@@ -1,11 +1,6 @@
 package com.upc.service;
 
-import java.util.List;
-
-import org.springframework.stereotype.Service;
-
 import com.upc.entity.Empresa;
-import com.upc.entity.TipoEmpresa;
 import com.upc.entity.Usuario;
 
 public interface EmpresaService {
@@ -14,5 +9,5 @@ public interface EmpresaService {
 	Empresa saveEmpresa(Empresa empresa);
 	void deleteEmpresa(Integer id);
 
-	Iterable<Empresa> getEmpresaByUsuarioAndTipoEmpresa(Usuario usuario,TipoEmpresa tipoEmpresa);
+	Empresa getEmpresaByUsuario(Usuario usuario);
 }

@@ -55,8 +55,6 @@ e
 5src/main/java/com/upc/service/ClienteServiceImpl.java,e\a\ea250f6c8fb4d0e68b14d3702db7c12a0b78f05c
 g
 7src/main/java/com/upc/repository/ClienteRepository.java,d\5\d5191b16df26ecad5f9cf054037bc9842886b109
-o
-?src/main/java/com/upc/controllers/PerfilCompaniaController.java,4\6\4617f950f0e8254401b02e6d140a46fdc34ef528
 c
 3src/main/resources/templates/cliente_registrar.html,7\a\7a9f2f867d2d0a548571c7db7f8f8ef783aae3df
 h

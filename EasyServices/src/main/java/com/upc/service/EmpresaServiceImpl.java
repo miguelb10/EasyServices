@@ -42,9 +42,4 @@ public class EmpresaServiceImpl implements EmpresaService{
 		// TODO Auto-generated method stub
 		return empresaRepository.findByUsuario(usuario);
 	}
-
-
-
-
-
 }

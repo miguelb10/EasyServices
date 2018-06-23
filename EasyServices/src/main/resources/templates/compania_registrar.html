@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<title>Easy Services</title>
+<th:block th:include="fragments/stylesheader :: head"></th:block>
+</head>
+<body>
+	<div class="container">
+	<!-- Incluyo el fragmento header donde se encuentra el nav(menu) -->
+    <th:block th:include="fragments/headerUsuario :: headerUsuario"></th:block>
+    </div>
+	<br/>
+	<br/>
+	<div class="container" style="padding-top: 30px">
+		<div class="page-header">
+	        <h1>Ingrese sus datos para poder registrarse</h1>
+	    </div>
+	    <div class="row">
+	    	<div class="col-md-12">
+                <ul class="nav nav-tabs">
+                    <li class="active"><a href="#tab1" data-toggle="tab">Compañia</a></li>
+                    
+                </ul>
+                <div class="tab-content">
+                	<!--CLIENTE-->
+                    <div class="tab-pane fade in active" id="tab1">
+                    	<div id="main_content">
+							<div class="container">
+							    <h1><span class="glyphicon glyphicon-user"></span>Registrar nueva <b>Compañia</b></h1>
+							    <div class="boxbg" >
+							        <hr/>
+							        <form id="client_form" th:action="@{/companiaRegistrar}" th:object="${empresa}" method="post">
+							        <table style="width: 100%;" >
+							        	
+							        	<tr>
+							        		<td><label>Tipo Empresa:</label></td>
+							        		<td><select th:field="*{tipoEmpresa}"  class="form-control">
+							        			<option th:each="t : ${tipoempresas}"
+							        					th:text="${t.nombre}"
+							        					th:value="${t.idtipo_empresa}">
+							        			</option>
+							        			</select>
+							        			<br/>
+							        		</td>
+							        		<td rowspan="5" style="width: 20%"></td>
+							        		<td><label>Correo:</label></td>
+							        		<td><input type="email" name="correo" th:field="*{correo}" class="form-control" required="required"/><br/></td>
+							        		
+							        	</tr>
+							        	<tr>
+							        		<td><label>Nombre:</label></td>
+							        		<td><input type="text" name="nombre" th:field="*{nombre}"  class="form-control" required="required"/><br/></td>
+							        		<td><label>RUC:</label></td>	
+							        		<td><input type="number" name="ruc" th:field="*{ruc}"  class="form-control" required="required"/><br/></td>
+							        	</tr>  
+							        	<tr>
+							        		<td><label>Telefono:</label></td>	
+							        		<td><input type="number" name="telefono" th:field="*{telefono}"  class="form-control" required="required"/><br/></td>
+							        		<td><label>Celular:</label></td>	
+							        		<td><input type="number" name="celular" th:field="*{celular}"  class="form-control" required="required"/><br/></td>
+							       		</tr>   	
+							        	<tr>
+							        		<td><label>Direccion:</label></td>
+							        		<td><input type="text" name="direccion" th:field="*{direccionPrincipal}" class="form-control" /><br/></td>
+							        		<td><label>Descripcion:</label></td>
+							        		<td><input type="text" name="descripcion" th:field="*{descripcion}" class="form-control" /><br/></td>							        	
+							        	</tr>  	
+							        	<tr>
+							        		<td><label>Hora de apertura:</label></td>
+							        		<td><input type="number" name="horaInicio" th:field="*{horaInicio}" class="form-control" /><br/></td>
+							        		<td><label>Hora de cierre:</label></td>
+							        		<td><input type="number" name="horaFin" th:field="*{horaFin}" class="form-control" /><br/></td>							        	
+							        	</tr>
+							        </table>
+							        <hr>
+							        <center>
+							        	<input type="submit" class="btn btn-primary" name="action" value="Registrar Compañia"/>
+							        </center>
+							        </hr>
+							        </form>
+							    </div>
+							</div>
+						</div>
+                    </div>                  
+
+                    </div>
+                </div>
+	        </div>
+	     </div>       
+
+</body>
+</html>

@@ -6,10 +6,12 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.ui.ModelMap;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
+import com.upc.entity.Cliente;
 import com.upc.entity.Empresa;
 import com.upc.entity.ListaSucursal;
 import com.upc.entity.Plantilla;
@@ -19,6 +21,7 @@ import com.upc.service.EmpresaService;
 import com.upc.service.ListaEmpleadoSolicitudService;
 import com.upc.service.ListaSucursalService;
 import com.upc.service.PlantillaService;
+import com.upc.service.TipoEmpresaService;
 
 @Controller
 public class CompaniaController {
@@ -33,6 +36,8 @@ public class CompaniaController {
 	private EmpresaService empresaService;
 	@Autowired
 	private CiudadService ciudadService;
+	@Autowired
+	private TipoEmpresaService tipoEmpresaService;
 	
 	@RequestMapping("/EmpresaCompaniaPerfil")
 	public String findCompania(Model model, HttpSession session, ModelMap modelMap) {
@@ -43,8 +48,18 @@ public class CompaniaController {
 		}else {
 			model.addAttribute("empresa", new Empresa());
 			model.addAttribute("ciudades", ciudadService.listAllCiudad());
-			return "empresa_registrar";			
+			model.addAttribute("tipoempresas", tipoEmpresaService.listAllTipoEmpresa());
+			return "compania_registrar";			
 		}		
+	}
+	
+	@RequestMapping(value = "/companiaRegistrar", method = RequestMethod.POST)
+	public String saveCompania(@ModelAttribute("empresa") Empresa empresa, HttpSession session, ModelMap modelMap) {		
+		modelMap.addAttribute("usersession", session.getAttribute("usuarioSesion"));
+		empresa.setUsuario((Usuario) session.getAttribute("usuarioSesion"));
+		empresa.setCalificacion(3);
+		empresaService.saveEmpresa(empresa);
+		return "compania_sesion";
 	}
 	
 	//ListaSolicitudesCompañia

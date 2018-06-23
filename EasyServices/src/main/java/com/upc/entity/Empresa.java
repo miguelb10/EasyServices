@@ -1,5 +1,7 @@
 package com.upc.entity;
 
+import javax.persistence.Column;
+
 // default package
 // Generated 17-may-2018 13:26:54 by Hibernate Tools 5.3.0.Beta2
 
@@ -33,9 +35,15 @@ public class Empresa  {
 	private String RUC;
 	private int telefono;
 	private int celular;
+	
+	@Column(name="direccion_principal")
 	private String direccionPrincipal;
 	private int calificacion;
+	
+	@Column(name="hora_inicio")
 	private int horaInicio;
+	
+	@Column(name="hora_fin")
 	private int horaFin;
 	private String correo;
 	private String descripcion;

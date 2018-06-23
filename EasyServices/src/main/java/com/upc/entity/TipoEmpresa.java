@@ -17,20 +17,20 @@ import javax.persistence.Table;
 public class TipoEmpresa {
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
-	private int idtipoEmpresa;
+	private int idtipo_empresa;
 	private String nombre;
 	private String descripcion;
 
 	public TipoEmpresa() {
 		super();
+	}	
+
+	public int getIdtipo_empresa() {
+		return idtipo_empresa;
 	}
 
-	public Integer getIdtipoEmpresa() {
-		return this.idtipoEmpresa;
-	}
-
-	public void setIdtipoEmpresa(Integer idtipoEmpresa) {
-		this.idtipoEmpresa = idtipoEmpresa;
+	public void setIdtipo_empresa(int idtipo_empresa) {
+		this.idtipo_empresa = idtipo_empresa;
 	}
 
 	public String getNombre() {

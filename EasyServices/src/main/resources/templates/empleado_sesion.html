@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<title>Easy Services</title>
+<th:block th:include="fragments/stylesheader :: head"></th:block>
+</head>
+<body>
+	<div class="container">
+	<!-- Incluyo el fragmento header donde se encuentra el nav(menu) -->
+    <th:block th:include="fragments/headerUsuario :: headerUsuario"></th:block>
+    </div>
+	<br/>
+	<br/>
+	<!-- SEARCH DOM -->
+	<div id="main_content" style="padding: 15px;">
+		<div id="div_info">
+			<h1>Bienvenido Trabajador: <h1 th:text="${usersession.nombreCompleto}">!</h1></h1>
+			<h3>Tu Resumen:</h3>
+			<table border="0" class="table table-hover">
+				<tr>
+					<th>Servicios por atender</th>
+					<th>Servicios atendido</th>
+					
+				</tr>
+				
+			</table>
+		</div>
+	</div>
+
+
+</body>
+</html>

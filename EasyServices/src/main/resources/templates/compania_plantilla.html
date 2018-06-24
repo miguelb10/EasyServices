@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
 <title>Preguntas</title>
 <th:block th:include="fragments/stylesheader :: head"></th:block>
 </head>
@@ -18,8 +19,19 @@
 				<tr>
 					<th>Nombre</th>
 					<th>Servicio</th>
+					<th>Especialidad</th>
+					<th>Empleado</th>
 					<th>Sucursal</th>
-                    <th>Descripcion</th>                                  
+                    <th>Descripcion</th>  
+                              
+				</tr>   
+				<tr th:each="ls : ${listaEmpleados}">
+					<td th:text="${ls.nombre}"/>
+					<td th:text="${ls.servicio.nombre}"/>
+					<td th:text="${ls.servicio.empleado.nombre}"/>
+					<td th:text="${ls.servicio.especialidad.nombre}"/>
+					<td th:text="${ls.listaSucursal.ciudad.nombre}"/>
+					<td th:text="${ls.descripcion}"/>
 				</tr>      
                     </table> 
                 </div>

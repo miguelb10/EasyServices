@@ -1,12 +1,13 @@
 <!DOCTYPE html>
-<html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
 <title>Preguntas</title>
 <th:block th:include="fragments/stylesheader :: head"></th:block>
 </head>
 <body>
 	<div class="container">
 	<!-- Incluyo el fragmento header donde se encuentra el nav(menu) -->
-    <th:block th:include="fragments/headerCompania :: headerCompania"></th:block>
+    <th:block th:include="fragments/headerIndependiente :: headerIndependiente"></th:block>
     </div>
 	<br/>
 	<br/>
@@ -17,10 +18,16 @@
                   <table border="0" class="table table-hover">
 				<tr>
 					<th>Nombre</th>
-					<th>Descripcion</th>
-					<th>Empleado</th>
-                    <th>Sucursal</th>
-                    <th>Direccion</th>                                     
+					<th>Servicio</th>
+					<th>Especialidad</th>
+                    <th>Descripcion</th>  
+                              
+				</tr>   
+				<tr th:each="ls : ${listaEmpleados}">
+					<td th:text="${ls.nombre}"/>
+					<td th:text="${ls.servicio.nombre}"/>
+					<td th:text="${ls.servicio.especialidad.nombre}"/>
+					<td th:text="${ls.descripcion}"/>
 				</tr>      
                     </table> 
                 </div>

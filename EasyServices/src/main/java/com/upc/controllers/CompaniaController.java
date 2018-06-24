@@ -1,12 +1,18 @@
 package com.upc.controllers;
 
+import javax.servlet.http.HttpSession;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
 
+import com.upc.entity.Empresa;
+import com.upc.entity.ListaEmpleadoSolicitud;
 import com.upc.entity.ListaSucursal;
 import com.upc.entity.Plantilla;
 import com.upc.entity.Servicio;
@@ -18,7 +24,7 @@ import com.upc.service.PlantillaService;
 import com.upc.service.TipoEmpresaService;
 
 @Controller
-public class PerfilCompaniaController {
+public class CompaniaController {
 
 	@Autowired
 	private TipoEmpresaService tipoEmpresaService;
@@ -31,6 +37,45 @@ public class PerfilCompaniaController {
 	@Autowired
 	private EmpresaService empresaService;
 	
+	@RequestMapping("/compania/sesion")
+	public String companiaSesion(ModelMap modelMap, HttpSession session,@RequestParam(value="id",required=false) Integer idempresa) {
+		if(idempresa!=null) {
+		Empresa empresasession=empresaService.getEmpresaById(idempresa);
+		session.setAttribute("empresaSession", empresasession);
+		}
+		else
+		{	
+			idempresa=((Empresa)session.getAttribute("empresaSession")).getIdempresa();
+		}
+		return "compania_sesion";
+	}
+	
+	@RequestMapping("/compania/sucursales")
+	public String companiaSucursales(Model model,ModelMap modelMap, HttpSession session) {
+		Iterable<ListaSucursal> listaSucursal=listaSucursalService.getListaSucursalByEmpresa((Empresa)session.getAttribute("empresaSession"));
+		model.addAttribute("listaSucursales", listaSucursal);	
+		return "compania_sucursales";
+	}
+	
+	@RequestMapping("/compania/plantilla")
+	public String companiaPlantilla(Model model,ModelMap modelMap, HttpSession session) {
+		Iterable<Plantilla> listaPlantilla=plantillaService.getPlantillaByEmpresa((Empresa)session.getAttribute("empresaSession"));
+		model.addAttribute("listaEmpleados", listaPlantilla);	
+		return "compania_plantilla";
+	}
+	
+	@RequestMapping("/compania/solicitudes")
+	public String companiaSolicitudes(Model model,ModelMap modelMap, HttpSession session) {
+		Iterable<ListaEmpleadoSolicitud> listaSolicitud=listaEmpleadoSolicitudService.getListaEmpleadoSolicitudByPlantillaEmpresa((Empresa)session.getAttribute("empresaSession"));
+		model.addAttribute("listaSolicitudes", listaSolicitud);	
+		return "compania_misolicitudes";
+	}
+	
+	@RequestMapping(value = "/compania/configuracion", method = RequestMethod.GET)
+	public String actualizarCompania(Model model,HttpSession session, ModelMap modelMap) {
+		//modelMap.addAttribute("usuario", session.getAttribute("usuarioSesion"));
+		return "compania_configuracion";
+	}
 	
 	//ListaSolicitudesCompañia
 	@RequestMapping(value= "/EmpresaCompañia/Solicitud/{id}", method = RequestMethod.GET)

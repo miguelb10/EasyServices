@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<title>Preguntas</title>
+<th:block th:include="fragments/stylesheader :: head"></th:block>
+</head>
+<body>
+	<div class="container">
+	<!-- Incluyo el fragmento header donde se encuentra el nav(menu) -->
+    <th:block th:include="fragments/headerCompania :: headerCompania"></th:block>
+    </div>
+	<br/>
+	<br/>
+	<div class="container" style="padding-top: 30px">
+		<div class="page-header">
+	        <h1>Mis Solicitudes</h1>
+                </div>                 
+                  <table border="0" class="table table-hover">
+				<tr>
+					<th>Servicio</th>
+					<th>Empleado</th>
+					<th>Fecha Solicitado</th>
+					<th>Fecha Aprobado</th>
+					<th>Fecha Atencion</th>
+                    <th>Sucursal</th> 
+					<th>Descripcion</th>  
+					<th>Estado</th>
+					<th>Calificacion</th>                                  
+				</tr>      
+				<tr th:each="ls : ${listaSolicitudes}">
+					<td th:text="${ls.plantilla.servicio.nombre}"/>
+					<td th:text="${ls.plantilla.servicio.empleado.nombre}"/>
+					<td th:text="${ls.solicitud.fechaSolicitado}"/>
+					<td th:text="${ls.solicitud.fechaAprobado}"/>
+					<td th:text="${ls.solicitud.fechaAtencion}"/>
+					<td th:text="${ls.plantilla.listaSucursal.ciudad.nombre}"/>
+					<td th:text="${ls.descripcion}"/>
+					<td th:text="${ls.solicitud.estadoProceso.nombre}"/>
+					<td th:text="${ls.solicitud.calificacion}"/>
+				</tr>     
+                    </table> 
+                </div>
+</body>
+</html>

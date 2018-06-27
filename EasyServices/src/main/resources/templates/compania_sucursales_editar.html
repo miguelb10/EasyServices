@@ -19,6 +19,7 @@
             <form id="agregarsucursal_form" th:action="@{/sucursalRegistrar}" th:object="${listaSucursal}" method="POST" > 
                     <table>
                     	<input type="hidden" id="hdnEmpresa" th:field="*{empresa}" th:value="${empresa}" />
+                    	<input type="hidden" id="hdnIdEntidad" th:field="*{idlistaSucursal}" />
                         <tr>
                             <td style="padding: 10px;">Nombre:</td>
                             <td><input type="text" name="nombre" class="form-control" th:field="*{nombre}" required="required"/></td>
@@ -45,7 +46,7 @@
                         <tr>
                             <td colspan="2">
                                 <center>
-                                <input type="submit" name="action" value="Registrar Sucursal" class="btn btn-success" />
+                                <input type="submit" name="action" value="Actualizar Sucursal" class="btn btn-success" />
                                 <input type="button" class="btn btn-default" onclick="location.href='/EmpresaCompaniaPerfil'" value="Cancelar" />
                                 </center>
                             </td>

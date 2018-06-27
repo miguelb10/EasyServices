@@ -33,52 +33,14 @@
 					<td th:text="${ls.descripcion}"/>
 					<td th:text="${ls.ciudad.nombre}"/>
 					<td><a th:href="${'/compania/sucursales/'+ls.idlistaSucursal}">Ver</a></td>
-					<td><a th:href="${'/companiaSucursalesEdit/'+ls.idlistaSucursal}">Editar</a></td>
-					<td><a href="#" class="linkDelete" th:id="${ls.idlistaSucursal}">Borrar</a></td>
+					<td><a th:href="${'/companiaSucursalesEdit'+ls.idlistaSucursal}">Editar</a></td>
+					<td><a th:href="${'/sucursalEliminar'+ls.idlistaSucursal}">Borrar</a></td>
 				</tr>      
                     </table> 
                 </div>
                 
-         <!-- Division Modal -->
-	<div id="modalDelete" class="modal fade" tabindex="-1" role="dialog">
-		<div class="modal-dialog">
-			<div class="modal-content">
-				<div class="modal-header">
-					<button type="button" class="close" data-dismiss="modal"
-						aria-label="Close">
-						<span aria-hidden="true">&times;</span>
-					</button>
-					<h4 class="modal-title">Borrar Empleado Asociado</h4>
-				</div>
-				<div class="modal-body">
-					<p>Seguro de eliminar esta registro??</p>
-				</div>
-				<div class="modal-footer">
-					<button type="button" class="btn btn-default" data-dismiss="modal">Cancelar</button>
-					<button id="btnDelete" class="btn btn-danger">
-						<span class="glyphicon glyphicon-trash"></span>Borrar</button>
-				</div>
-			</div>
-		</div>
-	</div>
-
-
-	<!-- Funcion JavaScript que recupera el valor del id y lo envia a la URL: /../delete/ del controller-->
-	<script type="text/javascript">
-		$(function() {
-			var idEntidad = null;
-
-			$('.linkDelete').on('click', function(e) {
-				e.preventDefault();
-				$('#modalDelete').modal();
-				idEntidad = $(this).attr('id');
-			});
-
-			$('#btnDelete').on('click', function() {
-				location.href = "/sucursalEliminar/" + idEntidad;
-			});
-		});
-	</script>
+         
+	
                 </section>
         <br/>
 	<br/>

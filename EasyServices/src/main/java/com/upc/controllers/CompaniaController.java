@@ -99,7 +99,7 @@ public class CompaniaController {
 	
 	@RequestMapping(value = "/companiaConfiguracion", method = RequestMethod.GET)
 	public String actualizarCompania(Model model,HttpSession session, ModelMap modelMap) {
-		//modelMap.addAttribute("usuario", session.getAttribute("usuarioSesion"));
+		modelMap.addAttribute("empresa", session.getAttribute("empresaSession"));
 		return "compania_configuracion";
 	}
 	
@@ -134,33 +134,44 @@ public class CompaniaController {
 		return "redirect:/EmpresaCompaniaPerfil";
 	}
 	
-	@RequestMapping("/plantillaEliminar/{id}")
+	@RequestMapping("/plantillaEliminar{id}")
 	public String deletePlantilla(@PathVariable Integer id) {
 		plantillaService.deletePlantilla(id);
 		return "redirect:/companiaPlantilla";
 	}
 	
-	@RequestMapping("/sucursalEliminar/{id}")
+	@RequestMapping("/sucursalEliminar{id}")
 	public String deleteSucursal(@PathVariable Integer id) {
 		listaSucursalService.deleteListaSucursal(id);
 		return "redirect:/companiaSucursales";
 	}
 	
-	@RequestMapping(value="/companiaPlantillaEdit/{id}", method = RequestMethod.GET)
-	public String editPlantilla(@PathVariable Integer id, Model model) {
+	@RequestMapping("/solicitdEliminar{id}")
+	public String deleteSolicitud(@PathVariable Integer id) {
+		listaEmpleadoSolicitudService.deleteListaEmpleadoSolicitud(id);
+		return "redirect:/companiaSolicitudes";
+	}
+	
+	@RequestMapping(value="/companiaPlantillaEdit{id}", method = RequestMethod.GET)
+	public String editPlantilla(@PathVariable Integer id, Model model,HttpSession session) {
 		model.addAttribute("plantilla", plantillaService.getPlantillaById(id));
+		model.addAttribute("sucursales", listaSucursalService.getListaSucursalByEmpresa((Empresa)session.getAttribute("empresaSession")));
+		model.addAttribute("servicios", servicioService.listAllServicio());
 		return "compania_plantilla_editar";
 	}
 	
-	@RequestMapping(value="/companiaSucursalesEdit/{id}", method = RequestMethod.GET)
+	@RequestMapping(value="/companiaSucursalesEdit{id}", method = RequestMethod.GET)
 	public String editSucursal(@PathVariable Integer id, Model model) {
 		model.addAttribute("listaSucursal", listaSucursalService.getListaSucursalById(id));
+		model.addAttribute("ciudades", ciudadService.listAllCiudad());
 		return "compania_sucursales_editar";
 	}
 	
-	@RequestMapping(value="/companiaSolicitudEdit/{id}", method = RequestMethod.GET)
+	@RequestMapping(value="/companiaSolicitudEdit{id}", method = RequestMethod.GET)
 	public String editSolicitud(@PathVariable Integer id, Model model) {
 		model.addAttribute("listaSolicitud", listaEmpleadoSolicitudService.getListaEmpleadoSolicitudById(id));
 		return "compania_misolicitudes_editar";
 	}
+	
+
 }

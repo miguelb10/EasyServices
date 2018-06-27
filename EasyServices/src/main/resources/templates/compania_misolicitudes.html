@@ -42,7 +42,7 @@
 					<td th:text="${ls.solicitud.estadoProceso.nombre}"/>
 					<td th:text="${ls.solicitud.calificacion}"/>
 					<td><a th:href="${'/compania/sucursales/'+ls.idlistaEmpleadoSolicitud}">Ver</a></td>
-					<td><a th:href="${'/companiaSolicitudEdit/'+ls.idlistaEmpleadoSolicitud}">Editar</a></td>
+					<td><a th:href="${'/companiaSolicitudEdit'+ls.idlistaEmpleadoSolicitud}">Editar</a></td>
 					<td><a href="#" class="linkDelete" th:id="${ls.idlistaEmpleadoSolicitud}">Borrar</a></td>
 				</tr>     
                     </table> 
@@ -84,7 +84,7 @@
 			});
 
 			$('#btnDelete').on('click', function() {
-				location.href = "/solicitudEliminar/" + idEntidad;
+				location.href = "/solicitudEliminar" + idEntidad;
 			});
 		});
 	</script>

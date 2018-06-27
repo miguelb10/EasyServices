@@ -53,7 +53,7 @@ public class UsuarioController {
 		return "index_registrar";
 	}
 
-	@RequestMapping(value = "/usuario/configuracion", method = RequestMethod.GET)
+	@RequestMapping(value = "/usuario_configuracion", method = RequestMethod.GET)
 	public String actualizarUsuario(Model model,HttpSession session, ModelMap modelMap) {
 		modelMap.addAttribute("usuario", session.getAttribute("usuarioSesion"));
 		return "usuario_configuracion";
@@ -62,7 +62,7 @@ public class UsuarioController {
 	@RequestMapping(value = "/usuario", method = RequestMethod.POST)
 	public String saveEntidad(Usuario usuario) {
 		usuarioService.saveUsuario(usuario);
-		return "redirect:/usuario/sesion";
+		return "redirect:/usuario_sesion";
 	}
 	
 	@RequestMapping(value = "/usuarioRegistrar", method = RequestMethod.POST)

@@ -52,6 +52,7 @@ public class IndependienteController {
 		}		
 	}
 	
+	
 	@RequestMapping("/independienteMisolicitudes")
 	public String independienteSolicitudes(Model model,ModelMap modelMap, HttpSession session) {
 		Iterable<ListaEmpleadoSolicitud> listaSolicitud=listaEmpleadoSolicitudService.getListaEmpleadoSolicitudByPlantillaListaSucursalEmpresa((Empresa)session.getAttribute("empresaSession"));

@@ -13,5 +13,5 @@ import com.upc.entity.Plantilla;
 @Transactional
 public interface PlantillaRepository extends CrudRepository<Plantilla, Integer> {
 
-	List<Plantilla> findByListaSucursalEmpresa(Empresa empresa);
+	List<Plantilla> findByEmpresa(Empresa empresa);
 }

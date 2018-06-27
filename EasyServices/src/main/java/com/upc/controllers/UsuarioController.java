@@ -9,20 +9,18 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
-import com.upc.entity.Administrador;
 import com.upc.entity.Cliente;
-import com.upc.entity.Empleado;
-import com.upc.entity.Empresa;
-import com.upc.entity.TipoEmpresa;
 import com.upc.entity.Usuario;
-import com.upc.service.AdministradorService;
 import com.upc.service.CiudadService;
+<<<<<<< HEAD
 
 import com.upc.service.ClienteService;
 import com.upc.service.EmpleadoService;
 import com.upc.service.EmpresaService;
 import com.upc.service.TipoEmpresaService;
 
+=======
+>>>>>>> parent of ccfd0d8... Merge branch 'Cristian'
 import com.upc.service.UsuarioService;
 
 @Controller
@@ -32,6 +30,7 @@ public class UsuarioController {
 	private UsuarioService usuarioService;
 	@Autowired
 	private CiudadService ciudadService;
+<<<<<<< HEAD
 	@Autowired
 	private ClienteService clienteService;
 	@Autowired
@@ -43,46 +42,30 @@ public class UsuarioController {
 	@Autowired
 	private AdministradorService administradorService;
 
+=======
+>>>>>>> parent of ccfd0d8... Merge branch 'Cristian'
 
 	@RequestMapping(value = "login", method = RequestMethod.POST)
 	public String login(@ModelAttribute("usuario") Usuario usuario, HttpSession session, ModelMap modelMap) {
 		if (usuarioService.findByUsernameAndPassword(usuario.getUsername(), usuario.getPassword()) != null) {
 			Usuario usersession = usuarioService.findByUsernameAndPassword(usuario.getUsername(),
 					usuario.getPassword());
+			// usuario.setNombreCompleto(usersession.getNombreCompleto());
 			session.setAttribute("usuarioSesion", usersession);
 			modelMap.addAttribute("usersession", session.getAttribute("usuarioSesion"));
+			// session.setAttribute("username", usuario.getUsername());
+			// session.setAttribute("nombreCompleto", usuario.getNombreCompleto());
 			return "usuario_sesion";
 		} else {
 			modelMap.put("error", "Usuario invalido");
 			return "index";
 		}
 	}
-	
-	@RequestMapping(value = "EliminarSesion", method = RequestMethod.POST)
-	public String cerrarLogin(Model model, ModelMap modelMap,HttpSession session) {
-		Usuario usuario = new Usuario();
-		modelMap.remove("usuario", usuario);
-		model.addAttribute("usuario", usuario);
-		return "index";
-	}
-	
 
 	@RequestMapping(value = "/usuarios", method = RequestMethod.GET)
 	public String list(Model model) {
 		model.addAttribute("usuarios", usuarioService.listAllUsuario());
 		return "usuarios";
-	}
-	
-	@RequestMapping(value = "/usuario/configuracion", method = RequestMethod.GET)
-	public String actualizarUsuario(Model model,HttpSession session, ModelMap modelMap) {
-		modelMap.addAttribute("usuario", session.getAttribute("usuarioSesion"));
-		return "usuario_configuracion";
-	}
-	
-	@RequestMapping(value = "/usuario", method = RequestMethod.POST)
-	public String saveEntidad(Usuario usuario) {
-		usuarioService.saveUsuario(usuario);
-		return "redirect:/usuario_sesion";
 	}
 
 	@RequestMapping("/index_registrar")
@@ -107,6 +90,7 @@ public class UsuarioController {
 	}
 
 	@RequestMapping("/usuario_perfiles")
+<<<<<<< HEAD
 	public String usuarioPerfiles(Model model, HttpSession session, ModelMap modelMap) {
 		TipoEmpresa compania=tipoEmpresaService.getTipoEmpresaById(1);
 		TipoEmpresa independiente=tipoEmpresaService.getTipoEmpresaById(2);
@@ -121,6 +105,9 @@ public class UsuarioController {
 		model.addAttribute("listaempresaindependientes", listaempresaindependiente);
 		model.addAttribute("listaempleados", listaempleado);
 		model.addAttribute("listaadministradores", listaadministrador);
+=======
+	public String usuarioPerfiles(Model model, HttpSession session, ModelMap modelMap) {		
+>>>>>>> parent of ccfd0d8... Merge branch 'Cristian'
 		modelMap.addAttribute("usersession", session.getAttribute("usuarioSesion"));
 		return "usuario_perfiles";
 	}
@@ -132,6 +119,16 @@ public class UsuarioController {
 		return "usuario_preguntas";
 	}
 
+<<<<<<< HEAD
+=======
+	@RequestMapping("/usuario_configuracion")
+	public String usuarioConfiguracion(Model model) {
+		Usuario usuario = new Usuario();
+		model.addAttribute("usuario", usuario);
+		return "usuario_configuracion";
+	}
+
+>>>>>>> parent of ccfd0d8... Merge branch 'Cristian'
 	@RequestMapping("/usuario_sesion")
 	public String usuarioSsion(Model model, HttpSession session) {
 		model.addAttribute("usersession", session.getAttribute("usuarioSesion"));

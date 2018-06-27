@@ -1,13 +1,17 @@
 <!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org">
+<html>
 <head>
 <title>Registrar Sucursal</title>
 <th:block th:include="fragments/stylesheader :: head"></th:block>
 </head>
 <body>
 	<!-- Incluyo el fragmento header donde se encuentra el nav(menu) -->
+<<<<<<< HEAD
     <th:block th:include="fragments/headerCompania :: headerCompania"></th:block>
 <<<<<<< HEAD
+=======
+    <th:block th:include="fragments/headerUsuario :: headerUsuario"></th:block>
+>>>>>>> parent of ccfd0d8... Merge branch 'Cristian'
     </div>
 	<br/>
 	<br/>
@@ -22,38 +26,39 @@
 	        <h1>Agregar Nueva Sucursal</h1>
 	        </div>
         </div>
-            <form id="agregarsucursal_form" th:action="@{/sucursalRegistrar}" th:object="${listaSucursal}" method="POST" > 
+            <form action="SCliente" method="POST" >
                     <table>
-                    	<input type="hidden" id="hdnEmpresa" th:field="*{empresa}" th:value="${empresa}" />
                         <tr>
                             <td style="padding: 10px;">Nombre:</td>
-                            <td><input type="text" name="nombre" class="form-control" th:field="*{nombre}" required="required"/></td>
+                            <td><input type="text" name="nombre" class="form-control" value="" required="required"/></td>
                         </tr>
                         <tr>
                             <td style="padding: 10px;">Direccion:</td>
-                            <td><input type="text" name="direccion" class="form-control" th:field="*{direccion}" required="required"/></td>
+                            <td><input type="text" name="direccion" class="form-control" value="" required="required"/></td>
                         </tr>
                         <tr>
                             <td style="padding: 10px;">Descripcion:</td>
-                            <td><input type="text" name="descripcion" class="form-control" th:field="*{descripcion}" required="required"/></td>
+                            <td><input type="text" name="descripcion" class="form-control" value="" required="required"/></td>
                         </tr>
                         <tr>
-							        		<td style="padding: 10px;">Ciudad:</td>
-							        		<td><select th:field="*{ciudad}" class="form-control">
+							 <td><label>Ciudad:</label></td>
+							 <td><select th:field="*{ciudad}"  class="form-control">
 							        			<option th:each="u : ${ciudades}"
 							        					th:text="${u.nombre}"
 							        					th:value="${u.idciudad}">
 							        			</option>
 							        			</select>
 							        			<br/>
-							        		</td>
-							        	</tr>
+							 </td>
+						</tr>
                         <tr>
                             <td colspan="2">
-                                <center>
                                 <input type="submit" name="action" value="Registrar Sucursal" class="btn btn-success" />
+<<<<<<< HEAD
                                 <input type="button" class="btn btn-default" onclick="location.href='/EmpresaCompaniaPerfil'" value="Cancelar" />
                                 </center>
+=======
+>>>>>>> parent of ccfd0d8... Merge branch 'Cristian'
                             </td>
                         </tr>
                     </table>

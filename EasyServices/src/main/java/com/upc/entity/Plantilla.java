@@ -23,17 +23,26 @@ public class Plantilla {
 	private int idplantilla;
 	
 	@ManyToOne
-	@JoinColumn(name="idservicio")
-	private Servicio servicio;
+	@JoinColumn(name="idempresa")
+	private Empresa empresa;
+	
+	@ManyToOne
+	@JoinColumn(name="idsolicitud")
+	private EstadoValidar estadoValidar;
 	
 	@ManyToOne
 	@JoinColumn(name="idlista_sucursal")
 	private ListaSucursal listaSucursal;
 	
 	@ManyToOne
+<<<<<<< HEAD
 	@JoinColumn(name="idestado_validar")
 	private EstadoValidar estadoValidar;
 
+=======
+	@JoinColumn(name="idservicio")
+	private Servicio servicio;
+>>>>>>> parent of ccfd0d8... Merge branch 'Cristian'
 	
 	private String descripcion;
 
@@ -50,6 +59,14 @@ public class Plantilla {
 
 	public void setIdplantilla(Integer idplantilla) {
 		this.idplantilla = idplantilla;
+	}
+
+	public Empresa getEmpresa() {
+		return this.empresa;
+	}
+
+	public void setEmpresa(Empresa empresa) {
+		this.empresa = empresa;
 	}
 
 	public EstadoValidar getEstadoValidar() {

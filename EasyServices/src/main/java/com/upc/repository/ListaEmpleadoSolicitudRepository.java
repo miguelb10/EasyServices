@@ -18,5 +18,5 @@ import com.upc.entity.Usuario;
 @Transactional
 public interface ListaEmpleadoSolicitudRepository extends CrudRepository<ListaEmpleadoSolicitud, Integer> {
 
-	List<ListaEmpleadoSolicitud> findByPlantillaListaSucursalEmpresa(Empresa empresa);
+	List<ListaEmpleadoSolicitud> findByPlantillaEmpresa(Empresa empresa);
 }

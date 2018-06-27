@@ -1,7 +1,6 @@
 <!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org">
-<head>
-<title>Sucursales</title>
+<html>
+<title>Preguntas</title>
 <th:block th:include="fragments/stylesheader :: head"></th:block>
 </head>
 <body>
@@ -15,6 +14,7 @@
 		<div class="container" style="padding-top: 30px">
 	        <h1>Mis Sucursales</h1>
 <<<<<<< HEAD
+<<<<<<< HEAD
                 </div>
                 <a href="#" th:href="@{/compania/sucursales/nuevo}">Crear Sucursal</a>                 
 =======
@@ -22,24 +22,15 @@
                 </div>
                 <a href="#" th:href="@{/companiaSucursalesNuevo}">Crear Sucursal</a>                 
 >>>>>>> CristianUnir
+=======
+                </div>                 
+>>>>>>> parent of ccfd0d8... Merge branch 'Cristian'
                   <table border="0" class="table table-hover">
 				<tr>
 					<th>Nombre</th>
 					<th>Direccion</th>
 					<th>Descripcion</th>
-                    <th>Ciudad</th>     
-                    <th>Visualizar</th>
-					<th>Modificar</th>
-					<th>Eliminar</th>                               
-				</tr>
-				<tr th:each="ls : ${listaSucursales}">
-					<td th:text="${ls.nombre}"/>
-					<td th:text="${ls.direccion}"/>
-					<td th:text="${ls.descripcion}"/>
-					<td th:text="${ls.ciudad.nombre}"/>
-					<td><a th:href="${'/compania/sucursales/'+ls.idlistaSucursal}">Ver</a></td>
-					<td><a th:href="${'/compania/sucursales/edit/'+ls.idlistaSucursal}">Editar</a></td>
-					<td><a href="#" class="linkDelete" th:id="${ls.idlistaSucursal}">Borrar</a></td>
+                    <th>Ciudad</th>                                   
 				</tr>      
                     </table> 
                 </div>

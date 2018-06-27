@@ -38,9 +38,9 @@ public class PlantillaServiceImpl implements PlantillaService{
 	}
 
 	@Override
-	public Iterable<Plantilla> getPlantillaByListaSucursalEmpresa(Empresa empresa) {
+	public Iterable<Plantilla> getPlantillaByEmpresa(Empresa empresa) {
 		// TODO Auto-generated method stub
-		return plantillaRepository.findByListaSucursalEmpresa(empresa);
+		return plantillaRepository.findByEmpresa(empresa);
 	}
 
 }

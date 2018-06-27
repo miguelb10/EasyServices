@@ -9,5 +9,5 @@ public interface PlantillaService {
 	Plantilla savePlantilla(Plantilla plantilla);
 	void deletePlantilla(Integer id);
 	
-	Iterable<Plantilla> getPlantillaByListaSucursalEmpresa(Empresa empresa);
+	Iterable<Plantilla> getPlantillaByEmpresa(Empresa empresa);
 }

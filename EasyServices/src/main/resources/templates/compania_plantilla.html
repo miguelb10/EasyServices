@@ -1,6 +1,5 @@
 <!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org">
-<head>
+<html>
 <title>Preguntas</title>
 <th:block th:include="fragments/stylesheader :: head"></th:block>
 </head>
@@ -15,6 +14,7 @@
 		<div class="container" style="padding-top: 30px">
 	        <h1>Mi Plantilla de Empleados</h1>
 <<<<<<< HEAD
+<<<<<<< HEAD
                 </div> 
                 <a href="#" th:href="@{/compania/plantilla/nuevo}">Agregar Empleado</a>                    
 =======
@@ -22,27 +22,15 @@
                 </div> 
                 <a href="#" th:href="@{/companiaPlantillaNuevo}">Agregar Empleado</a>                    
 >>>>>>> CristianUnir
+=======
+                </div>                 
+>>>>>>> parent of ccfd0d8... Merge branch 'Cristian'
                   <table border="0" class="table table-hover">
 				<tr>
 					<th>Nombre</th>
 					<th>Servicio</th>
-					<th>Especialidad</th>
-					<th>Empleado</th>
-					<th>Sucursal</th>  
-                    <th>Visualizar</th>
-					<th>Modificar</th>
-					<th>Eliminar</th>  
-                              
-				</tr>   
-				<tr th:each="ls : ${listaEmpleados}">
-					<td th:text="${ls.descripcion}"/>
-					<td th:text="${ls.servicio.nombre}"/>
-					<td th:text="${ls.servicio.empleado.usuario.nombreCompleto}"/>
-					<td th:text="${ls.servicio.especialidad.nombre}"/>
-					<td th:text="${ls.listaSucursal.ciudad.nombre}"/>
-					<td><a th:href="${'/compania/plantilla/'+ls.idplantilla}">Ver</a></td>
-					<td><a th:href="${'/compania/plantilla/edit/'+ls.idplantilla}">Editar</a></td>
-					<td><a href="#" class="linkDelete" th:id="${ls.idplantilla}">Borrar</a></td>
+					<th>Sucursal</th>
+                    <th>Descripcion</th>                                  
 				</tr>      
                     </table> 
                 </div>

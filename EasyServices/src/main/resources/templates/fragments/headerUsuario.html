@@ -19,12 +19,12 @@
 			</div>
 			<div id="navbar" class="navbar-collapse collapse">
 				<ul class="nav navbar-nav">
-					<li class=""><a href="#" th:href="@{/crear_perfiles}">Crear Perfil</a></li>
 					<li class=""><a href="#" th:href="@{/usuario_perfiles}">Lista Perfiles</a></li>
 					<li class=""><a href="#" th:href="@{/usuario_preguntas}">Preguntas</a></li>
-					<li class=""><a href="#" th:href="@{/usuario/configuracion}">Configuracion</a></li>
+					<li class=""><a href="#" th:href="@{/usuario_configuracion}">Configuracion</a></li>
 				</ul>
 				<ul class="nav navbar-nav navbar-right">
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
     <!-- ***** Preloader Start ***** -->
@@ -54,10 +54,9 @@
                                 </ul>
                                 <ul class="nav navbar-nav navbar-right">
 >>>>>>> CristianUnir
-                                    <form role="form" id="cerrarForm" method="post" th:action="@{logout}">
 =======
-                                    <form role="form" id="cerrarForm" method="post" th:action="@{EliminarSesion}">
->>>>>>> Cristian
+>>>>>>> parent of ccfd0d8... Merge branch 'Cristian'
+                                    <form role="form" id="cerrarForm" method="post" th:action="@{logout}">
                                         <input type="hidden" name="action" value="cerrar_sesion" />
                                     </form>
                                     <li onclick="cerrarForm.submit();">

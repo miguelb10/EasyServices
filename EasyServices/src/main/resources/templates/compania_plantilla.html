@@ -16,6 +16,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
                 </div> 
                 <a href="#" th:href="@{/compania/plantilla/nuevo}">Agregar Empleado</a>                    
 =======
@@ -29,15 +30,41 @@
 =======
                 </div>                 
 >>>>>>> parent of ccfd0d8... Merge branch 'Cristian'
+=======
+	        </div>
+                </div> 
+                <a href="#" th:href="@{/companiaPlantillaNuevo}">Agregar Empleado</a>                    
+>>>>>>> CristianUnir
                   <table border="0" class="table table-hover">
 				<tr>
 					<th>Nombre</th>
 					<th>Servicio</th>
+<<<<<<< HEAD
 					<th>Sucursal</th>
                     <th>Descripcion</th>                                  
+=======
+					<th>Especialidad</th>
+					<th>Empleado</th>
+					<th>Sucursal</th>  
+                    <th>Visualizar</th>
+					<th>Modificar</th>
+					<th>Eliminar</th>  
+                              
+				</tr>   
+				<tr th:each="ls : ${listaEmpleados}">
+					<td th:text="${ls.descripcion}"/>
+					<td th:text="${ls.servicio.nombre}"/>
+					<td th:text="${ls.servicio.empleado.usuario.nombreCompleto}"/>
+					<td th:text="${ls.servicio.especialidad.nombre}"/>
+					<td th:text="${ls.listaSucursal.ciudad.nombre}"/>
+					<td><a th:href="${'/compania/plantilla/'+ls.idplantilla}">Ver</a></td>
+					<td><a th:href="${'/companiaPlantillaEdit'+ls.idplantilla}">Editar</a></td>
+					<td><a th:href="${'/plantillaEliminar'+ls.idplantilla}">Borrar</a></td>
+>>>>>>> CristianUnir
 				</tr>      
                     </table> 
                 </div>
+              
                 </section>
         <br/>
 	<br/>

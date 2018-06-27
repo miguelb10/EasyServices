@@ -13,12 +13,13 @@
 	<div id="main_content" style="padding: 15px;">
 	<div class="page-header">
 	<div class="container" style="padding-top: 30px">
-	        <h1>Agregar Nuevo Empleado</h1>
+	        <h1>Editar Solicitud</h1>
 	        </div>
         </div>
             <form id="agregarplantilla_form" th:action="@{/plantillaRegistrar}" th:object="${plantilla}" method="POST" > 
                     <table>
                     <input type="hidden" id="hdnEstadoValidar" th:field="*{estadoValidar}" />
+                    <input type="hidden" id="hdnIdEntidad" th:field="*{idlistaEmpleadoSolicitud}" />
                         <tr>
                             <td style="padding: 10px;">Descripcion:</td>
                             <td><input type="text" name="descripcion" class="form-control" th:field="*{descripcion}" required="required"/></td>

@@ -52,8 +52,13 @@ public class Plantilla {
 	}
 
 
+<<<<<<< HEAD
 	public Servicio getServicio() {
 		return servicio;
+=======
+	public EstadoValidar getEstadoValidar() {
+		return this.estadoValidar;
+>>>>>>> CristianUnir
 	}
 
 

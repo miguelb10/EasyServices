@@ -10,6 +10,7 @@
 <<<<<<< HEAD
     <th:block th:include="fragments/headerCompania :: headerCompania"></th:block>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
     <th:block th:include="fragments/headerUsuario :: headerUsuario"></th:block>
 >>>>>>> parent of ccfd0d8... Merge branch 'Cristian'
@@ -20,65 +21,60 @@
 	<br/>
 	<br/>
 =======
+=======
+>>>>>>> CristianUnir
  	<section class="welcome_area clearfix" id="home" style="background-image: url(img/bg-img/welcome-bg.png)">
 	<br/><br/><br/><br/>
 	
->>>>>>> CristianUnir
 	<div id="main_content" style="padding: 15px;">
 	<div class="page-header">
 	<div class="container" style="padding-top: 30px">
 	        <h1>Configuracion</h1>
 	        </div>
         </div>
-            <form action="SCliente" method="POST" >
-                <center>
-                    <table>
-                        <tr>
-                            <td style="padding: 10px;">Nombre:</td>
-                            <td><input type="text" name="nombre" class="form-control" value="" required="required"/></td>
-                        </tr>
-                        <tr>
-                            <td style="padding: 10px;">RUC:</td>
-                            <td><input type="text" name="ruc" class="form-control" value="" required="required"/></td>
-                        </tr>
-                        <tr>
-                            <td style="padding: 10px;">Telefono:</td>
-                            <td><input type="number" name="telefono" class="form-control" value="" minlength="9" maxlength="12" required="required"/></td>
-                        </tr>
-                        <tr>
-                            <td style="padding: 10px;">Celular:</td>
-                            <td><input type="number" name="celular" class="form-control" value="" minlength="9" maxlength="12" required="required"/></td>
-                        </tr>
-                        <tr>
-                            <td style="padding: 10px;">Direccion:</td>
-                            <td><input type="text" name="direccion" class="form-control" value="" required="required"/></td>
-                        </tr>
-                        <tr>
-                            <td style="padding: 10px;">Hora Inicio:</td>
-                            <td><input type="number" name="horaInicio" class="form-control" value="" minlength="1" maxlength="2" required="required"/></td>
-                        </tr>
-                        <tr>
-                            <td style="padding: 10px;">Hora Final:</td>
-                            <td><input type="number" name="horaFinal" class="form-control" value="" minlength="1" maxlength="2" required="required"/></td>
-                        </tr>
-                        <tr>
-                            <td style="padding: 10px;">Correo:</td>
-                            <td><input type="email" name="correo" class="form-control" value="" required="required"/></td>
-                        </tr>
-                        <tr>
-                            <td style="padding: 10px;">Descripcion:</td>
-                            <td><input type="text" name="descripcion" class="form-control" value="" required="required"/></td>
-                        </tr>
-                        <tr>
-                            <td colspan="2">
-                                <center>
-                                <input type="submit" name="action" value="Guardar Configuracion" class="btn btn-success" />
-                                </center>
-                            </td>
-                        </tr>
-                    </table>
-                </center>
-            </form>
+            <form id="client_form" th:action="@{/companiaRegistrar}" th:object="${empresa}" method="post">
+							        <table style="width: 100%;" >
+							        	<input type="hidden" id="hdnIdUsuario" th:field="*{tipoEmpresa}" />
+							        	<input type="hidden" id="hdnIdEmpresa" th:field="*{idempresa}" />
+							        	<tr>
+							        		
+							        		<td rowspan="5" style="width: 20%"></td>
+							        		<td><label>Correo:</label></td>
+							        		<td><input type="email" name="correo" th:field="*{correo}" class="form-control" required="required"/><br/></td>
+							        		
+							        	</tr>
+							        	<tr>
+							        		<td><label>Nombre:</label></td>
+							        		<td><input type="text" name="nombre" th:field="*{nombre}"  class="form-control" required="required"/><br/></td>
+							        		<td><label>RUC:</label></td>	
+							        		<td><input type="number" name="ruc" th:field="*{ruc}"  class="form-control" required="required"/><br/></td>
+							        	</tr>  
+							        	<tr>
+							        		<td><label>Telefono:</label></td>	
+							        		<td><input type="number" name="telefono" th:field="*{telefono}"  class="form-control" required="required"/><br/></td>
+							        		<td><label>Celular:</label></td>	
+							        		<td><input type="number" name="celular" th:field="*{celular}"  class="form-control" required="required"/><br/></td>
+							       		</tr>   	
+							        	<tr>
+							        		<td><label>Direccion:</label></td>
+							        		<td><input type="text" name="direccion" th:field="*{direccionPrincipal}" class="form-control" /><br/></td>
+							        		<td><label>Descripcion:</label></td>
+							        		<td><input type="text" name="descripcion" th:field="*{descripcion}" class="form-control" /><br/></td>							        	
+							        	</tr>  	
+							        	<tr>
+							        		<td><label>Hora de apertura:</label></td>
+							        		<td><input type="number" name="horaInicio" th:field="*{horaInicio}" class="form-control" /><br/></td>
+							        		<td><label>Hora de cierre:</label></td>
+							        		<td><input type="number" name="horaFin" th:field="*{horaFin}" class="form-control" /><br/></td>							        	
+							        	</tr>
+							        </table>
+							        <hr>
+							        <center>
+							        	<input type="submit" class="btn btn-primary" name="action" value="Actualizar Compañia"/>
+							        	<input type="button" class="btn btn-default" onclick="location.href='/EmpresaCompaniaPerfil'" value="Cancelar" />
+							        </center>
+							        </hr>
+							        </form>
 	</div>
 	
 	</section>

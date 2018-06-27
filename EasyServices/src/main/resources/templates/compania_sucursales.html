@@ -1,6 +1,7 @@
 <!DOCTYPE html>
-<html>
-<title>Preguntas</title>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<title>Sucursales</title>
 <th:block th:include="fragments/stylesheader :: head"></th:block>
 </head>
 <body>
@@ -13,13 +14,26 @@
 	<div class="container" style="padding-top: 30px">
 		<div class="page-header">
 	        <h1>Mis Sucursales</h1>
-                </div>                 
+                </div>
+                <a href="#" th:href="@{/compania/sucursales/nuevo}">Crear Sucursal</a>                 
                   <table border="0" class="table table-hover">
 				<tr>
 					<th>Nombre</th>
 					<th>Direccion</th>
 					<th>Descripcion</th>
-                    <th>Ciudad</th>                                   
+                    <th>Ciudad</th>     
+                    <th>Visualizar</th>
+					<th>Modificar</th>
+					<th>Eliminar</th>                               
+				</tr>
+				<tr th:each="ls : ${listaSucursales}">
+					<td th:text="${ls.nombre}"/>
+					<td th:text="${ls.direccion}"/>
+					<td th:text="${ls.descripcion}"/>
+					<td th:text="${ls.ciudad.nombre}"/>
+					<td><a th:href="${'/compania/sucursales/'+ls.idlistaSucursal}">Ver</a></td>
+					<td><a th:href="${'/compania/sucursales/edit/'+ls.idlistaSucursal}">Editar</a></td>
+					<td><a href="#" class="linkDelete" th:id="${ls.idlistaSucursal}">Borrar</a></td>
 				</tr>      
                     </table> 
                 </div>

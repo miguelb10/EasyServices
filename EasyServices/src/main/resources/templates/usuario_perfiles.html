@@ -11,10 +11,16 @@
 	</div>
 	<br />
 	<br />
+<<<<<<< HEAD
+=======
+	<h1>Perfiles</h1>
+
+>>>>>>> Cristian
 	<div class="container" style="padding-top: 30px">
 		<div class="page-header">
 			<h1>Perfiles</h1>
 		</div>
+<<<<<<< HEAD
 		<div class="row">
 			<div class="col-sm-4">
 				<div class="card">
@@ -53,6 +59,78 @@
 				</div>
 			</div>
 		</div>
+=======
+		<table border="0" class="table table-hover">
+			<tr>
+				<th>Id</th>
+				<th>Seleccionar</th>
+			</tr>
+			<tr th:each="c : ${listaclientes}">
+				<td th:text="${c.idcliente}"/>
+				<td><a th:text="Ingresar" th:value="${c.idcliente}" href="#" th:href="@{/cliente_sesion.html?id={id}(id=${c.idcliente})}"/></td>
+			</tr>
+		</table>
+	</div>
+	<div class="container" style="padding-top: 30px">
+		<div class="page-header">
+			<h1>Perfiles Empresa Compañia</h1>
+		</div>
+		<table border="0" class="table table-hover">
+			<tr>
+				<th>Id</th>
+				<th>Seleccionar</th>
+			</tr>
+			<tr th:each="ec : ${listaempresacompanias}">
+				<td th:text="${ec.idempresa}"/>
+				<td><a th:text="Ingresar" th:value="${ec.idempresa}" href="#" th:href="@{/compania/sesion.html?id={id}(id=${ec.idempresa})}"/></td>
+			</tr>
+		</table>
+	</div>
+	<div class="container" style="padding-top: 30px">
+		<div class="page-header">
+			<h1>Perfiles Empresa Independiente</h1>
+		</div>
+		<table border="0" class="table table-hover">
+			<tr>
+				<th>Id</th>
+				<th>Seleccionar</th>
+			</tr>
+			<tr th:each="ei : ${listaempresaindependientes}">
+				<td th:text="${ei.idempresa}"/>
+				<td><a th:text="Ingresar" th:value="${ei.idempresa}" href="#" th:href="@{/independiente/sesion.html?id={id}(id=${ei.idempresa})}"/></td>
+			</tr>
+		</table>
+	</div>
+	<div class="container" style="padding-top: 30px">
+		<div class="page-header">
+			<h1>Perfiles Empleado</h1>
+		</div>
+		<table border="0" class="table table-hover">
+			<tr>
+				<th>Id</th>
+				<th>Seleccionar</th>
+			</tr>
+			<tr th:each="e : ${listaempleados}">
+				<td th:text="${e.idempleado}"/>
+				<td><a th:text="Ingresar" th:value="${e.idempleado}" href="#" th:href="@{/empleado_sesion.html?id={id}(id=${e.idempleado})}"/></td>
+			</tr>
+		</table>
+	</div>
+	<div class="container" style="padding-top: 30px">
+		<div class="page-header">
+			<h1>Perfiles Administrador</h1>
+		</div>
+		<table border="0" class="table table-hover">
+			<tr>
+				<th>Id</th>
+				<th>Seleccionar</th>
+			</tr>
+			<tr th:each="a : ${listaadministradores}">
+				<td th:text="${a.idadministrador}"/>
+				<td><a th:text="Ingresar" th:value="${a.idadministrador}" href="#" th:href="@{/administrador/sesion.html?id={id}(id=${a.idadministrador})}"/></td>
+			</tr>
+		</table>
+>>>>>>> Cristian
 	</div>
 </body>
 </html>

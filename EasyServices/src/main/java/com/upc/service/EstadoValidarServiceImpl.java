@@ -15,25 +15,25 @@ public class EstadoValidarServiceImpl implements EstadoValidarService{
 	@Override
 	public Iterable<EstadoValidar> listAllEstadoValidar() {
 		// TODO Auto-generated method stub
-		return null;
+		return estadoValidarRepository.findAll();
 	}
 
 	@Override
 	public EstadoValidar getEstadoValidarById(Integer id) {
 		// TODO Auto-generated method stub
-		return null;
+		return estadoValidarRepository.findOne(id);
 	}
 
 	@Override
 	public EstadoValidar saveEstadoValidar(EstadoValidar estadoValidar) {
 		// TODO Auto-generated method stub
-		return null;
+		return estadoValidarRepository.save(estadoValidar);
 	}
 
 	@Override
 	public void deleteEstadoValidar(Integer id) {
 		// TODO Auto-generated method stub
-		
+		estadoValidarRepository.delete(id);
 	}
 
 }

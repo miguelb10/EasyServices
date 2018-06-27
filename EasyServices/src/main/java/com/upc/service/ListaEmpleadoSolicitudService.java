@@ -9,6 +9,6 @@ public interface ListaEmpleadoSolicitudService {
 	ListaEmpleadoSolicitud saveListaEmpleadoSolicitud(ListaEmpleadoSolicitud listaEmpleadoSolicitud);
 	void deleteListaEmpleadoSolicitud(Integer id);
 	
-	Iterable<ListaEmpleadoSolicitud> getListaEmpleadoSolicitudByPlantillaEmpresa(Empresa empresa);
+	Iterable<ListaEmpleadoSolicitud> getListaEmpleadoSolicitudByPlantillaListaSucursalEmpresa(Empresa empresa);
 
 }

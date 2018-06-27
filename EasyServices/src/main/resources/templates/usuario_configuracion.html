@@ -5,15 +5,17 @@
 <th:block th:include="fragments/stylesheader :: head"></th:block>
 </head>
 <body>
-	<div class="container">
 	<!-- Incluyo el fragmento header donde se encuentra el nav(menu) -->
     <th:block th:include="fragments/headerUsuario :: headerUsuario"></th:block>
-    </div>
-	<br/>
-	<br/>
+ 	<section class="welcome_area clearfix" id="home" style="background-image: url(img/bg-img/welcome-bg.png)">
+	<br/><br/><br/><br/>
+	
+	
 	<div id="main_content" style="padding: 15px;">
 	<div class="page-header">
+			<div class="container" style="padding-top: 30px">
 	        <h1>Configuracion</h1>
+	        </div>
         </div>
             <form action="SCliente" method="POST" >
                 <center>
@@ -49,5 +51,10 @@
                 </center>
             </form>
 	</div>
+	
+	 </section>
+        <br/>
+	<br/>
+	<th:block th:include="fragments/down :: down"></th:block> 
 </body>
 </html>

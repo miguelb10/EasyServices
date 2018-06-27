@@ -5,15 +5,15 @@
 <th:block th:include="fragments/stylesheader :: head"></th:block>
 </head>
 <body>
-	<div class="container">
 	<!-- Incluyo el fragmento header donde se encuentra el nav(menu) -->
     <th:block th:include="fragments/header :: header"></th:block>
-    </div>
-	<br/>
+ 	<section class="welcome_area clearfix" id="home" style="background-image: url(img/bg-img/welcome-bg.png)">
+	<br/><br/><br/><br/>
 
 	<div id="main_content_contactenos" class="page-header" style="padding: 15px">
-		
+		<div class="container" style="padding-top: 30px">
 	        <h1>Acerca de Nosotros</h1>
+	        </div>
 	   <hr>
             <div class="row">
 	    	<div class="col-md-12">
@@ -77,13 +77,10 @@
         </div>
         
         
+        </section>
         <br/>
 	<br/>
-	<br/>
-	<div class="container">
-	<!-- Incluyo el fragmento header donde se encuentra el nav(menu) -->
-    <th:block th:include="fragments/down :: down"></th:block>
-    </div>
+	<th:block th:include="fragments/down :: down"></th:block> 
                 
         
         

@@ -11,5 +11,5 @@ public interface AdministradorService {
 	Administrador saveAdministrador(Administrador administrador);
 	void deleteAdministrador(Integer id);
 
-	Iterable<Administrador> getEmpresaByUsuario(Usuario usuario);
+	Administrador getAdministradorByUsuario(Usuario usuario);
 }

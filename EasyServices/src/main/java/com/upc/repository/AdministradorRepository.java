@@ -13,5 +13,5 @@ import com.upc.entity.Usuario;
 @Repository
 @Transactional
 public interface AdministradorRepository extends CrudRepository<Administrador, Integer> {
-	List<Administrador> findByUsuario(Usuario usuario);
+	Administrador findByUsuario(Usuario usuario);
 }

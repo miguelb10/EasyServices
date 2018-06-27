@@ -33,7 +33,10 @@ public class Plantilla {
 	@ManyToOne
 	@JoinColumn(name="idestado_validar")
 	private EstadoValidar estadoValidar;
+<<<<<<< HEAD
 	
+=======
+>>>>>>> CristianUnir
 	
 	private String descripcion;
 
@@ -52,6 +55,10 @@ public class Plantilla {
 		this.idplantilla = idplantilla;
 	}
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> CristianUnir
 	public EstadoValidar getEstadoValidar() {
 		return this.estadoValidar;
 	}

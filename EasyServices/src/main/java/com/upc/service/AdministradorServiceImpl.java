@@ -38,7 +38,7 @@ public class AdministradorServiceImpl implements AdministradorService{
 	}
 
 	@Override
-	public Iterable<Administrador> getEmpresaByUsuario(Usuario usuario) {
+	public Administrador getAdministradorByUsuario(Usuario usuario) {
 		// TODO Auto-generated method stub
 		return administradorRepository.findByUsuario(usuario);
 	}

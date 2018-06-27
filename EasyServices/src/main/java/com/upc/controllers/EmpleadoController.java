@@ -7,8 +7,11 @@ import org.springframework.stereotype.Controller;
 <<<<<<< HEAD
 import org.springframework.ui.Model;
 import org.springframework.ui.ModelMap;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 
+import com.upc.entity.Cliente;
 import com.upc.entity.Empleado;
 import com.upc.entity.Usuario;
 import com.upc.service.CiudadService;
@@ -26,6 +29,7 @@ public class EmpleadoController {
 	public String findEmpleado(Model model, HttpSession session, ModelMap modelMap) {
 		Empleado empl = empleadoService.getEmpleadoByUsuario((Usuario) session.getAttribute("usuarioSesion"));
 		if(empl != null){
+			session.setAttribute("empleadoSession", empl);
 			return "empleado_principal";
 			
 		}else {
@@ -33,6 +37,14 @@ public class EmpleadoController {
 			model.addAttribute("ciudades", ciudadService.listAllCiudad());
 			return "empleado_registrar";			
 		}		
+	}
+	@RequestMapping(value = "/empleadoRegistrar", method = RequestMethod.POST)
+	public String saveCliente(@ModelAttribute("empleado") Empleado empleado, HttpSession session, ModelMap modelMap) {		
+		modelMap.addAttribute("usersession", session.getAttribute("usuarioSesion"));
+		empleado.setUsuario((Usuario) session.getAttribute("usuarioSesion"));
+		empleadoService.saveEmpleado(empleado);
+		session.setAttribute("empleadoSession", empleado);
+		return "empleado_principal";
 	}
 
 =======

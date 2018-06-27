@@ -1,24 +1,11 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
-<head lang="aes">
-<!--Author: HAMP -->
-	<!-- En este fragmento solo coloco los CSS y JS de bootstrap y jquery-->
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
-    <!-- StyleCSS -->
-    <link href="../static/css/bootstrap.css" th:href="@{/css/bootstrap.css}" rel="stylesheet" media="screen" />
-
- 	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css" />
-
-	<!-- ScriptJS -->
- 	<script src=".../static/js/bootstrap.js" th:src="@{/js/bootstrap.js}"></script>
- 	<script src=".../static/js/datatable.js" th:src="@{/js/datatable.js}"></script>
- 	<script src=".../static/js/jquery-3.2.1.js" th:src="@{/js/jquery-3.2.1.js}"></script>
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-	<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
-	
+<head lang="es">
 </head>
-<body>  
+<body>
+<body>
 <div th:fragment="headerAdministrador">
+<<<<<<< HEAD
 	<nav class="navbar navbar-inverse navbar-fixed-top">
 		<div class="container">
 			<div class="navbar-header">
@@ -45,5 +32,58 @@
 		</div>
 	</nav>
 </div>
+=======
+    <!-- ***** Preloader Start ***** -->
+    <div id="preloader">
+        <div class="mosh-preloader"></div>
+    </div>
+
+    <!-- ***** Header Area Start ***** -->
+    <header class="header_area clearfix">
+        <div class="container-fluid h-100">
+            <div class="row h-100">
+                <!-- Menu Area Start -->
+                <div class="col-12 h-100">
+                    <div class="menu_area h-100">
+                        <nav class="navbar h-100 navbar-expand-lg align-items-center">
+                            <!-- Logo -->
+                            <a class="navbar-brand" href="#" th:href="@{/administradorPerfil}"><b>Perfil Administrador</b></a>
+
+                            <!-- Menu Area -->
+                            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#mosh-navbar" aria-controls="mosh-navbar" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+
+                            <div class="collapse navbar-collapse justify-content-end" id="mosh-navbar">
+                                <ul class="navbar-nav animated" id="nav">
+                                    <li class="nav-item"><a class="nav-link" href="#" th:href="@{/administradorTodosolicitud}">Solicitudes</a></li>
+                                    <li class="nav-item"><a class="nav-link" href="#" th:href="@{/administradorEspecialidades}">Especialidades</a></li>
+                                    <li class="nav-item"><a class="nav-link" href="#" th:href="@{/administradorPreguntas}">Preguntas</a></li>
+                                    <li class="nav-item"><a class="nav-link" href="#" th:href="@{/administradorConfiguracion}">Configuracion</a></li>
+                                </ul>
+                                <ul class="nav navbar-nav navbar-right">
+                    				<li class=""><a href="#" th:href="@{/usuario_sesion.html}" >Regresar</a></li>
+								</ul>
+                                <!-- Search Form Area Start -->
+                                <div class="search-form-area animated">
+                                    <form action="#" method="post">
+                                        <input type="search" name="search" id="search" placeholder="Type keywords &amp; hit enter"/>
+                                        <button type="submit" class="d-none"><img src="..../img/core-img/search-icon.png" alt="Search"/></button>
+                                    </form>
+                                </div>
+                                <!-- Search btn -->
+                                <div class="search-button">
+                                    <a href="#" id="search-btn"><img src="../img/core-img/search-icon.png" alt="Search"/></a>
+                                    
+                                </div>
+                                
+                            </div>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    </div>
+</body>
+>>>>>>> CristianUnir
 </body>
 </html>

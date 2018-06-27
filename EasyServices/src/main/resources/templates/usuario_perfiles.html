@@ -5,6 +5,7 @@
 <th:block th:include="fragments/stylesheader :: head"></th:block>
 </head>
 <body>
+<<<<<<< HEAD
 	<div class="container">
 		<!-- Incluyo el fragmento header donde se encuentra el nav(menu) -->
 		<th:block th:include="fragments/headerUsuario :: headerUsuario"></th:block>
@@ -16,11 +17,24 @@
 	<h1>Perfiles</h1>
 
 >>>>>>> Cristian
+=======
+	<!-- Incluyo el fragmento header donde se encuentra el nav(menu) -->
+    <th:block th:include="fragments/headerUsuario :: headerUsuario"></th:block>
+ 	<section class="welcome_area clearfix" id="home" style="background-image: url(img/bg-img/welcome-bg.png)">
+	<br/><br/><br/><br/>
+	
+>>>>>>> CristianUnir
 	<div class="container" style="padding-top: 30px">
 		<div class="page-header">
+		<div class="container" style="padding-top: 30px">
 			<h1>Perfiles</h1>
+			</div>
 		</div>
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+		<center>
+>>>>>>> CristianUnir
 		<div class="row">
 			<div class="col-sm-4">
 				<div class="card">
@@ -49,6 +63,18 @@
 			<div class="col-sm-4">
 				<div class="card">
 					<div class="card-body" style="text-align: center">
+						<h5 class="card-title">Independiente</h5>
+						<img src="../img/empresa.png" width="250" height="300" />
+						<form th:action="@{/EmpresaIndependientePerfil}">
+							<br/>
+							<input class="btn btn-primary" type="submit" value="Independiente" />
+						</form>
+					</div>
+				</div>
+			</div>
+			<div class="col-sm-4">
+				<div class="card">
+					<div class="card-body" style="text-align: center">
 						<h5 class="card-title">Empleado</h5>
 						<img src="../img/empleado.jpg" width="250" height="300" />
 						<form th:action="@{/empleadoPerfil}">
@@ -58,7 +84,20 @@
 					</div>
 				</div>
 			</div>
+			<div class="col-sm-4">
+				<div class="card">
+					<div class="card-body" style="text-align: center">
+						<h5 class="card-title">Administrador</h5>
+						<img src="../img/empleado.jpg" width="250" height="300" />
+						<form th:action="@{/administradorPerfil}">
+							<br/>
+							<input class="btn btn-primary" type="submit" value="Administrador" />
+						</form>
+					</div>
+				</div>
+			</div>
 		</div>
+<<<<<<< HEAD
 =======
 		<table border="0" class="table table-hover">
 			<tr>
@@ -131,6 +170,13 @@
 			</tr>
 		</table>
 >>>>>>> Cristian
+=======
+		</center>
+>>>>>>> CristianUnir
 	</div>
+	</section>
+        <br/>
+	<br/>
+	<th:block th:include="fragments/down :: down"></th:block>
 </body>
 </html>

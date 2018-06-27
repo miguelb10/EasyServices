@@ -96,6 +96,18 @@ public class UsuarioController {
 		return "index_registrar";
 	}
 
+	@RequestMapping(value = "/usuario/configuracion", method = RequestMethod.GET)
+	public String actualizarUsuario(Model model,HttpSession session, ModelMap modelMap) {
+		modelMap.addAttribute("usuario", session.getAttribute("usuarioSesion"));
+		return "usuario_configuracion";
+	}
+	
+	@RequestMapping(value = "/usuario", method = RequestMethod.POST)
+	public String saveEntidad(Usuario usuario) {
+		usuarioService.saveUsuario(usuario);
+		return "redirect:/usuario/sesion";
+	}
+	
 	@RequestMapping(value = "/usuarioRegistrar", method = RequestMethod.POST)
 	public String saveUsuario(@ModelAttribute("usuario") Usuario usuario, ModelMap modelMap, HttpSession session) {
 		try {
@@ -140,7 +152,10 @@ public class UsuarioController {
 		return "usuario_preguntas";
 	}
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> CristianUnir
 
 	@RequestMapping("/usuario_sesion")
 	public String usuarioSsion(Model model, HttpSession session) {

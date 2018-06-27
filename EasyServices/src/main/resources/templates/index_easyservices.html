@@ -5,19 +5,17 @@
 <th:block th:include="fragments/stylesheader :: head"></th:block>
 </head>
 <body>
-	<div class="container">
 	<!-- Incluyo el fragmento header donde se encuentra el nav(menu) -->
     <th:block th:include="fragments/header :: header"></th:block>
-    </div>
-	<br/>
+ 	<section class="welcome_area clearfix" id="home" style="background-image: url(img/bg-img/welcome-bg.png)">
+	<br/><br/><br/><br/>
 	
 	<div id="main_content" class="page-header" style="padding: 15px">
+	<div class="container" style="padding-top: 30px">
 		<h1>Datos de la pagina</h1>
+		</div>
                 <hr>
 	
-        	<!--CLIENTE-->
-                    <div class="tab-pane fade in active" id="tab1">
-                    	<div id="main_content_info">
 							<div class="container">
 							    <h1>¿Quienes somos?</h1>
 							    <div class="boxbg" >
@@ -64,18 +62,14 @@
 			
 							    
 							</div>
-						</div>
-                    </div>
+						
                     </hr>
                     </div>
                     
-                    <br/>
+                   </section>
+        <br/>
 	<br/>
-	<br/>
-	<div class="container">
-	<!-- Incluyo el fragmento header donde se encuentra el nav(menu) -->
-    <th:block th:include="fragments/down :: down"></th:block>
-    </div>
+	<th:block th:include="fragments/down :: down"></th:block> 
                 
                 
 </body>

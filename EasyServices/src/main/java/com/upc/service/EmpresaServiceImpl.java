@@ -4,6 +4,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.upc.entity.Empresa;
+import com.upc.entity.TipoEmpresa;
 import com.upc.entity.Usuario;
 import com.upc.repository.EmpresaRepository;
 
@@ -41,5 +42,11 @@ public class EmpresaServiceImpl implements EmpresaService{
 	public Empresa getEmpresaByUsuario(Usuario usuario) {
 		// TODO Auto-generated method stub
 		return empresaRepository.findByUsuario(usuario);
+	}
+
+	@Override
+	public Empresa getEmpresaByUsuarioAndTipoEmpresa(Usuario usuario, TipoEmpresa tipoEmpresa) {
+		// TODO Auto-generated method stub
+		return empresaRepository.findByUsuarioAndTipoEmpresa(usuario, tipoEmpresa);
 	}
 }

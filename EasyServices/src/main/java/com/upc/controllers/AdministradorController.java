@@ -32,7 +32,7 @@ public class AdministradorController {
 	@Autowired
 	private PreguntaService preguntaService;
 	
-	@RequestMapping("/AdministradorPerfil")
+	@RequestMapping("/administradorPerfil")
 	public String findCompania(Model model, HttpSession session, ModelMap modelMap) {
 		Administrador compa = administradorService.getAdministradorByUsuario((Usuario) session.getAttribute("usuarioSesion"));
 		if(compa != null){

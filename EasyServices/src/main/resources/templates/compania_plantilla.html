@@ -1,27 +1,49 @@
 <!DOCTYPE html>
-<html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
 <title>Preguntas</title>
 <th:block th:include="fragments/stylesheader :: head"></th:block>
 </head>
 <body>
-	<div class="container">
 	<!-- Incluyo el fragmento header donde se encuentra el nav(menu) -->
     <th:block th:include="fragments/headerCompania :: headerCompania"></th:block>
-    </div>
-	<br/>
-	<br/>
+ 	<section class="welcome_area clearfix" id="home" style="background-image: url(img/bg-img/welcome-bg.png)">
+	<br/><br/><br/><br/>
+	
 	<div class="container" style="padding-top: 30px">
 		<div class="page-header">
+		<div class="container" style="padding-top: 30px">
 	        <h1>Mi Plantilla de Empleados</h1>
-                </div>                 
+	        </div>
+                </div> 
+                <a href="#" th:href="@{/compania/plantilla/nuevo}">Agregar Empleado</a>                    
                   <table border="0" class="table table-hover">
 				<tr>
 					<th>Nombre</th>
 					<th>Servicio</th>
-					<th>Sucursal</th>
-                    <th>Descripcion</th>                                  
+					<th>Especialidad</th>
+					<th>Empleado</th>
+					<th>Sucursal</th>  
+                    <th>Visualizar</th>
+					<th>Modificar</th>
+					<th>Eliminar</th>  
+                              
+				</tr>   
+				<tr th:each="ls : ${listaEmpleados}">
+					<td th:text="${ls.descripcion}"/>
+					<td th:text="${ls.servicio.nombre}"/>
+					<td th:text="${ls.servicio.empleado.usuario.nombreCompleto}"/>
+					<td th:text="${ls.servicio.especialidad.nombre}"/>
+					<td th:text="${ls.listaSucursal.ciudad.nombre}"/>
+					<td><a th:href="${'/compania/plantilla/'+ls.idplantilla}">Ver</a></td>
+					<td><a th:href="${'/compania/plantilla/edit/'+ls.idplantilla}">Editar</a></td>
+					<td><a href="#" class="linkDelete" th:id="${ls.idplantilla}">Borrar</a></td>
 				</tr>      
                     </table> 
                 </div>
+                </section>
+        <br/>
+	<br/>
+	<th:block th:include="fragments/down :: down"></th:block> 
 </body>
 </html>

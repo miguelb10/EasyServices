@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
-<title>Sucursales</title>
+<title>Preguntas</title>
 <th:block th:include="fragments/stylesheader :: head"></th:block>
 </head>
 <body>
@@ -13,31 +13,41 @@
 	<div class="container" style="padding-top: 30px">
 		<div class="page-header">
 		<div class="container" style="padding-top: 30px">
-	        <h1>Mis Sucursales</h1>
+	        <h1>Mis Solicitudes</h1>
 	        </div>
-                </div>
-                <a href="#" th:href="@{/compania/sucursales/nuevo}">Crear Sucursal</a>                 
+                </div>                 
                   <table border="0" class="table table-hover">
 				<tr>
-					<th>Nombre</th>
-					<th>Direccion</th>
-					<th>Descripcion</th>
-                    <th>Ciudad</th>     
-                    <th>Visualizar</th>
+					<th>Servicio</th>
+					<th>Empleado</th>
+					<th>Fecha Solicitado</th>
+					<th>Fecha Aprobado</th>
+					<th>Fecha Atencion</th>
+                    <th>Sucursal</th> 
+					<th>Descripcion</th>  
+					<th>Estado</th>
+					<th>Calificacion</th>         
+					<th>Visualizar</th>
 					<th>Modificar</th>
-					<th>Eliminar</th>                               
-				</tr>
-				<tr th:each="ls : ${listaSucursales}">
-					<td th:text="${ls.nombre}"/>
-					<td th:text="${ls.direccion}"/>
+					<th>Eliminar</th>                         
+				</tr>      
+				<tr th:each="ls : ${listaSolicitudes}">
+					<td th:text="${ls.plantilla.servicio.nombre}"/>
+					<td th:text="${ls.plantilla.servicio.empleado.nombre}"/>
+					<td th:text="${ls.solicitud.fechaSolicitado}"/>
+					<td th:text="${ls.solicitud.fechaAprobado}"/>
+					<td th:text="${ls.solicitud.fechaAtencion}"/>
+					<td th:text="${ls.plantilla.listaSucursal.ciudad.nombre}"/>
 					<td th:text="${ls.descripcion}"/>
-					<td th:text="${ls.ciudad.nombre}"/>
+					<td th:text="${ls.solicitud.estadoProceso.nombre}"/>
+					<td th:text="${ls.solicitud.calificacion}"/>
 					<td><a th:href="${'/compania/sucursales/'+ls.idlistaSucursal}">Ver</a></td>
 					<td><a th:href="${'/compania/sucursales/edit/'+ls.idlistaSucursal}">Editar</a></td>
 					<td><a href="#" class="linkDelete" th:id="${ls.idlistaSucursal}">Borrar</a></td>
-				</tr>      
+				</tr>     
                     </table> 
                 </div>
+                
                 </section>
         <br/>
 	<br/>

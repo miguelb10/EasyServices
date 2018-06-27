@@ -33,7 +33,6 @@ public class Plantilla {
 	@ManyToOne
 	@JoinColumn(name="idestado_validar")
 	private EstadoValidar estadoValidar;
-=======
 
 	
 	private String descripcion;

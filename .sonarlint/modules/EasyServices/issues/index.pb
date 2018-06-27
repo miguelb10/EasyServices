@@ -101,5 +101,3 @@ d
 4src/main/resources/templates/compania_registrar.html,7\c\7cc23c23e9e0e38bcb75bd5f37ac8f4fb283d11a
 i
 9src/main/java/com/upc/controllers/CompaniaController.java,6\e\6e780b2a9c067372bcdb6f478e32196a01ed63f0
-W
-'src/main/resources/static/css/style.css,f\1\f1805981f76a3b436234f76681e9b7554336982e

@@ -5,10 +5,6 @@ Y
 )src/main/resources/application.properties,0\6\06f65155ec73600b9fc5c4dc2883d4bb84d8e284
 `
 0src/main/resources/templates/fragments/down.html,9\6\963827fec45a6995c6d44eaff6e3b53c74cb5f80
-[
-+src/main/resources/static/css/bootstrap.css,2\d\2d98b35c414c1a898a2c263411272cc471555b71
-Y
-)src/main/resources/static/js/bootstrap.js,9\e\9e85ab57f374529562a1667613b3a24c76a453dc
 b
 2src/main/java/com/upc/EasyServicesApplication.java,d\a\da2e0a19702b0a64e89e5d7ea4052809e4f93409
 f

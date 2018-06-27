@@ -9,5 +9,5 @@ public interface ClienteService {
 	Cliente saveCliente(Cliente cliente);
 	void deleteCliente(Integer id);
 
-	Iterable<Cliente> getClienteByUsuario(Usuario usuario);
+	Cliente getClienteByUsuario(Usuario usuario);
 }

@@ -3,6 +3,20 @@
 <head>
 <title>Ubicanos</title>
 <th:block th:include="fragments/stylesheader :: head"></th:block>
+<style>
+    /* Always set the map height explicitly to define the size of the div
+       * element that contains the map. */
+    #map {
+        height: 1010px;
+        width: 1500px;
+    }
+    /* Optional: Makes the sample page fill the window. */
+    html, body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+    }
+</style>
 </head>
 <body>
 	<!-- Incluyo el fragmento header donde se encuentra el nav(menu) -->
@@ -16,7 +30,25 @@
 	   </div>
         
            
-           
+           <div class="row">
+                        <div id="map"></div>
+                        <script>
+                            var map;
+                            function initMap() {
+                                map = new google.maps.Map(document.getElementById('map'), {
+                                    center: { lat: -12.046373, lng: -77.042754 },
+                                    zoom: 10
+                                });
+                                var Maker = new google.maps.Maker({
+                                    position: { lat: -12.046373, lng: -77.042754 },
+                                    map: map
+                                });
+                            }
+
+                        </script>
+                       <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCUCOhuEzH731AU1Qu_DJ3tRJ1sZGy2fjI&amp;callback=initMap"
+                                async="defer"></script>
+                    </div>
         
         </div>
 
@@ -27,7 +59,43 @@
 	<br/>
 	<th:block th:include="fragments/down :: down"></th:block> 
                 
-        
+    <script>
+        var ctx = document.getElementById("myChart").getContext('2d');
+        var myChart = new Chart(ctx, {
+            type: 'line',
+            data: {
+                labels: ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+                datasets: [{
+                    label: 'Statistics',
+                    data: [460, 458, 330, 502, 430, 610, 488],
+                    borderWidth: 2,
+                    backgroundColor: 'rgb(87,75,144)',
+                    borderColor: 'rgb(87,75,144)',
+                    borderWidth: 2.5,
+                    pointBackgroundColor: '#ffffff',
+                    pointRadius: 4
+                }]
+            },
+            options: {
+                legend: {
+                    display: false
+                },
+                scales: {
+                    yAxes: [{
+                        ticks: {
+                            beginAtZero: true,
+                            stepSize: 150
+                        }
+                    }],
+                    xAxes: [{
+                        gridLines: {
+                            display: false
+                        }
+                    }]
+                },
+            }
+        });
+    </script>
         
     </body>
 </html>

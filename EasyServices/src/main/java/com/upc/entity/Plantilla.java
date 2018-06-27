@@ -23,12 +23,8 @@ public class Plantilla {
 	private int idplantilla;
 	
 	@ManyToOne
-	@JoinColumn(name="idempresa")
-	private Empresa empresa;
-	
-	@ManyToOne
-	@JoinColumn(name="idsolicitud")
-	private EstadoValidar estadoValidar;
+	@JoinColumn(name="idservicio")
+	private Servicio servicio;
 	
 	@ManyToOne
 	@JoinColumn(name="idlista_sucursal")
@@ -37,11 +33,6 @@ public class Plantilla {
 	@ManyToOne
 	@JoinColumn(name="idestado_validar")
 	private EstadoValidar estadoValidar;
-
-
-	@JoinColumn(name="idservicio")
-	private Servicio servicio;
-
 	
 	private String descripcion;
 
@@ -51,55 +42,53 @@ public class Plantilla {
 	}
 
 
-
-	public Integer getIdplantilla() {
-		return this.idplantilla;
+	public int getIdplantilla() {
+		return idplantilla;
 	}
 
-	public void setIdplantilla(Integer idplantilla) {
+
+	public void setIdplantilla(int idplantilla) {
 		this.idplantilla = idplantilla;
 	}
 
-	public Empresa getEmpresa() {
-		return this.empresa;
-	}
-
-	public void setEmpresa(Empresa empresa) {
-		this.empresa = empresa;
-	}
-
-	public EstadoValidar getEstadoValidar() {
-		return this.estadoValidar;
-	}
-
-	public void setEstadoValidar(EstadoValidar estadoValidar) {
-		this.estadoValidar = estadoValidar;
-	}
-
-	public ListaSucursal getListaSucursal() {
-		return this.listaSucursal;
-	}
-
-	public void setListaSucursal(ListaSucursal listaSucursal) {
-		this.listaSucursal = listaSucursal;
-	}
 
 	public Servicio getServicio() {
-		return this.servicio;
+		return servicio;
 	}
+
 
 	public void setServicio(Servicio servicio) {
 		this.servicio = servicio;
 	}
 
-	public String getDescripcion() {
-		return this.descripcion;
+
+	public ListaSucursal getListaSucursal() {
+		return listaSucursal;
 	}
+
+
+	public void setListaSucursal(ListaSucursal listaSucursal) {
+		this.listaSucursal = listaSucursal;
+	}
+
+
+	public EstadoValidar getEstadoValidar() {
+		return estadoValidar;
+	}
+
+
+	public void setEstadoValidar(EstadoValidar estadoValidar) {
+		this.estadoValidar = estadoValidar;
+	}
+
+
+	public String getDescripcion() {
+		return descripcion;
+	}
+
 
 	public void setDescripcion(String descripcion) {
 		this.descripcion = descripcion;
 	}
-
-
-
+	
 }

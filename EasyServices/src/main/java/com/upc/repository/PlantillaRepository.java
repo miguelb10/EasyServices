@@ -14,4 +14,6 @@ import com.upc.entity.Plantilla;
 public interface PlantillaRepository extends CrudRepository<Plantilla, Integer> {
 
 	List<Plantilla> findByEmpresa(Empresa empresa);
+	
+	
 }

@@ -37,6 +37,7 @@ public class EmpleadoController {
 			return "empleado_registrar";			
 		}		
 	}
+<<<<<<< HEAD
 	@RequestMapping(value = "/empleadoRegistrar", method = RequestMethod.POST)
 	public String saveCliente(@ModelAttribute("empleado") Empleado empleado, HttpSession session, ModelMap modelMap) {		
 		modelMap.addAttribute("usersession", session.getAttribute("usuarioSesion"));
@@ -45,5 +46,7 @@ public class EmpleadoController {
 		session.setAttribute("empleadoSession", empleado);
 		return "empleado_principal";
 	}
+=======
+>>>>>>> parent of ccfd0d8... Merge branch 'Cristian'
 
 }

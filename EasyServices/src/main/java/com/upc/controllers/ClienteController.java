@@ -51,6 +51,7 @@ public class ClienteController {
 		session.setAttribute("clienteSession", cliente);
 		return "cliente_principal";
 <<<<<<< HEAD
+<<<<<<< HEAD
 	}
 	
 	@RequestMapping("/cliente_sesion")
@@ -64,6 +65,8 @@ public class ClienteController {
 			idcliente=((Cliente)session.getAttribute("clienteSession")).getIdcliente();
 		}
 		return "cliente_sesion";
+=======
+>>>>>>> parent of ccfd0d8... Merge branch 'Cristian'
 =======
 >>>>>>> parent of ccfd0d8... Merge branch 'Cristian'
 	}

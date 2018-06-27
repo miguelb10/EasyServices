@@ -13,12 +13,15 @@ import com.upc.entity.Cliente;
 import com.upc.entity.Usuario;
 import com.upc.service.CiudadService;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 import com.upc.service.ClienteService;
 import com.upc.service.EmpleadoService;
 import com.upc.service.EmpresaService;
 import com.upc.service.TipoEmpresaService;
 
+=======
+>>>>>>> parent of ccfd0d8... Merge branch 'Cristian'
 =======
 >>>>>>> parent of ccfd0d8... Merge branch 'Cristian'
 import com.upc.service.UsuarioService;
@@ -31,6 +34,7 @@ public class UsuarioController {
 	@Autowired
 	private CiudadService ciudadService;
 <<<<<<< HEAD
+<<<<<<< HEAD
 	@Autowired
 	private ClienteService clienteService;
 	@Autowired
@@ -42,6 +46,8 @@ public class UsuarioController {
 	@Autowired
 	private AdministradorService administradorService;
 
+=======
+>>>>>>> parent of ccfd0d8... Merge branch 'Cristian'
 =======
 >>>>>>> parent of ccfd0d8... Merge branch 'Cristian'
 
@@ -91,6 +97,7 @@ public class UsuarioController {
 
 	@RequestMapping("/usuario_perfiles")
 <<<<<<< HEAD
+<<<<<<< HEAD
 	public String usuarioPerfiles(Model model, HttpSession session, ModelMap modelMap) {
 		TipoEmpresa compania=tipoEmpresaService.getTipoEmpresaById(1);
 		TipoEmpresa independiente=tipoEmpresaService.getTipoEmpresaById(2);
@@ -108,6 +115,9 @@ public class UsuarioController {
 =======
 	public String usuarioPerfiles(Model model, HttpSession session, ModelMap modelMap) {		
 >>>>>>> parent of ccfd0d8... Merge branch 'Cristian'
+=======
+	public String usuarioPerfiles(Model model, HttpSession session, ModelMap modelMap) {		
+>>>>>>> parent of ccfd0d8... Merge branch 'Cristian'
 		modelMap.addAttribute("usersession", session.getAttribute("usuarioSesion"));
 		return "usuario_perfiles";
 	}
@@ -120,7 +130,10 @@ public class UsuarioController {
 	}
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> parent of ccfd0d8... Merge branch 'Cristian'
 	@RequestMapping("/usuario_configuracion")
 	public String usuarioConfiguracion(Model model) {
 		Usuario usuario = new Usuario();
@@ -128,6 +141,9 @@ public class UsuarioController {
 		return "usuario_configuracion";
 	}
 
+<<<<<<< HEAD
+>>>>>>> parent of ccfd0d8... Merge branch 'Cristian'
+=======
 >>>>>>> parent of ccfd0d8... Merge branch 'Cristian'
 	@RequestMapping("/usuario_sesion")
 	public String usuarioSsion(Model model, HttpSession session) {

@@ -37,6 +37,7 @@ public class ListaEmpleadoSolicitudServiceImpl implements ListaEmpleadoSolicitud
 		listaEmpleadoSolicitudRepository.delete(id);
 	}
 
+
 	@Override
 	public Iterable<ListaEmpleadoSolicitud> getListaEmpleadoSolicitudByPlantillaListaSucursalEmpresa(Empresa empresa) {
 		// TODO Auto-generated method stub

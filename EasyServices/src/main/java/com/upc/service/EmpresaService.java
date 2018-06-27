@@ -1,6 +1,7 @@
 package com.upc.service;
 
 import com.upc.entity.Empresa;
+import com.upc.entity.TipoEmpresa;
 import com.upc.entity.Usuario;
 
 public interface EmpresaService {
@@ -10,4 +11,5 @@ public interface EmpresaService {
 	void deleteEmpresa(Integer id);
 
 	Empresa getEmpresaByUsuario(Usuario usuario);
+	Empresa getEmpresaByUsuarioAndTipoEmpresa(Usuario usuario,TipoEmpresa tipoEmpresa);
 }

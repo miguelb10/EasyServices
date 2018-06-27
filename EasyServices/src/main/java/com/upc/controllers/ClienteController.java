@@ -33,6 +33,7 @@ public class ClienteController {
 	public String findCliente(Model model, HttpSession session, ModelMap modelMap) {
 		Cliente clientel = clienteService.getClienteByUsuario((Usuario) session.getAttribute("usuarioSesion"));
 		if(clientel != null){
+			session.setAttribute("clienteSession", clientel);
 			return "cliente_principal";
 			
 		}else {
@@ -46,6 +47,7 @@ public class ClienteController {
 		modelMap.addAttribute("usersession", session.getAttribute("usuarioSesion"));
 		cliente.setUsuario((Usuario) session.getAttribute("usuarioSesion"));
 		clienteService.saveCliente(cliente);
+		session.setAttribute("clienteSession", cliente);
 		return "cliente_principal";
 	}
 }

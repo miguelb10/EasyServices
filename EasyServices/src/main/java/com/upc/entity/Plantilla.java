@@ -23,20 +23,16 @@ public class Plantilla {
 	private int idplantilla;
 	
 	@ManyToOne
-	@JoinColumn(name="idempresa")
-	private Empresa empresa;
-	
-	@ManyToOne
-	@JoinColumn(name="idsolicitud")
-	private EstadoValidar estadoValidar;
+	@JoinColumn(name="idservicio")
+	private Servicio servicio;
 	
 	@ManyToOne
 	@JoinColumn(name="idlista_sucursal")
 	private ListaSucursal listaSucursal;
 	
 	@ManyToOne
-	@JoinColumn(name="idservicio")
-	private Servicio servicio;
+	@JoinColumn(name="idestado_validar")
+	private EstadoValidar estadoValidar;
 	
 	private String descripcion;
 
@@ -55,13 +51,6 @@ public class Plantilla {
 		this.idplantilla = idplantilla;
 	}
 
-	public Empresa getEmpresa() {
-		return this.empresa;
-	}
-
-	public void setEmpresa(Empresa empresa) {
-		this.empresa = empresa;
-	}
 
 	public EstadoValidar getEstadoValidar() {
 		return this.estadoValidar;

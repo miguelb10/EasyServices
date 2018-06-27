@@ -17,10 +17,13 @@ import com.upc.entity.ListaSucursal;
 import com.upc.entity.Plantilla;
 import com.upc.entity.Servicio;
 import com.upc.repository.PlantillaRepository;
+import com.upc.service.CiudadService;
 import com.upc.service.EmpresaService;
+import com.upc.service.EstadoValidarService;
 import com.upc.service.ListaEmpleadoSolicitudService;
 import com.upc.service.ListaSucursalService;
 import com.upc.service.PlantillaService;
+import com.upc.service.ServicioService;
 import com.upc.service.TipoEmpresaService;
 
 @Controller
@@ -36,6 +39,12 @@ public class CompaniaController {
 	private ListaSucursalService listaSucursalService;
 	@Autowired
 	private EmpresaService empresaService;
+	@Autowired
+	private CiudadService ciudadService;
+	@Autowired
+	private ServicioService servicioService;
+	@Autowired
+	private EstadoValidarService estadoValidarService;
 	
 	@RequestMapping("/compania/sesion")
 	public String companiaSesion(ModelMap modelMap, HttpSession session,@RequestParam(value="id",required=false) Integer idempresa) {
@@ -59,14 +68,14 @@ public class CompaniaController {
 	
 	@RequestMapping("/compania/plantilla")
 	public String companiaPlantilla(Model model,ModelMap modelMap, HttpSession session) {
-		Iterable<Plantilla> listaPlantilla=plantillaService.getPlantillaByEmpresa((Empresa)session.getAttribute("empresaSession"));
+		Iterable<Plantilla> listaPlantilla=plantillaService.getPlantillaByListaSucursalEmpresa((Empresa)session.getAttribute("empresaSession"));
 		model.addAttribute("listaEmpleados", listaPlantilla);	
 		return "compania_plantilla";
 	}
 	
 	@RequestMapping("/compania/solicitudes")
 	public String companiaSolicitudes(Model model,ModelMap modelMap, HttpSession session) {
-		Iterable<ListaEmpleadoSolicitud> listaSolicitud=listaEmpleadoSolicitudService.getListaEmpleadoSolicitudByPlantillaEmpresa((Empresa)session.getAttribute("empresaSession"));
+		Iterable<ListaEmpleadoSolicitud> listaSolicitud=listaEmpleadoSolicitudService.getListaEmpleadoSolicitudByPlantillaListaSucursalEmpresa((Empresa)session.getAttribute("empresaSession"));
 		model.addAttribute("listaSolicitudes", listaSolicitud);	
 		return "compania_misolicitudes";
 	}
@@ -77,30 +86,49 @@ public class CompaniaController {
 		return "compania_configuracion";
 	}
 	
+	@RequestMapping("/compania/sucursales/nuevo")
+	public String newSucursal(Model model,HttpSession session,ModelMap modelMap){
+		ListaSucursal listaSucursal=new ListaSucursal();
+		listaSucursal.setEmpresa((Empresa)session.getAttribute("empresaSession"));
+		modelMap.addAttribute("listaSucursal", listaSucursal);
+		model.addAttribute("ciudades", ciudadService.listAllCiudad());
+		return "compania_sucursales_agregar";
+	}
+	
+	@RequestMapping(value = "/sucursalRegistrar", method = RequestMethod.POST)
+	public String saveSucursal(ListaSucursal listaSucursal){
+		listaSucursalService.saveListaSucursal(listaSucursal);
+		return "redirect:/compania/sesion";
+	}
+	
+	@RequestMapping("/compania/plantilla/nuevo")
+	public String newPlantilla(Model model,HttpSession session,ModelMap modelMap){
+		Plantilla plantilla=new Plantilla();
+		plantilla.setEstadoValidar(estadoValidarService.getEstadoValidarById(2));
+		modelMap.addAttribute("plantilla", plantilla);
+		model.addAttribute("sucursales", listaSucursalService.getListaSucursalByEmpresa((Empresa)session.getAttribute("empresaSession")));
+		model.addAttribute("servicios", servicioService.listAllServicio());
+		return "compania_plantilla_agregar";
+	}
+	
+	@RequestMapping(value = "/plantillaRegistrar", method = RequestMethod.POST)
+	public String savePlantilla(Plantilla plantilla){
+		plantillaService.savePlantilla(plantilla);
+		return "redirect:/compania/sesion";
+	}
+	
 	//ListaSolicitudesCompañia
 	@RequestMapping(value= "/EmpresaCompañia/Solicitud/{id}", method = RequestMethod.GET)
 	public String listSolicitd(@PathVariable Integer id,Model model) {
-		model.addAttribute("listaSolicitud", listaEmpleadoSolicitudService.getListaEmpleadoSolicitudByPlantillaEmpresa(empresaService.getEmpresaById(id)));
+		model.addAttribute("listaSolicitud", listaEmpleadoSolicitudService.getListaEmpleadoSolicitudByPlantillaListaSucursalEmpresa(empresaService.getEmpresaById(id)));
 		return "listaSolicitud";
 	}
 	
 	//PlantillaCompañia
 	@RequestMapping(value= "/EmpresaCompañia/Plantilla/{id}", method = RequestMethod.GET)
 	public String listPlantilla(@PathVariable Integer id,Model model) {
-			model.addAttribute("listaPlantilla",plantillaService.getPlantillaByEmpresa(empresaService.getEmpresaById(id)));
+			model.addAttribute("listaPlantilla",plantillaService.getPlantillaByListaSucursalEmpresa(empresaService.getEmpresaById(id)));
 			return "listaPlantilla";
-	}
-	
-	@RequestMapping("/EmpresaCompañia/Plantilla/new")
-	public String newPlantilla(Model model){
-		model.addAttribute("plantilla", new Plantilla());
-		return "plantilla";
-	}
-	
-	@RequestMapping(value = "/EmpresaCompañia/Plantilla", method = RequestMethod.POST)
-	public String savePlantilla(Plantilla plantilla){
-		plantillaService.savePlantilla(plantilla);
-		return "redirect:/EmpresaCompañia/Plantilla";
 	}
 	
 	@RequestMapping(value= "/EmpresaCompañia/Plantilla/edit/{id}", method = RequestMethod.GET)
@@ -123,17 +151,7 @@ public class CompaniaController {
 				return "listaSucursal";
 		}
 		
-		@RequestMapping("/EmpresaCompañia/Sucursal/new")
-		public String newSucursal(Model model){
-			model.addAttribute("sucursal", new ListaSucursal());
-			return "sucursal";
-		}
 		
-		@RequestMapping(value = "/EmpresaCompañia/Sucursal", method = RequestMethod.POST)
-		public String saveSucursal(ListaSucursal listaSucursal){
-			listaSucursalService.saveListaSucursal(listaSucursal);
-			return "redirect:/EmpresaCompañia/Sucursal";
-		}
 		
 		@RequestMapping(value= "/EmpresaCompañia/Sucursal/edit/{id}", method = RequestMethod.GET)
 		public String editSucursal(@PathVariable Integer id, Model model){

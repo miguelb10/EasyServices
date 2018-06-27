@@ -52,14 +52,14 @@ public class IndependienteController {
 	
 	@RequestMapping("/independiente/misolicitudes")
 	public String independienteSolicitudes(Model model,ModelMap modelMap, HttpSession session) {
-		Iterable<ListaEmpleadoSolicitud> listaSolicitud=listaEmpleadoSolicitudService.getListaEmpleadoSolicitudByPlantillaEmpresa((Empresa)session.getAttribute("empresaSession"));
+		Iterable<ListaEmpleadoSolicitud> listaSolicitud=listaEmpleadoSolicitudService.getListaEmpleadoSolicitudByPlantillaListaSucursalEmpresa((Empresa)session.getAttribute("empresaSession"));
 		model.addAttribute("listaSolicitudes", listaSolicitud);	
 		return "independiente_misolicitudes";
 	}
 	
 	@RequestMapping("/independiente/servicios")
 	public String independienteServicios(Model model,ModelMap modelMap, HttpSession session) {
-		Iterable<Plantilla> listaPlantilla=plantillaService.getPlantillaByEmpresa((Empresa)session.getAttribute("empresaSession"));
+		Iterable<Plantilla> listaPlantilla=plantillaService.getPlantillaByListaSucursalEmpresa((Empresa)session.getAttribute("empresaSession"));
 		model.addAttribute("listaEmpleados", listaPlantilla);	
 		return "independiente_servicios";
 	}

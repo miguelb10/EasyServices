@@ -59,8 +59,10 @@ public class UsuarioController {
 	}
 	
 	@RequestMapping(value = "EliminarSesion", method = RequestMethod.POST)
-	public String cerrarLogin(HttpSession session, ModelMap modelMap) {
-		modelMap.put("mostrar", "Cerro Sesion");
+	public String cerrarLogin(Model model, ModelMap modelMap,HttpSession session) {
+		Usuario usuario = new Usuario();
+		modelMap.remove("usuario", usuario);
+		model.addAttribute("usuario", usuario);
 		return "index";
 	}
 	

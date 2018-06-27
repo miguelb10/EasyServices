@@ -13,38 +13,41 @@
 	<br/>
 	<div id="main_content" style="padding: 15px;">
 	<div class="page-header">
-	        <h1>Agregar Nueva Sucursal</h1>
+	        <h1>Agregar Nuevo Empleado</h1>
         </div>
-            <form id="agregarsucursal_form" th:action="@{/sucursalRegistrar}" th:object="${listaSucursal}" method="POST" > 
+            <form id="agregarplantilla_form" th:action="@{/plantillaRegistrar}" th:object="${plantilla}" method="POST" > 
                     <table>
-                    	<input type="hidden" id="hdnEmpresa" th:field="*{empresa}" th:value="${empresa}" />
-                        <tr>
-                            <td style="padding: 10px;">Nombre:</td>
-                            <td><input type="text" name="nombre" class="form-control" th:field="*{nombre}" required="required"/></td>
-                        </tr>
-                        <tr>
-                            <td style="padding: 10px;">Direccion:</td>
-                            <td><input type="text" name="direccion" class="form-control" th:field="*{direccion}" required="required"/></td>
-                        </tr>
+                    <input type="hidden" id="hdnEstadoValidar" th:field="*{estadoValidar}" />
                         <tr>
                             <td style="padding: 10px;">Descripcion:</td>
                             <td><input type="text" name="descripcion" class="form-control" th:field="*{descripcion}" required="required"/></td>
                         </tr>
                         <tr>
-							        		<td style="padding: 10px;">Ciudad:</td>
-							        		<td><select th:field="*{ciudad}" class="form-control">
-							        			<option th:each="u : ${ciudades}"
+							        		<td style="padding: 10px;">Sucursales:</td>
+							        		<td><select th:field="*{listaSucursal}" class="form-control">
+							        			<option th:each="u : ${sucursales}"
 							        					th:text="${u.nombre}"
-							        					th:value="${u.idciudad}">
+							        					th:value="${u.idlistaSucursal}">
 							        			</option>
 							        			</select>
 							        			<br/>
 							        		</td>
 							        	</tr>
                         <tr>
-                            <td colspan="2">
+							        		<td style="padding: 10px;">Servicios:</td>
+							        		<td><select th:field="*{servicio}" class="form-control">
+							        			<option th:each="u : ${servicios}"
+							        					th:text="${u.nombre}"
+							        					th:value="${u.idservicio}">
+							        			</option>
+							        			</select>
+							        			<br/>
+							        		</td>
+							        	</tr>
+                        <tr>
+                        	<td colspan="2">
                                 <center>
-                                <input type="submit" name="action" value="Registrar Sucursal" class="btn btn-success" />
+                                <input type="submit" name="action" value="Registrar Empleado" class="btn btn-success" />
                                 <input type="button" class="btn btn-default" onclick="location.href='/compania/sesion/'" value="Cancelar" />
                                 </center>
                             </td>

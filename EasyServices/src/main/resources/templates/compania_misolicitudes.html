@@ -25,7 +25,10 @@
                     <th>Sucursal</th> 
 					<th>Descripcion</th>  
 					<th>Estado</th>
-					<th>Calificacion</th>                                  
+					<th>Calificacion</th>         
+					<th>Visualizar</th>
+					<th>Modificar</th>
+					<th>Eliminar</th>                         
 				</tr>      
 				<tr th:each="ls : ${listaSolicitudes}">
 					<td th:text="${ls.plantilla.servicio.nombre}"/>
@@ -37,6 +40,9 @@
 					<td th:text="${ls.descripcion}"/>
 					<td th:text="${ls.solicitud.estadoProceso.nombre}"/>
 					<td th:text="${ls.solicitud.calificacion}"/>
+					<td><a th:href="${'/compania/sucursales/'+ls.idlistaSucursal}">Ver</a></td>
+					<td><a th:href="${'/compania/sucursales/edit/'+ls.idlistaSucursal}">Editar</a></td>
+					<td><a href="#" class="linkDelete" th:id="${ls.idlistaSucursal}">Borrar</a></td>
 				</tr>     
                     </table> 
                 </div>

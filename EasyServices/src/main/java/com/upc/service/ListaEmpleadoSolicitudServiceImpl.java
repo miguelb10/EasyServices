@@ -38,9 +38,9 @@ public class ListaEmpleadoSolicitudServiceImpl implements ListaEmpleadoSolicitud
 	}
 
 	@Override
-	public Iterable<ListaEmpleadoSolicitud> getListaEmpleadoSolicitudByPlantillaEmpresa(Empresa empresa) {
+	public Iterable<ListaEmpleadoSolicitud> getListaEmpleadoSolicitudByPlantillaListaSucursalEmpresa(Empresa empresa) {
 		// TODO Auto-generated method stub
-		return listaEmpleadoSolicitudRepository.findByPlantillaEmpresa(empresa);
+		return listaEmpleadoSolicitudRepository.findByPlantillaListaSucursalEmpresa(empresa);
 	}
 
 }

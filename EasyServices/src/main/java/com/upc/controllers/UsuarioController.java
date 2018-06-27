@@ -17,13 +17,12 @@ import com.upc.entity.TipoEmpresa;
 import com.upc.entity.Usuario;
 import com.upc.service.AdministradorService;
 import com.upc.service.CiudadService;
-<<<<<<< HEAD
-=======
+
 import com.upc.service.ClienteService;
 import com.upc.service.EmpleadoService;
 import com.upc.service.EmpresaService;
 import com.upc.service.TipoEmpresaService;
->>>>>>> Cristian
+
 import com.upc.service.UsuarioService;
 
 @Controller
@@ -33,8 +32,6 @@ public class UsuarioController {
 	private UsuarioService usuarioService;
 	@Autowired
 	private CiudadService ciudadService;
-<<<<<<< HEAD
-=======
 	@Autowired
 	private ClienteService clienteService;
 	@Autowired
@@ -45,7 +42,7 @@ public class UsuarioController {
 	private EmpleadoService empleadoService;
 	@Autowired
 	private AdministradorService administradorService;
->>>>>>> Cristian
+
 
 	@RequestMapping(value = "login", method = RequestMethod.POST)
 	public String login(@ModelAttribute("usuario") Usuario usuario, HttpSession session, ModelMap modelMap) {
@@ -95,19 +92,6 @@ public class UsuarioController {
 		model.addAttribute("ciudades", ciudadService.listAllCiudad());
 		return "index_registrar";
 	}
-
-	@RequestMapping(value = "/usuario/configuracion", method = RequestMethod.GET)
-	public String actualizarUsuario(Model model,HttpSession session, ModelMap modelMap) {
-		modelMap.addAttribute("usuario", session.getAttribute("usuarioSesion"));
-		return "usuario_configuracion";
-	}
-	
-	@RequestMapping(value = "/usuario", method = RequestMethod.POST)
-	public String saveEntidad(Usuario usuario) {
-		usuarioService.saveUsuario(usuario);
-		return "redirect:/usuario/sesion";
-	}
-	
 	@RequestMapping(value = "/usuarioRegistrar", method = RequestMethod.POST)
 	public String saveUsuario(@ModelAttribute("usuario") Usuario usuario, ModelMap modelMap, HttpSession session) {
 		try {
@@ -123,24 +107,20 @@ public class UsuarioController {
 	}
 
 	@RequestMapping("/usuario_perfiles")
-<<<<<<< HEAD
-	public String usuarioPerfiles(Model model, HttpSession session, ModelMap modelMap) {		
-=======
 	public String usuarioPerfiles(Model model, HttpSession session, ModelMap modelMap) {
 		TipoEmpresa compania=tipoEmpresaService.getTipoEmpresaById(1);
 		TipoEmpresa independiente=tipoEmpresaService.getTipoEmpresaById(2);
 		
-		Iterable<Cliente> listacliente = clienteService.getClienteByUsuario((Usuario) session.getAttribute("usuarioSesion"));	
-		Iterable<Empresa> listaempresacompania = empresaService.getEmpresaByUsuarioAndTipoEmpresa((Usuario) session.getAttribute("usuarioSesion"), compania);
-		Iterable<Empresa> listaempresaindependiente = empresaService.getEmpresaByUsuarioAndTipoEmpresa((Usuario) session.getAttribute("usuarioSesion"), independiente);
-		Iterable<Empleado> listaempleado=empleadoService.getEmpresaByUsuario((Usuario) session.getAttribute("usuarioSesion"));
-		Iterable<Administrador> listaadministrador=administradorService.getEmpresaByUsuario((Usuario) session.getAttribute("usuarioSesion"));
+		Cliente listacliente = clienteService.getClienteByUsuario((Usuario) session.getAttribute("usuarioSesion"));	
+		Empresa listaempresacompania = empresaService.getEmpresaByUsuarioAndTipoEmpresa((Usuario) session.getAttribute("usuarioSesion"), compania);
+		Empresa listaempresaindependiente = empresaService.getEmpresaByUsuarioAndTipoEmpresa((Usuario) session.getAttribute("usuarioSesion"), independiente);
+		Empleado listaempleado=empleadoService.getEmpresaByUsuario((Usuario) session.getAttribute("usuarioSesion"));
+		Administrador listaadministrador=administradorService.getEmpresaByUsuario((Usuario) session.getAttribute("usuarioSesion"));
 		model.addAttribute("listaclientes", listacliente);
 		model.addAttribute("listaempresacompanias", listaempresacompania);
 		model.addAttribute("listaempresaindependientes", listaempresaindependiente);
 		model.addAttribute("listaempleados", listaempleado);
 		model.addAttribute("listaadministradores", listaadministrador);
->>>>>>> Cristian
 		modelMap.addAttribute("usersession", session.getAttribute("usuarioSesion"));
 		return "usuario_perfiles";
 	}
@@ -151,11 +131,6 @@ public class UsuarioController {
 		model.addAttribute("usuario", usuario);
 		return "usuario_preguntas";
 	}
-
-<<<<<<< HEAD
-
-=======
->>>>>>> CristianUnir
 
 	@RequestMapping("/usuario_sesion")
 	public String usuarioSsion(Model model, HttpSession session) {

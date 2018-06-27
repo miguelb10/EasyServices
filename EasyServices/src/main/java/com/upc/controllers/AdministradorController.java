@@ -58,6 +58,7 @@ public class AdministradorController {
 			return "administrador_sesion";
 			
 		}else {
+			modelMap.addAttribute("usersession", session.getAttribute("usuarioSesion"));
 			return "usuario_sesion";			
 		}		
 	}

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<title>Registrar Sucursal</title>
+<th:block th:include="fragments/stylesheader :: head"></th:block>
+</head>
+<body>
+	<!-- Incluyo el fragmento header donde se encuentra el nav(menu) -->
+    <th:block th:include="fragments/headerCompania :: headerCompania"></th:block>
+ 	<section class="welcome_area clearfix" id="home" style="background-image: url(img/bg-img/welcome-bg.png)">
+	<br/><br/><br/><br/>
+	
+	<div id="main_content" style="padding: 15px;">
+	<div class="page-header">
+	<div class="container" style="padding-top: 30px">
+	        <h1>Editar Empleado</h1>
+	        </div>
+        </div>
+            <form id="agregarplantilla_form" th:action="@{/plantillaRegistrar}" th:object="${plantilla}" method="POST" > 
+                    <table>
+                    <input type="hidden" id="hdnEstadoValidar" th:field="*{estadoValidar}" />
+                        <tr>
+                            <td style="padding: 10px;">Descripcion:</td>
+                            <td><input type="text" name="descripcion" class="form-control" th:field="*{descripcion}" required="required"/></td>
+                        </tr>
+                        <tr>
+							        		<td style="padding: 10px;">Sucursales:</td>
+							        		<td><select th:field="*{listaSucursal}" class="form-control">
+							        			<option th:each="u : ${sucursales}"
+							        					th:text="${u.nombre}"
+							        					th:value="${u.idlistaSucursal}">
+							        			</option>
+							        			</select>
+							        			<br/>
+							        		</td>
+							        	</tr>
+                        <tr>
+							        		<td style="padding: 10px;">Servicios:</td>
+							        		<td><select th:field="*{servicio}" class="form-control">
+							        			<option th:each="u : ${servicios}"
+							        					th:text="${u.nombre}"
+							        					th:value="${u.idservicio}">
+							        			</option>
+							        			</select>
+							        			<br/>
+							        		</td>
+							        	</tr>
+                        <tr>
+                        	<td colspan="2">
+                                <center>
+                                <input type="submit" name="action" value="Registrar Empleado" class="btn btn-success" />
+                                <input type="button" class="btn btn-default" onclick="location.href='/EmpresaCompaniaPerfil'" value="Cancelar" />
+                                </center>
+                            </td>
+                        </tr>
+                    </table>
+            </form>
+	</div>
+	
+	</section>
+        <br/>
+	<br/>
+	<th:block th:include="fragments/down :: down"></th:block> 
+</body>
+</html>

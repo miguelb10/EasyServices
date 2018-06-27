@@ -1,27 +1,20 @@
 <!DOCTYPE html>
-<<<<<<< HEAD
-<<<<<<< HEAD
-<html>
-=======
 <html xmlns:th="http://www.thymeleaf.org">
->>>>>>> Cristian
-=======
-<html xmlns:th="http://www.thymeleaf.org">
->>>>>>> CristianUnir
 <head>
 <title>Easy Services</title>
 <th:block th:include="fragments/stylesheader :: head"></th:block>
 </head>
 <body>
+	<div class="container">
 	<!-- Incluyo el fragmento header donde se encuentra el nav(menu) -->
-    <th:block th:include="fragments/headerCompania :: headerCompania"></th:block>
- 	<section class="welcome_area clearfix" id="home" style="background-image: url(img/bg-img/welcome-bg.png)">
-	<br/><br/><br/><br/>
-	
+    <th:block th:include="fragments/headerCliente :: headerCliente"></th:block>
+    </div>
+	<br/>
+	<br/>
 	<!-- SEARCH DOM -->
 	<div id="main_content" style="padding: 15px;">
 		<div id="div_info">
-			<h1>Sesion Perfil Compañia!</h1>
+			<h1>Sesion Perfil Cliente!</h1>
 			<h3>Tu Resumen:</h3>
 			<table border="0" class="table table-hover">
 				<tr>
@@ -41,10 +34,7 @@
 		</div>
 
 	</div>
-</section>
-        <br/>
-	<br/>
-	<th:block th:include="fragments/down :: down"></th:block> 
+
 
 </body>
 </html>

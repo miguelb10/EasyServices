@@ -5,16 +5,15 @@
 <th:block th:include="fragments/stylesheader :: head"></th:block>
 </head>
 <body>
+	<div class="container">
 	<!-- Incluyo el fragmento header donde se encuentra el nav(menu) -->
-    <th:block th:include="fragments/headerAdministrador :: headerAdministrador "></th:block>
- 	<section class="welcome_area clearfix" id="home" style="background-image: url(img/bg-img/welcome-bg.png)">
-	<br/><br/><br/><br/>
-	
+    <th:block th:include="fragments/headerAdministrador :: headerAdministrador"></th:block>
+    </div>
+	<br/>
+	<br/>
 	<div class="container" style="padding-top: 30px">
 		<div class="page-header">
-		<div class="container" style="padding-top: 30px">
 	        <h1>Especialidades</h1>
-	        </div>
                 </div>                 
                   <table border="0" class="table table-hover">
 				<tr>
@@ -27,10 +26,5 @@
 				</tr>      
                     </table> 
                 </div>
-                
-                </section>
-        <br/>
-	<br/>
-	<th:block th:include="fragments/down :: down"></th:block> 
 </body>
 </html>

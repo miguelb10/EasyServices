@@ -69,41 +69,41 @@ public class CompaniaController {
 		empresaService.saveEmpresa(empresa);
 		session.setAttribute("empresaSession", empresa);
 		if(empresa.getTipoEmpresa().getIdtipo_empresa()==1)
-			return "compania_sesion";
+			return "redirect:/EmpresaCompaniaPerfil";
 		else if(empresa.getTipoEmpresa().getIdtipo_empresa()==2)
-			return "independiente_sesion";
+			return "redirect:/EmpresaIndependientePerfil";
 		else
 			return "usuario_sesion";
 	}
 	
-	@RequestMapping("/compania/sucursales")
+	@RequestMapping("/companiaSucursales")
 	public String companiaSucursales(Model model,ModelMap modelMap, HttpSession session) {
 		Iterable<ListaSucursal> listaSucursal=listaSucursalService.getListaSucursalByEmpresa((Empresa)session.getAttribute("empresaSession"));
 		model.addAttribute("listaSucursales", listaSucursal);	
 		return "compania_sucursales";
 	}
 	
-	@RequestMapping("/compania/plantilla")
+	@RequestMapping("/companiaPlantilla")
 	public String companiaPlantilla(Model model,ModelMap modelMap, HttpSession session) {
 		Iterable<Plantilla> listaPlantilla=plantillaService.getPlantillaByListaSucursalEmpresa((Empresa)session.getAttribute("empresaSession"));
 		model.addAttribute("listaEmpleados", listaPlantilla);	
 		return "compania_plantilla";
 	}
 	
-	@RequestMapping("/compania/solicitudes")
+	@RequestMapping("/companiaSolicitudes")
 	public String companiaSolicitudes(Model model,ModelMap modelMap, HttpSession session) {
 		Iterable<ListaEmpleadoSolicitud> listaSolicitud=listaEmpleadoSolicitudService.getListaEmpleadoSolicitudByPlantillaListaSucursalEmpresa((Empresa)session.getAttribute("empresaSession"));
 		model.addAttribute("listaSolicitudes", listaSolicitud);	
 		return "compania_misolicitudes";
 	}
 	
-	@RequestMapping(value = "/compania/configuracion", method = RequestMethod.GET)
+	@RequestMapping(value = "/companiaConfiguracion", method = RequestMethod.GET)
 	public String actualizarCompania(Model model,HttpSession session, ModelMap modelMap) {
 		//modelMap.addAttribute("usuario", session.getAttribute("usuarioSesion"));
 		return "compania_configuracion";
 	}
 	
-	@RequestMapping("/compania/sucursales/nuevo")
+	@RequestMapping("/companiaSucursalesNuevo")
 	public String newSucursal(Model model,HttpSession session,ModelMap modelMap){
 		ListaSucursal listaSucursal=new ListaSucursal();
 		listaSucursal.setEmpresa((Empresa)session.getAttribute("empresaSession"));
@@ -115,10 +115,10 @@ public class CompaniaController {
 	@RequestMapping(value = "/sucursalRegistrar", method = RequestMethod.POST)
 	public String saveSucursal(ListaSucursal listaSucursal){
 		listaSucursalService.saveListaSucursal(listaSucursal);
-		return "redirect:/compania/sesion";
+		return "redirect:/EmpresaCompaniaPerfil";
 	}
 	
-	@RequestMapping("/compania/plantilla/nuevo")
+	@RequestMapping("/companiaPlantillaNuevo")
 	public String newPlantilla(Model model,HttpSession session,ModelMap modelMap){
 		Plantilla plantilla=new Plantilla();
 		plantilla.setEstadoValidar(estadoValidarService.getEstadoValidarById(2));
@@ -131,6 +131,6 @@ public class CompaniaController {
 	@RequestMapping(value = "/plantillaRegistrar", method = RequestMethod.POST)
 	public String savePlantilla(Plantilla plantilla){
 		plantillaService.savePlantilla(plantilla);
-		return "redirect:/compania/sesion";
+		return "redirect:/EmpresaCompaniaPerfil";
 	}
 }

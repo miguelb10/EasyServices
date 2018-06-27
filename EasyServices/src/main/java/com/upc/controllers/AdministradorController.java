@@ -44,28 +44,28 @@ public class AdministradorController {
 		}		
 	}
 	
-	@RequestMapping("/administrador/todosolicitud")
+	@RequestMapping("/administradorTodosolicitud")
 	public String administradorSolicitudes(Model model,ModelMap modelMap, HttpSession session) {
 		Iterable<ListaEmpleadoSolicitud> listaSolicitud=listaEmpleadoSolicitudService.listAllListaEmpleadoSolicitud();
 		model.addAttribute("listaSolicitudes", listaSolicitud);	
 		return "administrador_todosolicitud";
 	}
 	
-	@RequestMapping("/administrador/especialidades")
+	@RequestMapping("/administradorEspecialidades")
 	public String administradorEspecialidades(Model model,ModelMap modelMap, HttpSession session) {
 		Iterable<Especialidad> listaEspecialidad=especialidadService.listAllEspecialidad();
 		model.addAttribute("listaEspecialidades", listaEspecialidad);	
 		return "administrador_especialidades";
 	}
 	
-	@RequestMapping("/administrador/preguntas")
+	@RequestMapping("/administradorPreguntas")
 	public String administradorPreguntas(Model model,ModelMap modelMap, HttpSession session) {
 		Iterable<Pregunta> listaPregunta=preguntaService.listAllPregunta();
 		model.addAttribute("listaPreguntas", listaPregunta);	
 		return "administrador_preguntas";
 	}
 	
-	@RequestMapping(value = "/administrador/configuracion", method = RequestMethod.GET)
+	@RequestMapping(value = "/administradorConfiguracion", method = RequestMethod.GET)
 	public String actualizarAdministrador(Model model,HttpSession session, ModelMap modelMap) {
 		//modelMap.addAttribute("usuario", session.getAttribute("usuarioSesion"));
 		return "administrador_configuracion";

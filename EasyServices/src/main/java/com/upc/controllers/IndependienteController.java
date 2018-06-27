@@ -42,7 +42,7 @@ public class IndependienteController {
 		Empresa compa = empresaService.getEmpresaByUsuarioAndTipoEmpresa((Usuario) session.getAttribute("usuarioSesion"),tipoEmpresaService.getTipoEmpresaById(2));
 		if(compa != null){
 			session.setAttribute("empresaSession", compa);
-			return "compania_sesion";
+			return "independiente_sesion";
 			
 		}else {
 			model.addAttribute("empresa", new Empresa());
@@ -52,21 +52,21 @@ public class IndependienteController {
 		}		
 	}
 	
-	@RequestMapping("/independiente/misolicitudes")
+	@RequestMapping("/independienteMisolicitudes")
 	public String independienteSolicitudes(Model model,ModelMap modelMap, HttpSession session) {
 		Iterable<ListaEmpleadoSolicitud> listaSolicitud=listaEmpleadoSolicitudService.getListaEmpleadoSolicitudByPlantillaListaSucursalEmpresa((Empresa)session.getAttribute("empresaSession"));
 		model.addAttribute("listaSolicitudes", listaSolicitud);	
 		return "independiente_misolicitudes";
 	}
 	
-	@RequestMapping("/independiente/servicios")
+	@RequestMapping("/independienteServicios")
 	public String independienteServicios(Model model,ModelMap modelMap, HttpSession session) {
 		Iterable<Plantilla> listaPlantilla=plantillaService.getPlantillaByListaSucursalEmpresa((Empresa)session.getAttribute("empresaSession"));
 		model.addAttribute("listaEmpleados", listaPlantilla);	
 		return "independiente_servicios";
 	}
 	
-	@RequestMapping(value = "/independiente/configuracion", method = RequestMethod.GET)
+	@RequestMapping(value = "/independienteConfiguracion", method = RequestMethod.GET)
 	public String actualizarIndependiente(Model model,HttpSession session, ModelMap modelMap) {
 		//modelMap.addAttribute("usuario", session.getAttribute("usuarioSesion"));
 		return "independiente_configuracion";

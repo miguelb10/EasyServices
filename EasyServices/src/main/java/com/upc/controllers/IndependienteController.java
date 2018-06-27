@@ -48,7 +48,6 @@ public class IndependienteController {
 	private ListaSucursalService listaSucursalService;
 	@Autowired
 	private EmpresaService empresaService;
-<<<<<<< HEAD
 	
 	@RequestMapping("/independiente/sesion")
 	public String independienteSesion(ModelMap modelMap, HttpSession session,@RequestParam(value="id",required=false) Integer idempresa) {
@@ -64,49 +63,20 @@ public class IndependienteController {
 	}
 	
 	@RequestMapping("/independiente/misolicitudes")
-=======
-	@Autowired
-	private CiudadService ciudadService;
-	
-	@RequestMapping("/EmpresaIndependientePerfil")
-	public String findCompania(Model model, HttpSession session, ModelMap modelMap) {
-		Empresa compa = empresaService.getEmpresaByUsuarioAndTipoEmpresa((Usuario) session.getAttribute("usuarioSesion"),tipoEmpresaService.getTipoEmpresaById(2));
-		if(compa != null){
-			session.setAttribute("empresaSession", compa);
-			return "independiente_sesion";
-			
-		}else {
-			model.addAttribute("empresa", new Empresa());
-			model.addAttribute("ciudades", ciudadService.listAllCiudad());
-			model.addAttribute("tipoempresas", tipoEmpresaService.listAllTipoEmpresa());
-			return "compania_registrar";			
-		}		
-	}
-	
-	@RequestMapping("/independienteMisolicitudes")
->>>>>>> CristianUnir
 	public String independienteSolicitudes(Model model,ModelMap modelMap, HttpSession session) {
 		Iterable<ListaEmpleadoSolicitud> listaSolicitud=listaEmpleadoSolicitudService.getListaEmpleadoSolicitudByPlantillaListaSucursalEmpresa((Empresa)session.getAttribute("empresaSession"));
 		model.addAttribute("listaSolicitudes", listaSolicitud);	
 		return "independiente_misolicitudes";
 	}
 	
-<<<<<<< HEAD
 	@RequestMapping("/independiente/servicios")
-=======
-	@RequestMapping("/independienteServicios")
->>>>>>> CristianUnir
 	public String independienteServicios(Model model,ModelMap modelMap, HttpSession session) {
 		Iterable<Plantilla> listaPlantilla=plantillaService.getPlantillaByListaSucursalEmpresa((Empresa)session.getAttribute("empresaSession"));
 		model.addAttribute("listaEmpleados", listaPlantilla);	
 		return "independiente_servicios";
 	}
 	
-<<<<<<< HEAD
 	@RequestMapping(value = "/independiente/configuracion", method = RequestMethod.GET)
-=======
-	@RequestMapping(value = "/independienteConfiguracion", method = RequestMethod.GET)
->>>>>>> CristianUnir
 	public String actualizarIndependiente(Model model,HttpSession session, ModelMap modelMap) {
 		//modelMap.addAttribute("usuario", session.getAttribute("usuarioSesion"));
 		return "independiente_configuracion";

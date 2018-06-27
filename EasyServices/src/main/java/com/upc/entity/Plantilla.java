@@ -35,19 +35,13 @@ public class Plantilla {
 	private ListaSucursal listaSucursal;
 	
 	@ManyToOne
-<<<<<<< HEAD
-<<<<<<< HEAD
 	@JoinColumn(name="idestado_validar")
 	private EstadoValidar estadoValidar;
 
-=======
+
 	@JoinColumn(name="idservicio")
 	private Servicio servicio;
->>>>>>> parent of ccfd0d8... Merge branch 'Cristian'
-=======
-	@JoinColumn(name="idservicio")
-	private Servicio servicio;
->>>>>>> parent of ccfd0d8... Merge branch 'Cristian'
+
 	
 	private String descripcion;
 

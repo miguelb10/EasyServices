@@ -42,48 +42,58 @@ public class Plantilla {
 	}
 
 
-
-	public Integer getIdplantilla() {
-		return this.idplantilla;
+	public int getIdplantilla() {
+		return idplantilla;
 	}
 
-	public void setIdplantilla(Integer idplantilla) {
+
+	public void setIdplantilla(int idplantilla) {
 		this.idplantilla = idplantilla;
 	}
 
 
+<<<<<<< HEAD
+	public Servicio getServicio() {
+		return servicio;
+=======
 	public EstadoValidar getEstadoValidar() {
 		return this.estadoValidar;
+>>>>>>> CristianUnir
 	}
 
-	public void setEstadoValidar(EstadoValidar estadoValidar) {
-		this.estadoValidar = estadoValidar;
-	}
-
-	public ListaSucursal getListaSucursal() {
-		return this.listaSucursal;
-	}
-
-	public void setListaSucursal(ListaSucursal listaSucursal) {
-		this.listaSucursal = listaSucursal;
-	}
-
-	public Servicio getServicio() {
-		return this.servicio;
-	}
 
 	public void setServicio(Servicio servicio) {
 		this.servicio = servicio;
 	}
 
-	public String getDescripcion() {
-		return this.descripcion;
+
+	public ListaSucursal getListaSucursal() {
+		return listaSucursal;
 	}
+
+
+	public void setListaSucursal(ListaSucursal listaSucursal) {
+		this.listaSucursal = listaSucursal;
+	}
+
+
+	public EstadoValidar getEstadoValidar() {
+		return estadoValidar;
+	}
+
+
+	public void setEstadoValidar(EstadoValidar estadoValidar) {
+		this.estadoValidar = estadoValidar;
+	}
+
+
+	public String getDescripcion() {
+		return descripcion;
+	}
+
 
 	public void setDescripcion(String descripcion) {
 		this.descripcion = descripcion;
 	}
-
-
-
+	
 }

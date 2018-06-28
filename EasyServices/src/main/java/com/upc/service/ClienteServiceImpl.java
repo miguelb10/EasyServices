@@ -44,5 +44,7 @@ public class ClienteServiceImpl implements ClienteService{
 		return clienteRepository.findByUsuario(usuario);
 	}
 
+	
+
 
 }

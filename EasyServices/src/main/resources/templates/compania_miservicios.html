@@ -1,11 +1,19 @@
 <!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org">
-<head>
-<title>Sucursales</title>
+<html>
+<title>Preguntas</title>
 <th:block th:include="fragments/stylesheader :: head"></th:block>
 </head>
 <body>
 	<!-- Incluyo el fragmento header donde se encuentra el nav(menu) -->
+<<<<<<< HEAD:EasyServices/src/main/resources/templates/compania_miservicios.html
+    <th:block th:include="fragments/headerCompania :: headerCompania"></th:block>
+    </div>
+	<br/>
+	<br/>
+	<div class="container" style="padding-top: 30px">
+		<div class="page-header">
+	        <h1>Mis Servicios</h1>
+=======
     <th:block th:include="fragments/headerAdministrador :: headerAdministrador "></th:block>
  	<section class="welcome_area clearfix" id="home" style="background-image: url(img/bg-img/welcome-bg.png)">
 	<br/><br/><br/><br/>
@@ -15,15 +23,15 @@
 		<div class="container" style="padding-top: 30px">
 	        <h1>Especialidades</h1>
 	        </div>
+>>>>>>> CristianUnir:EasyServices/src/main/resources/templates/administrador_especialidades.html
                 </div>                 
                   <table border="0" class="table table-hover">
 				<tr>
 					<th>Nombre</th>
-					<th>Descripcion</th>                          
-				</tr>
-				<tr th:each="ls : ${listaEspecialidades}">
-					<td th:text="${ls.nombre}"/>
-					<td th:text="${ls.descripcion}"/>
+					<th>Descripcion</th>
+					<th>Empleado</th>
+                    <th>Sucursal</th>
+                    <th>Direccion</th>                                     
 				</tr>      
                     </table> 
                 </div>

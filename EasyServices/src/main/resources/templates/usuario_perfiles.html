@@ -5,18 +5,58 @@
 <th:block th:include="fragments/stylesheader :: head"></th:block>
 </head>
 <body>
+<<<<<<< HEAD
+<<<<<<< HEAD
+	<div class="container">
+		<!-- Incluyo el fragmento header donde se encuentra el nav(menu) -->
+		<th:block th:include="fragments/headerUsuario :: headerUsuario"></th:block>
+	</div>
+	<br />
+	<br />
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+	<h1>Perfiles</h1>
+
+>>>>>>> Cristian
+=======
+=======
+>>>>>>> CristianUnir
 	<!-- Incluyo el fragmento header donde se encuentra el nav(menu) -->
     <th:block th:include="fragments/headerUsuario :: headerUsuario"></th:block>
  	<section class="welcome_area clearfix" id="home" style="background-image: url(img/bg-img/welcome-bg.png)">
 	<br/><br/><br/><br/>
 	
+<<<<<<< HEAD
+>>>>>>> CristianUnir
+=======
+>>>>>>> parent of ccfd0d8... Merge branch 'Cristian'
+=======
+>>>>>>> parent of ccfd0d8... Merge branch 'Cristian'
+=======
+>>>>>>> CristianUnir
 	<div class="container" style="padding-top: 30px">
 		<div class="page-header">
 		<div class="container" style="padding-top: 30px">
 			<h1>Perfiles</h1>
 			</div>
 		</div>
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
 		<center>
+>>>>>>> CristianUnir
+=======
+>>>>>>> parent of ccfd0d8... Merge branch 'Cristian'
+=======
+>>>>>>> parent of ccfd0d8... Merge branch 'Cristian'
+=======
+		<center>
+>>>>>>> CristianUnir
 		<div class="row">
 			<div class="col-sm-4">
 				<div class="card">
@@ -79,7 +119,92 @@
 				</div>
 			</div>
 		</div>
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+		<table border="0" class="table table-hover">
+			<tr>
+				<th>Id</th>
+				<th>Seleccionar</th>
+			</tr>
+			<tr th:each="c : ${listaclientes}">
+				<td th:text="${c.idcliente}"/>
+				<td><a th:text="Ingresar" th:value="${c.idcliente}" href="#" th:href="@{/cliente_sesion.html?id={id}(id=${c.idcliente})}"/></td>
+			</tr>
+		</table>
+	</div>
+	<div class="container" style="padding-top: 30px">
+		<div class="page-header">
+			<h1>Perfiles Empresa Compañia</h1>
+		</div>
+		<table border="0" class="table table-hover">
+			<tr>
+				<th>Id</th>
+				<th>Seleccionar</th>
+			</tr>
+			<tr th:each="ec : ${listaempresacompanias}">
+				<td th:text="${ec.idempresa}"/>
+				<td><a th:text="Ingresar" th:value="${ec.idempresa}" href="#" th:href="@{/compania/sesion.html?id={id}(id=${ec.idempresa})}"/></td>
+			</tr>
+		</table>
+	</div>
+	<div class="container" style="padding-top: 30px">
+		<div class="page-header">
+			<h1>Perfiles Empresa Independiente</h1>
+		</div>
+		<table border="0" class="table table-hover">
+			<tr>
+				<th>Id</th>
+				<th>Seleccionar</th>
+			</tr>
+			<tr th:each="ei : ${listaempresaindependientes}">
+				<td th:text="${ei.idempresa}"/>
+				<td><a th:text="Ingresar" th:value="${ei.idempresa}" href="#" th:href="@{/independiente/sesion.html?id={id}(id=${ei.idempresa})}"/></td>
+			</tr>
+		</table>
+	</div>
+	<div class="container" style="padding-top: 30px">
+		<div class="page-header">
+			<h1>Perfiles Empleado</h1>
+		</div>
+		<table border="0" class="table table-hover">
+			<tr>
+				<th>Id</th>
+				<th>Seleccionar</th>
+			</tr>
+			<tr th:each="e : ${listaempleados}">
+				<td th:text="${e.idempleado}"/>
+				<td><a th:text="Ingresar" th:value="${e.idempleado}" href="#" th:href="@{/empleado_sesion.html?id={id}(id=${e.idempleado})}"/></td>
+			</tr>
+		</table>
+	</div>
+	<div class="container" style="padding-top: 30px">
+		<div class="page-header">
+			<h1>Perfiles Administrador</h1>
+		</div>
+		<table border="0" class="table table-hover">
+			<tr>
+				<th>Id</th>
+				<th>Seleccionar</th>
+			</tr>
+			<tr th:each="a : ${listaadministradores}">
+				<td th:text="${a.idadministrador}"/>
+				<td><a th:text="Ingresar" th:value="${a.idadministrador}" href="#" th:href="@{/administrador/sesion.html?id={id}(id=${a.idadministrador})}"/></td>
+			</tr>
+		</table>
+>>>>>>> Cristian
+=======
 		</center>
+>>>>>>> CristianUnir
+=======
+>>>>>>> parent of ccfd0d8... Merge branch 'Cristian'
+=======
+>>>>>>> parent of ccfd0d8... Merge branch 'Cristian'
+=======
+		</center>
+>>>>>>> CristianUnir
 	</div>
 	</section>
         <br/>

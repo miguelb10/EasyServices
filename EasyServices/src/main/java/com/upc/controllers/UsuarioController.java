@@ -12,6 +12,15 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import com.upc.entity.Cliente;
 import com.upc.entity.Usuario;
 import com.upc.service.CiudadService;
+<<<<<<< HEAD
+
+import com.upc.service.ClienteService;
+import com.upc.service.EmpleadoService;
+import com.upc.service.EmpresaService;
+import com.upc.service.TipoEmpresaService;
+
+=======
+>>>>>>> CristianUnir
 import com.upc.service.UsuarioService;
 
 @Controller
@@ -21,6 +30,18 @@ public class UsuarioController {
 	private UsuarioService usuarioService;
 	@Autowired
 	private CiudadService ciudadService;
+<<<<<<< HEAD
+
+	@Autowired
+	private ClienteService clienteService;
+	@Autowired
+	private EmpresaService empresaService;
+	@Autowired
+	private TipoEmpresaService tipoEmpresaService;
+	@Autowired
+	private EmpleadoService empleadoService;
+=======
+>>>>>>> CristianUnir
 
 	@RequestMapping(value = "login", method = RequestMethod.POST)
 	public String login(@ModelAttribute("usuario") Usuario usuario, HttpSession session, ModelMap modelMap) {
@@ -52,6 +73,8 @@ public class UsuarioController {
 		model.addAttribute("ciudades", ciudadService.listAllCiudad());
 		return "index_registrar";
 	}
+<<<<<<< HEAD
+=======
 
 	@RequestMapping(value = "/usuario_configuracion", method = RequestMethod.GET)
 	public String actualizarUsuario(Model model,HttpSession session, ModelMap modelMap) {
@@ -65,6 +88,7 @@ public class UsuarioController {
 		return "redirect:/usuario_sesion";
 	}
 	
+>>>>>>> CristianUnir
 	@RequestMapping(value = "/usuarioRegistrar", method = RequestMethod.POST)
 	public String saveUsuario(@ModelAttribute("usuario") Usuario usuario, ModelMap modelMap, HttpSession session) {
 		try {
@@ -92,6 +116,16 @@ public class UsuarioController {
 		return "usuario_preguntas";
 	}
 
+<<<<<<< HEAD
+
+	@RequestMapping("/usuario_configuracion")
+	public String usuarioConfiguracion(Model model) {
+		Usuario usuario = new Usuario();
+		model.addAttribute("usuario", usuario);
+		return "usuario_configuracion";
+	}
+=======
+>>>>>>> CristianUnir
 
 	@RequestMapping("/usuario_sesion")
 	public String usuarioSsion(Model model, HttpSession session) {

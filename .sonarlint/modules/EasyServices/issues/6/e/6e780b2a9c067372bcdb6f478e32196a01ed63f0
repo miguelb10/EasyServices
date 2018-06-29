@@ -1,9 +1,16 @@
 
-squid:S1192Q"JDefine a constant instead of duplicating this literal "plantilla" 4 times.(œ†•›ùÿÿÿÿHåRCRITICALZ
+ysquid:UselessImportCheck"3Remove this unused import 'com.upc.entity.Cliente'.(¨®•Íùÿÿÿÿ8ÏÃÀïÂ,Hƒ"RMINORZ
 CODE_SMELL
-}squid:S1192k"NDefine a constant instead of duplicating this literal "listaSucursal" 4 times.( Ç§,HäRCRITICALZ
+„squid:S11923"NDefine a constant instead of duplicating this literal "usuarioSesion" 3 times.(Ÿ®¬=8¥ËÚ™Ä,H„"RCRITICALZ
 CODE_SMELL
-Šsquid:S1192,"NDefine a constant instead of duplicating this literal "usuarioSesion" 3 times.(¥°àªøÿÿÿÿ8ÏÃÀïÂ,HÿRCRITICALZ
+œsquid:S1192H"`Define a constant instead of duplicating this literal "redirect:/EmpresaCompaniaPerfil" 3 times.(Óå¶Ôüÿÿÿÿ8¥ËÚ™Ä,H…"RCRITICALZ
 CODE_SMELL
-ysquid:UselessImportCheck"3Remove this unused import 'com.upc.entity.Cliente'.(¨®•Íùÿÿÿÿ8ÏÃÀïÂ,H€RMINORZ
+…squid:S11925"ODefine a constant instead of duplicating this literal "empresaSession" 7 times.(·¾×j8¥ËÚ™Ä,H†"RCRITICALZ
+CODE_SMELL
+„squid:CommentedOutCodeLinef"<This block of commented-out lines of code should be removed.(â°šÕúÿÿÿÿ8¥ËÚ™Ä,H‡"RMAJORZ
+CODE_SMELL
+isquid:S24415"=Make "Empresa" serializable or don't store it in the session.(·¾×j8¥ËÚ™Ä,Hˆ"RMAJORZBUG
+jsquid:S2441F"=Make "Empresa" serializable or don't store it in the session.(Ç­Æë8¥ËÚ™Ä,H‰"RMAJORZBUG
+—squid:UselessImportCheck
+"QRemove this unused import 'org.springframework.web.bind.annotation.PathVariable'.(¹ûñÅşÿÿÿÿ8¥ËÚ™Ä,HŠ"RMINORZ
 CODE_SMELL

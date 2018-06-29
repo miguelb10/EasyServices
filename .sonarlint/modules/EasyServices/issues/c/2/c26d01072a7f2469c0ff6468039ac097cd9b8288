@@ -1,0 +1,8 @@
+
+„squid:S1192("ODefine a constant instead of duplicating this literal "empresaSession" 4 times.(ß…¥…þÿÿÿÿHª"RCRITICALZ
+CODE_SMELL
+}squid:CommentedOutCodeLineA"<This block of commented-out lines of code should be removed.(â°šÕúÿÿÿÿH«"RMAJORZ
+CODE_SMELL
+hsquid:S2441("=Make "Empresa" serializable or don't store it in the session.(ß…¥…þÿÿÿÿH¬"RMAJORZBUG
+osquid:S1854,"=Remove this useless assignment to local variable "idempresa".(÷‰ºÿÿÿÿÿH­"RMAJORZ
+CODE_SMELL

@@ -370,7 +370,7 @@ img {
     top: 0;
     padding: 0 15px;
     height: 120px;
-    background-color: transparent;
+    background-color: #25499f;
     -webkit-transition-duration: 700ms;
     transition-duration: 700ms;
 }
@@ -600,7 +600,7 @@ img {
 ------------------------- */
 
 .mosh-features-area {
-    background-color: #211b31;
+    background-color: #f9f9f9;
     position: relative;
     z-index: 1;
 }

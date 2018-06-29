@@ -1,0 +1,11 @@
+
+vsquid:UselessImportCheck"7Remove this unused import 'com.upc.entity.TipoEmpresa'.(³Œ”¸ýÿÿÿÿHè#RMINORZ
+CODE_SMELL
+‰squid:UselessImportCheck"JRemove this unused import 'org.springframework.data.jpa.repository.Query'.(ÄºöïþÿÿÿÿHä#RMINORZ
+CODE_SMELL
+†squid:UselessImportCheck"LRemove this unused import 'org.springframework.data.repository.query.Param'.(©”šôHå#RMINORZ
+CODE_SMELL
+msquid:UselessImportCheck"3Remove this unused import 'com.upc.entity.Usuario'.(æªœÕHç#RMINORZ
+CODE_SMELL
+tsquid:UselessImportCheck"5Remove this unused import 'com.upc.entity.Plantilla'.(àßÎ˜ûÿÿÿÿHæ#RMINORZ
+CODE_SMELL

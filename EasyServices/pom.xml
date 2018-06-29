@@ -6,7 +6,6 @@
 	<groupId>com.upc</groupId>
 	<artifactId>EasyServices</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<packaging>jar</packaging>
 
 	<name>EasyServices</name>
 	<description>Proyecto EasyServices</description>

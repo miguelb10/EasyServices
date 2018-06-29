@@ -23,15 +23,21 @@ public class UsuarioController {
 	private CiudadService ciudadService;
 
 	@RequestMapping(value = "login", method = RequestMethod.POST)
-	public String login(@ModelAttribute("usuario") Usuario usuario, HttpSession session, ModelMap modelMap) {
+	public String login(Model model,@ModelAttribute("usuario") Usuario usuario, HttpSession session, ModelMap modelMap) {
 		if (usuarioService.findByUsernameAndPassword(usuario.getUsername(), usuario.getPassword()) != null) {
 			Usuario usersession = usuarioService.findByUsernameAndPassword(usuario.getUsername(),
 					usuario.getPassword());
-			// usuario.setNombreCompleto(usersession.getNombreCompleto());
 			session.setAttribute("usuarioSesion", usersession);
 			modelMap.addAttribute("usersession", session.getAttribute("usuarioSesion"));
-			// session.setAttribute("username", usuario.getUsername());
-			// session.setAttribute("nombreCompleto", usuario.getNombreCompleto());
+			
+
+			String[][] nombre = new String[2][1];
+			
+			nombre[0][0]="ho";
+			nombre[1][0]="ho";
+			model.addAttribute("nombre", nombre);
+			
+			
 			return "usuario_sesion";
 		} else {
 			modelMap.put("error", "Usuario invalido");

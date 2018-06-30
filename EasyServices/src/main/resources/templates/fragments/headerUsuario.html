@@ -4,60 +4,56 @@
 </head>
 <body>
 <body>
-<div th:fragment="headerUsuario">
-    <!-- ***** Preloader Start ***** -->
-    <div id="preloader">
-        <div class="mosh-preloader"></div>
-    </div>
+	<div th:fragment="headerUsuario">
+		<!-- ***** Preloader Start ***** -->
+		<div id="preloader">
+			<div class="mosh-preloader"></div>
+		</div>
 
-    <!-- ***** Header Area Start ***** -->
-    <header class="header_area clearfix">
-        <div class="container-fluid h-100">
-            <div class="row h-100">
-                <!-- Menu Area Start -->
-                <div class="col-12 h-100">
-                    <div class="menu_area h-100">
-                        <nav class="navbar h-100 navbar-expand-lg align-items-center">
-                            <!-- Logo -->
-                            <a class="navbar-brand" href="#" th:href="@{/usuario_sesion}"><b>Usuario</b></a>
-
-                            <!-- Menu Area -->
-                            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#mosh-navbar" aria-controls="mosh-navbar" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
-
-                            <div class="collapse navbar-collapse justify-content-end" id="mosh-navbar">
-                                <ul class="navbar-nav animated" id="nav">
-                                    <li class="nav-item"><a class="nav-link" href="#" th:href="@{/usuario_perfiles}">Lista Perfiles</a></li>
-                                    <li class="nav-item"><a class="nav-link" href="#" th:href="@{/usuario_configuracion}">Configuracion</a></li>
-                                </ul>
-                                <ul class="nav navbar-nav navbar-right">
-                                    <form role="form" id="cerrarForm" method="post" th:action="@{logout}">
-                                        <input type="hidden" name="action" value="cerrar_sesion" />
-                                    </form>
-                                    <li onclick="cerrarForm.submit();">
-                                        <a href="#" data-toggle="modal" data-target='#modalRegister'>Cerrar Sesion</a>
-                                    </li>
+		<!-- ***** Header Area Start ***** -->
+		<header class="header_area clearfix">
+			<div class="container-fluid h-100">
+				<div class="row h-100">
+					<!-- Menu Area Start -->
+					<div class="col-12 h-100">
+						<div class="menu_area h-100">
+							<nav class="navbar h-100 navbar-expand-lg align-items-center">
+								<!-- Logo -->
+								<ul class="navbar-nav animated" id="nav">
+									<li class="nav-item"><a class="nav-link"
+										th:text="${'Bienvenido '+usersession.nombreCompleto}"></a></li>
 								</ul>
-                                <!-- Search Form Area Start -->
-                                <div class="search-form-area animated">
-                                    <form action="#" method="post">
-                                        <input type="search" name="search" id="search" placeholder="Type keywords &amp; hit enter"/>
-                                        <button type="submit" class="d-none"><img src="../img/core-img/search-icon.png" alt="Search"/></button>
-                                    </form>
-                                </div>
-                                <!-- Search btn -->
-                                <div class="search-button">
-                                    <a href="#" id="search-btn"><img src="../img/core-img/search-icon.png" alt="Search"/></a>
-                                    
-                                </div>
-                                
-                            </div>
-                        </nav>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </header>
-    </div>
+								<!-- Menu Area -->
+								<button class="navbar-toggler" type="button"
+									data-toggle="collapse" data-target="#mosh-navbar"
+									aria-controls="mosh-navbar" aria-expanded="false"
+									aria-label="Toggle navigation">
+									<span class="navbar-toggler-icon"></span>
+								</button>
+
+								<div class="collapse navbar-collapse justify-content-end"
+									id="mosh-navbar">
+									<ul class="navbar-nav animated" id="nav">
+										<li class="nav-item"></li>
+										<li class="nav-item"><a class="nav-link"
+											th:href="@{/usuario_perfiles}">Lista Perfiles</a></li>
+										<li class="nav-item"><a class="nav-link"
+											th:href="@{/usuario_configuracion}">Configuracion</a></li>
+										<form role="form" id="cerrarForm" method="post" th:action="@{logout}">
+											<input type="hidden" name="action" value="cerrar_sesion" />
+										</form>
+										<li onclick="cerrarForm.submit();" class="nav-item"><a
+											href="#" class="nav-link" >Cerrar
+												Sesion</a></li>
+									</ul>
+								</div>
+							</nav>
+						</div>
+					</div>
+				</div>
+			</div>
+		</header>
+	</div>
 </body>
 </body>
 </html>

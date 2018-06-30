@@ -39,7 +39,7 @@ public class Solicitud {
 	@JoinColumn(name="idestadovalidar_cliente")
 	private EstadoValidar estadoValidarByIdestadovalidarCliente;
 	
-	private Date fecha_solicitado;
+	private String fecha_solicitado;
 	private Date fechaAprobado;
 	private Date fechaAtencion;
 	private int calificacion;
@@ -116,16 +116,15 @@ public class Solicitud {
 	public void setEstadoValidarByIdestadovalidarCliente(EstadoValidar estadoValidarByIdestadovalidarCliente) {
 		this.estadoValidarByIdestadovalidarCliente = estadoValidarByIdestadovalidarCliente;
 	}
-
 	
-
-	public Date getFecha_solicitado() {
+	
+	public String getFecha_solicitado() {
 		return fecha_solicitado;
 	}
 
 
 
-	public void setFecha_solicitado(Date fecha_solicitado) {
+	public void setFecha_solicitado(String fecha_solicitado) {
 		this.fecha_solicitado = fecha_solicitado;
 	}
 

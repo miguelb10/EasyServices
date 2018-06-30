@@ -32,7 +32,6 @@
 				<tr th:each="ls : ${listaEmpleados}">
 					<td th:text="${ls.descripcion}"/>
 					<td th:text="${ls.servicio.nombre}"/>
-					<td th:text="${ls.servicio.empleado.usuario.nombreCompleto}"/>
 					<td th:text="${ls.servicio.especialidad.nombre}"/>
 					<td th:text="${ls.listaSucursal.ciudad.nombre}"/>
 					<td><a th:href="${'/compania/plantilla/'+ls.idplantilla}">Ver</a></td>

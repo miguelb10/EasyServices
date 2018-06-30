@@ -17,10 +17,9 @@
 			<div class="row" align="center">
 				<div class="col-sm-3" align="center" th:each="p : ${useraux}">
 					<div class="card">
-						<div class="card-body" style="text-align: center">
+						<div class="card-body">
 							<h5 class="card-title" th:text="${p.nomPerfil}"></h5>
-							<a th:href="@{${p.accion}}"> <img th:src="${p.recurso}" width="200"
-								height="100" />
+							<a th:href="@{${p.accion}}"> <img th:src="${p.recurso}" th:style="'width=484'"/>
 							</a>
 						</div>
 					</div>

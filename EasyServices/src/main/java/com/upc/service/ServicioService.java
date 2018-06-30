@@ -1,6 +1,6 @@
 package com.upc.service;
 
-import com.upc.entity.Empleado;
+import com.upc.entity.Empresa;
 import com.upc.entity.Servicio;
 
 public interface ServicioService {
@@ -9,5 +9,5 @@ public interface ServicioService {
 	Servicio saveServicio(Servicio servicio);
 	void deleteServicio(Integer id);
 
-	Iterable<Servicio> getServicioByEmpleado(Empleado empleado);
+	Iterable<Servicio> getServicioByEmpresa(Empresa empresa);
 }

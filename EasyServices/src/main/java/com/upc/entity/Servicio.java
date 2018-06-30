@@ -22,8 +22,8 @@ public class Servicio {
 	private int idservicio;
 	
 	@ManyToOne
-	@JoinColumn(name="idempleado")
-	private Empleado empleado;
+	@JoinColumn(name="idempresa")
+	private Empresa empresa;
 	
 	@ManyToOne
 	@JoinColumn(name="idespecialidad")
@@ -44,13 +44,20 @@ public class Servicio {
 		this.idservicio = idservicio;
 	}
 
-	public Empleado getEmpleado() {
-		return this.empleado;
+	public Empresa getEmpresa() {
+		return empresa;
 	}
 
-	public void setEmpleado(Empleado empleado) {
-		this.empleado = empleado;
+
+	public void setEmpresa(Empresa empresa) {
+		this.empresa = empresa;
 	}
+
+
+	public void setIdservicio(int idservicio) {
+		this.idservicio = idservicio;
+	}
+
 
 	public Especialidad getEspecialidad() {
 		return this.especialidad;

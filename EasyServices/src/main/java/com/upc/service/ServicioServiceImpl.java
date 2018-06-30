@@ -3,7 +3,7 @@ package com.upc.service;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.upc.entity.Empleado;
+import com.upc.entity.Empresa;
 import com.upc.entity.Servicio;
 import com.upc.repository.ServicioRepository;
 
@@ -38,9 +38,10 @@ public class ServicioServiceImpl implements ServicioService{
 	}
 
 	@Override
-	public Iterable<Servicio> getServicioByEmpleado(Empleado empleado) {
+	public Iterable<Servicio> getServicioByEmpresa(Empresa empresa) {
 		// TODO Auto-generated method stub
-		return servicioRepository.findByEmpleado(empleado);
+		return servicioRepository.findByEmpresa(empresa);
 	}
+
 
 }

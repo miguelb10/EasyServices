@@ -38,16 +38,43 @@ public class Solicitud {
 	@ManyToOne
 	@JoinColumn(name="idestadovalidar_cliente")
 	private EstadoValidar estadoValidarByIdestadovalidarCliente;
-	private Date fechaSolicitado;
+	
+	private Date fecha_solicitado;
 	private Date fechaAprobado;
 	private Date fechaAtencion;
 	private int calificacion;
 	private String descripcion;
+	private String direccion;
 
 
 	public Solicitud() {
 		super();
 	}
+
+	
+
+	public String getDireccion() {
+		return direccion;
+	}
+
+
+
+	public void setDireccion(String direccion) {
+		this.direccion = direccion;
+	}
+
+
+
+	public void setIdsolicitud(int idsolicitud) {
+		this.idsolicitud = idsolicitud;
+	}
+
+
+
+	public void setCalificacion(int calificacion) {
+		this.calificacion = calificacion;
+	}
+
 
 
 	public Integer getIdsolicitud() {
@@ -90,13 +117,19 @@ public class Solicitud {
 		this.estadoValidarByIdestadovalidarCliente = estadoValidarByIdestadovalidarCliente;
 	}
 
-	public Date getFechaSolicitado() {
-		return this.fechaSolicitado;
+	
+
+	public Date getFecha_solicitado() {
+		return fecha_solicitado;
 	}
 
-	public void setFechaSolicitado(Date fechaSolicitado) {
-		this.fechaSolicitado = fechaSolicitado;
+
+
+	public void setFecha_solicitado(Date fecha_solicitado) {
+		this.fecha_solicitado = fecha_solicitado;
 	}
+
+
 
 	public Date getFechaAprobado() {
 		return this.fechaAprobado;
@@ -130,4 +163,6 @@ public class Solicitud {
 		this.descripcion = descripcion;
 	}
 
+	
+	
 }

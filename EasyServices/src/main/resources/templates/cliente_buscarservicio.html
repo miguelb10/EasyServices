@@ -35,6 +35,7 @@
 				<thead>
 					<tr>
 						<th>Codigo</th>
+						<th>Empresa</th>
 						<th>Servicio</th>
 						<th>Solicitar</th>
 					</tr>
@@ -42,8 +43,9 @@
 				<tbody>
 					<tr th:each="s : ${servicios}">
 						<td th:text="${s.idservicio}"></td>
+						<td th:text="${s.empresa.nombre}"></td>
 						<td th:text="${s.nombre}"></td>
-						<td><a th:href="${'/entidad/edit/'+s.idservicio}">Contratar</a></td>
+						<td><a th:href="${'/solicitud/new/'+s.idservicio}">Contratar</a></td>
 					</tr>
 				</tbody>
 			</table>

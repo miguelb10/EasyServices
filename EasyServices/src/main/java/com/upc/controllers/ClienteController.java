@@ -14,6 +14,7 @@ import com.upc.entity.Cliente;
 import com.upc.entity.Usuario;
 import com.upc.service.CiudadService;
 import com.upc.service.ClienteService;
+import com.upc.service.ServicioService;
 
 @Controller
 public class ClienteController {	
@@ -22,6 +23,8 @@ public class ClienteController {
 	private CiudadService ciudadService;
 	@Autowired
 	private ClienteService clienteService;
+	@Autowired
+	private ServicioService servicioService;
 	
 	@RequestMapping("/indexCliente")
 	public String indexAcerca(Model model, HttpSession session, ModelMap modelMap) {		
@@ -31,7 +34,9 @@ public class ClienteController {
 	
 	@RequestMapping("/clienteBuscarServicio")
 	public String clienteBuscarServicio(Model model, HttpSession session, ModelMap modelMap) {		
+		model.addAttribute("servicios", servicioService.listAllServicio());		
 		modelMap.addAttribute("usersession", session.getAttribute("usuarioSesion"));
+		
 		return "cliente_buscarservicio";
 	}
 	

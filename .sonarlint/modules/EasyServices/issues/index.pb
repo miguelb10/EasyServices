@@ -143,8 +143,6 @@ g
 7src/main/resources/templates/usuario_configuracion.html,4\2\42e40386d20dbee0aac2fed807832333519d2f08
 k
 ;src/main/resources/static/css/dataTables.bootstrap4.min.css,a\1\a129b4bb4545c3518a89d8bcba040ea06c67e735
-V
-&src/main/resources/static/js/pri.jpage,9\9\990b0f002d9da1498ef0bfedd1d4c73dd41c8e43
 Z
 *src/main/resources/static/js/popper.min.js,c\6\c6d1714cfca6ae67d9748e6b5cecdee5e6aa6d89
 e

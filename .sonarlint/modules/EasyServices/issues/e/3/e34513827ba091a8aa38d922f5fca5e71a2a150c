@@ -1,5 +1,7 @@
 
-…squid:S1192"NDefine a constant instead of duplicating this literal "usuarioSesion" 3 times.(Æ¾8Üñ²Ä,HÒ*RCRITICALZ
+…squid:S1192"NDefine a constant instead of duplicating this literal "usuarioSesion" 3 times.(Æ¾8Üñ²Ä,HŒ/RCRITICALZ
 CODE_SMELL
-psquid:S2441,">Make "Empleado" serializable or don't store it in the session.(§ñÕ¯ÿÿÿÿÿ8Üñ²Ä,HÔ*RMAJORZBUG
-psquid:S2441">Make "Empleado" serializable or don't store it in the session.(Üü™öıÿÿÿÿ8Üñ²Ä,HÓ*RMAJORZBUG
+psquid:S2441">Make "Empleado" serializable or don't store it in the session.(Üü™öıÿÿÿÿ8Üñ²Ä,H/RMAJORZBUG
+psquid:S2441-">Make "Empleado" serializable or don't store it in the session.(§ñÕ¯ÿÿÿÿÿ8Üñ²Ä,H/RMAJORZBUG
+ysquid:UselessImportCheck"3Remove this unused import 'com.upc.entity.Cliente'.(¨®•Íùÿÿÿÿ8ÂÚÄ÷Ä,H‘/RMINORZ
+CODE_SMELL

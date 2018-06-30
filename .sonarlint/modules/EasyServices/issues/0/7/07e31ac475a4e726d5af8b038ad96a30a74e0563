@@ -1,11 +1,19 @@
 
-jsquid:S2441P"=Make "Usuario" serializable or don't store it in the session.(ÛÄ¼Ï8å¬‚ĞÀ,Hš-RMAJORZBUG
-„squid:S11928"HDefine a constant instead of duplicating this literal "usuario" 5 times.(›õ×¶ûÿÿÿÿ8–°ç“Ä,H—-RCRITICALZ
+squid:S2293Š"YReplace the type specification in this constructor call with the diamond operator ("<>").(“Ñ¸İ8»•É÷Ä,H“/RMINORZ
 CODE_SMELL
-jsquid:S2441"=Make "Usuario" serializable or don't store it in the session.(ÛÄ¼Ï8êÄöµÀ,H”-RMAJORZBUG
-…squid:S1192"NDefine a constant instead of duplicating this literal "usuarioSesion" 7 times.(ÛÄ¼Ï8êÄöµÀ,H™-RCRITICALZ
+jsquid:S2441a"=Make "Usuario" serializable or don't store it in the session.(ÛÄ¼Ï8å¬‚ĞÀ,H -RMAJORZBUG
+squid:S22933"YReplace the type specification in this constructor call with the diamond operator ("<>").(“Ñ¸İ8Ãİ°óÄ,HÀ-RMINORZ
 CODE_SMELL
-ƒsquid:S1192"LDefine a constant instead of duplicating this literal "usersession" 4 times.(—¼ñ8ÊÏÀ,H•-RCRITICALZ
+jsquid:S24410"=Make "Usuario" serializable or don't store it in the session.(ÛÄ¼Ï8êÄöµÀ,H¢-RMAJORZBUG
+…squid:S11920"NDefine a constant instead of duplicating this literal "usuarioSesion" 8 times.(ÛÄ¼Ï8êÄöµÀ,H¡-RCRITICALZ
 CODE_SMELL
-‹squid:S1192)"ODefine a constant instead of duplicating this literal "usuario_sesion" 3 times.(´Ÿªùÿÿÿÿ8îæ²ÏÀ,H–-RCRITICALZ
+tsquid:S1854l"@Remove this useless assignment to local variable "listPerfiles".(“Ñ¸İ8»•É÷Ä,H”/RMAJORZ
+CODE_SMELL
+„squid:S1192I"HDefine a constant instead of duplicating this literal "usuario" 5 times.(›õ×¶ûÿÿÿÿ8–°ç“Ä,HŸ-RCRITICALZ
+CODE_SMELL
+ƒsquid:S11921"LDefine a constant instead of duplicating this literal "usersession" 4 times.(—¼ñ8ÊÏÀ,H£-RCRITICALZ
+CODE_SMELL
+squid:S2293l"YReplace the type specification in this constructor call with the diamond operator ("<>").(“Ñ¸İ8½¦òÄ,HÑ.RMINORZ
+CODE_SMELL
+tsquid:S18543"@Remove this useless assignment to local variable "listPerfiles".(“Ñ¸İ8–Î’ôÄ,Hß.RMAJORZ
 CODE_SMELL

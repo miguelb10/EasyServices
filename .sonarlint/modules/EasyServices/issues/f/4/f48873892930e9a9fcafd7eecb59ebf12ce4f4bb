@@ -1,5 +1,9 @@
 
-osquid:S24412"=Make "Cliente" serializable or don't store it in the session.(‰å‡ëıÿÿÿÿ8İñ²Ä,H×*RMAJORZBUG
-osquid:S2441$"=Make "Cliente" serializable or don't store it in the session.(‡˜ñäşÿÿÿÿ8İñ²Ä,HÖ*RMAJORZBUG
-…squid:S1192""NDefine a constant instead of duplicating this literal "usuarioSesion" 3 times.(Áëîñ8¸ß§‰Á,HÅRCRITICALZ
+ƒsquid:S1192"LDefine a constant instead of duplicating this literal "usersession" 3 times.(—¼ñ8¨ÇõûÄ,Hš/RCRITICALZ
+CODE_SMELL
+‰squid:S1192"RDefine a constant instead of duplicating this literal "cliente_principal" 3 times.(ï™Ö¯8ü§‹øÄ,H•/RCRITICALZ
+CODE_SMELL
+osquid:S24418"=Make "Cliente" serializable or don't store it in the session.(‰å‡ëıÿÿÿÿ8İñ²Ä,Hÿ.RMAJORZBUG
+osquid:S2441*"=Make "Cliente" serializable or don't store it in the session.(‡˜ñäşÿÿÿÿ8İñ²Ä,Hş.RMAJORZBUG
+…squid:S1192"NDefine a constant instead of duplicating this literal "usuarioSesion" 5 times.(—¼ñ8¸ß§‰Á,H€/RCRITICALZ
 CODE_SMELL

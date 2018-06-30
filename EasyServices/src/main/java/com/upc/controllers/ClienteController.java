@@ -24,11 +24,17 @@ public class ClienteController {
 	private ClienteService clienteService;
 	
 	@RequestMapping("/indexCliente")
-	public String indexAcerca(Model model) {
-		Usuario usuario=new Usuario();
-		model.addAttribute("usuario",usuario );
+	public String indexAcerca(Model model, HttpSession session, ModelMap modelMap) {		
+		modelMap.addAttribute("usersession", session.getAttribute("usuarioSesion"));
 		return "cliente_principal";
 	}
+	
+	@RequestMapping("/clienteBuscarServicio")
+	public String clienteBuscarServicio(Model model, HttpSession session, ModelMap modelMap) {		
+		modelMap.addAttribute("usersession", session.getAttribute("usuarioSesion"));
+		return "cliente_buscarservicio";
+	}
+	
 	@RequestMapping("/clientePerfil")
 	public String findCliente(Model model, HttpSession session, ModelMap modelMap) {
 		Cliente clientel = clienteService.getClienteByUsuario((Usuario) session.getAttribute("usuarioSesion"));

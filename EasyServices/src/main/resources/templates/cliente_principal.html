@@ -5,11 +5,46 @@
 <th:block th:include="fragments/stylesheader :: head"></th:block>
 </head>
 <body>
-	<div class="container">
 	<!-- Incluyo el fragmento header donde se encuentra el nav(menu) -->
-    <th:block th:include="fragments/headerCliente :: headerCliente"></th:block>
-    </div>
-    <h1>hol</h1>
+	<th:block th:include="fragments/headerCliente :: headerCliente"></th:block>
+	<section class="mosh-features-area section_padding_100">
+		<div id="main_content" style="padding: 15px;">
+			<div id="div_info">
+				<h2>
+					Bienvenido <label th:text="${usersession.nombreCompleto}">!</label>
+				</h2>
+				<h3>Tu Resumen:</h3>
+				<table border="0" class="table table-hover">
+					<tr>
+						<th>Total servicios pendientes</th>
+						<th>Total servicios atendidos</th>
+						<th>Total</th>
+					</tr>
+					<tr>
+						<td></td>
+					</tr>
+				</table>
+			</div>
+			<div id="div_ayuda">
+				<h3>Información de ayuda:</h3>
+				<p>
+					-<label>"Buscar Servicio":</label> En esta pestaña encontraras los
+					servicios que necesites y quieres sacar una consulta.
+				</p>
+				<p>
+					-<label>"Mis Servicios":</label> En esta pestaña podras ver el
+					estado de tus servicios, si estos fueron atendidos o si todavia no
+					lo fueron.
+				</p>
+				<p>
+					-<label>"Configuración:"</label> En esta pestaña podras editar
+					opciones de tu perfil como: contraseña, correo electronico,
+					telefono, direccion, etc.
+				</p>
+			</div>
+
+		</div>
+	</section>
 	<th:block th:include="fragments/down :: down"></th:block>
 </body>
 </html>

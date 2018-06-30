@@ -1,8 +1,8 @@
 
-„squid:S1192("ODefine a constant instead of duplicating this literal "empresaSession" 4 times.(ß…¥…þÿÿÿÿHª"RCRITICALZ
+}squid:CommentedOutCodeLineH"<This block of commented-out lines of code should be removed.(â°šÕúÿÿÿÿHˆ/RMAJORZ
 CODE_SMELL
-}squid:CommentedOutCodeLineA"<This block of commented-out lines of code should be removed.(â°šÕúÿÿÿÿH«"RMAJORZ
+…squid:S1192,"ODefine a constant instead of duplicating this literal "empresaSession" 3 times.(·¾×j8ÇŸ´÷Ä,H‰/RCRITICALZ
 CODE_SMELL
-hsquid:S2441("=Make "Empresa" serializable or don't store it in the session.(ß…¥…þÿÿÿÿH¬"RMAJORZBUG
-osquid:S1854,"=Remove this useless assignment to local variable "idempresa".(÷‰ºÿÿÿÿÿH­"RMAJORZ
+isquid:S2441,"=Make "Empresa" serializable or don't store it in the session.(·¾×j8ÇŸ´÷Ä,HŠ/RMAJORZBUG
+”squid:UselessImportCheck	"SRemove this unused import 'org.springframework.web.bind.annotation.ModelAttribute'.(®ùæé8ÇŸ´÷Ä,H‹/RMINORZ
 CODE_SMELL

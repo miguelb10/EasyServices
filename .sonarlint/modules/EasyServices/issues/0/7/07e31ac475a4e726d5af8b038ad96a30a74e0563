@@ -1,15 +1,11 @@
 
-…squid:S1192"NDefine a constant instead of duplicating this literal "usuarioSesion" 7 times.(ÛÄ¼Ï8êÄöµÀ,HRCRITICALZ
+jsquid:S2441P"=Make "Usuario" serializable or don't store it in the session.(ÛÄ¼Ï8å¬‚ĞÀ,Hš-RMAJORZBUG
+„squid:S11928"HDefine a constant instead of duplicating this literal "usuario" 5 times.(›õ×¶ûÿÿÿÿ8–°ç“Ä,H—-RCRITICALZ
 CODE_SMELL
-ƒsquid:S1192 "LDefine a constant instead of duplicating this literal "usersession" 4 times.(—¼ñ8ÊÏÀ,HRCRITICALZ
+jsquid:S2441"=Make "Usuario" serializable or don't store it in the session.(ÛÄ¼Ï8êÄöµÀ,H”-RMAJORZBUG
+…squid:S1192"NDefine a constant instead of duplicating this literal "usuarioSesion" 7 times.(ÛÄ¼Ï8êÄöµÀ,H™-RCRITICALZ
 CODE_SMELL
-„squid:CommentedOutCodeLine!"<This block of commented-out lines of code should be removed.(–Š¢Œúÿÿÿÿ8¡­›”Ä,HÓ RMAJORZ
+ƒsquid:S1192"LDefine a constant instead of duplicating this literal "usersession" 4 times.(—¼ñ8ÊÏÀ,H•-RCRITICALZ
 CODE_SMELL
-jsquid:S2441"=Make "Usuario" serializable or don't store it in the session.(ÛÄ¼Ï8å¬‚ĞÀ,H‹RMAJORZBUG
-jsquid:S2441J"=Make "Usuario" serializable or don't store it in the session.(ÛÄ¼Ï8êÄöµÀ,HÑ RMAJORZBUG
-‹squid:S1192#"ODefine a constant instead of duplicating this literal "usuario_sesion" 3 times.(´Ÿªùÿÿÿÿ8îæ²ÏÀ,HŒRCRITICALZ
-CODE_SMELL
-„squid:S11922"HDefine a constant instead of duplicating this literal "usuario" 5 times.(›õ×¶ûÿÿÿÿ8–°ç“Ä,HRCRITICALZ
-CODE_SMELL
-„squid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(úíÓñúÿÿÿÿ8¡­›”Ä,HÒ RMAJORZ
+‹squid:S1192)"ODefine a constant instead of duplicating this literal "usuario_sesion" 3 times.(´Ÿªùÿÿÿÿ8îæ²ÏÀ,H–-RCRITICALZ
 CODE_SMELL

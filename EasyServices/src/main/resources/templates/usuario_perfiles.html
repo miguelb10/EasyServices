@@ -6,82 +6,35 @@
 </head>
 <body>
 	<!-- Incluyo el fragmento header donde se encuentra el nav(menu) -->
-    <th:block th:include="fragments/headerUsuario :: headerUsuario"></th:block>
- 	<section class="mosh-features-area section_padding_100 clearfix" >
-	<br/><br/><br/><br/>
-	
-	<div class="container" style="padding-top: 30px">
-		<div class="page-header">
+	<th:block th:include="fragments/headerUsuario :: headerUsuario"></th:block>
+	<section class="mosh-features-area section_padding_100 clearfix">
+
 		<div class="container" style="padding-top: 30px">
-			<h1>Perfiles</h1>
-			</div>
-		</div>
-		<div class="row">
-			<div class="col-sm-4">
-				<div class="card">
-					<div class="card-body" style="text-align: center">
-						<h5 class="card-title">Cliente</h5>
-						<img src="../img/cliente.jpg" width="250" height="300" />
-						<form th:action="@{/clientePerfil}">
-							<br/>
-							<input class="btn btn-primary" type="submit" value="Cliente" />
-						</form>
-					</div>
+			<div class="page-header">
+				<div class="container" style="padding-top: 30px">
+					<h1>Perfiles</h1>
 				</div>
 			</div>
-			<div class="col-sm-4">
-				<div class="card">
-					<div class="card-body" style="text-align: center">
-						<h5 class="card-title">Empresa</h5>
-						<img src="../img/empresa.png" width="250" height="300" />
-						<form th:action="@{/EmpresaCompaniaPerfil}">
-							<br/>
-							<input class="btn btn-primary" type="submit" value="Empresa" />
-						</form>
-					</div>
-				</div>
-			</div>
-			<div class="col-sm-4">
-				<div class="card">
-					<div class="card-body" style="text-align: center">
-						<h5 class="card-title">Independiente</h5>
-						<img src="../img/empresa.png" width="250" height="300" />
-						<form th:action="@{/EmpresaIndependientePerfil}">
-							<br/>
-							<input class="btn btn-primary" type="submit" value="Independiente" />
-						</form>
-					</div>
-				</div>
-			</div>
-			<div class="col-sm-4">
-				<div class="card">
-					<div class="card-body" style="text-align: center">
-						<h5 class="card-title">Empleado</h5>
-						<img src="../img/empleado.jpg" width="250" height="300" />
-						<form th:action="@{/empleadoPerfil}">
-							<br/>
-							<input class="btn btn-primary" type="submit" value="Empleado" />
-						</form>
-					</div>
-				</div>
-			</div>
-			<div class="col-sm-4">
-				<div class="card">
-					<div class="card-body" style="text-align: center">
-						<h5 class="card-title">Administrador</h5>
-						<img src="../img/empleado.jpg" width="250" height="300" />
-						<form th:action="@{/administradorPerfil}">
-							<br/>
-							<input class="btn btn-primary" type="submit" value="Administrador" />
-						</form>
+			<div class="row" align="center">
+				<div class="col-sm-3" align="center" th:each="p : ${useraux}">
+					<div class="card">
+						<div class="card-body" style="text-align: center">
+							<h5 class="card-title" th:text="${p.nomPerfil}"></h5>
+							<a th:href="@{${p.accion}}"> <img th:src="${p.recurso}" width="200"
+								height="100" />
+							</a>
+							<form th:action="@{/}">
+								<br /> <input class="btn btn-primary" type="submit"
+									value="Cliente" />
+							</form>
+						</div>
 					</div>
 				</div>
 			</div>
 		</div>
-	</div>
 	</section>
-        <br/>
-	<br/>
+	<br />
+	<br />
 	<th:block th:include="fragments/down :: down"></th:block>
 </body>
 </html>

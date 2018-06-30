@@ -16,24 +16,6 @@
 			<h2>Bienvenido <h2 th:text="${usersession.nombreCompleto}">!</h2></h2>
 			<h4>Tu Resumen:</h4>
 			</div>
-			<table border="0" class="table table-hover">
-				<tr>
-					<th>Total de perfiles</th>
-					<th>Total servicios pendientes</th>
-					<th>Total servicios atendidos</th>
-					<th>Total</th>
-				</tr>
-				
-			</table>
-			<table class="table table-striped">
-			<tr th:each="p : ${nombre}">
-				<th th:text="${p[0][1]}">Id</th>
-
-			</tr>
-			<tr th:each="p : ${nombre}">
-				<td th:text="${p[0][0]}">Id</td>
-			</tr>
-		</table>
 		</div>
 		<div id="div_ayuda">
 			<h3>Información de ayuda:</h3>

@@ -123,3 +123,13 @@ v
 Fsrc/main/java/com/upc/repository/ListaEmpleadoSolicitudRepository.java,5\e\5e877956b0f2e33de3e35f23cd044c95201d239d
 7
 pom.xml,4\4\442292b8a7efeabbe4cc176709b833b1792140ec
+_
+/src/main/resources/static/css/bootstrap.min.css,7\4\74d640cf9a95f80d5abe473ab1597b69c7adb3ae
+b
+2src/main/resources/static/css/font-awesome.min.css,4\4\44075339f9ffd363799f6cac9849102b63c0aaa6
+`
+0src/main/resources/static/css/magnific-popup.css,3\5\35580df54598f7ca7b98c3be008567d48160c3ab
+b
+2src/main/resources/static/css/owl.carousel.min.css,1\7\1783e6f468200023b91aa4e8ea84671ba9485f95
+\
+,src/main/resources/static/css/responsive.css,5\f\5fa7d64a71abb81564a6fe4cf18627ae39a53290

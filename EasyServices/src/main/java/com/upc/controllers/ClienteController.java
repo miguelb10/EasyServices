@@ -27,7 +27,7 @@ public class ClienteController {
 	public String indexAcerca(Model model) {
 		Usuario usuario=new Usuario();
 		model.addAttribute("usuario",usuario );
-		return "indexCliente";
+		return "cliente_principal";
 	}
 	@RequestMapping("/clientePerfil")
 	public String findCliente(Model model, HttpSession session, ModelMap modelMap) {

@@ -7,8 +7,7 @@
 <body>
 	<!-- Incluyo el fragmento header donde se encuentra el nav(menu) -->
 	<th:block th:include="fragments/headerUsuario :: headerUsuario"></th:block>
-	<section class="mosh-features-area section_padding_100 clearfix">
-
+	<section class="mosh-features-area section_padding_100">
 		<div class="container" style="padding-top: 30px">
 			<div class="page-header">
 				<div class="container" style="padding-top: 30px">
@@ -23,18 +22,12 @@
 							<a th:href="@{${p.accion}}"> <img th:src="${p.recurso}" width="200"
 								height="100" />
 							</a>
-							<form th:action="@{/}">
-								<br /> <input class="btn btn-primary" type="submit"
-									value="Cliente" />
-							</form>
 						</div>
 					</div>
 				</div>
 			</div>
 		</div>
 	</section>
-	<br />
-	<br />
 	<th:block th:include="fragments/down :: down"></th:block>
 </body>
 </html>

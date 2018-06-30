@@ -79,8 +79,12 @@ img {
 }
 
 .section_padding_100 {
-    padding-top: 100px;
-    padding-bottom: 100px;
+    padding-top: 120px;
+    padding-bottom: 110px;
+}
+.section_padding_conf {
+    padding-top: 180px;
+    padding-bottom: 190px;
 }
 
 .section_padding_100_0 {
@@ -929,7 +933,8 @@ span.accor-open {
 -------------------------- */
 
 .footer-area {
-    position: relative;
+	left: 0; bottom: 0;width: 100%;
+    position: absolute;
     z-index: 1;
     background-color: #211b31;
 }

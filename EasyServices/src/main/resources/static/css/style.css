@@ -933,9 +933,8 @@ span.accor-open {
 -------------------------- */
 
 .footer-area {
-	left: 0; bottom: 0;width: 100%;
+	left: 0; bottom: 1;width: 100%;
     position: absolute;
-    z-index: 1;
     background-color: #211b31;
 }
 

@@ -2,100 +2,94 @@
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
 <title>Registrar Usuario</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
 <th:block th:include="fragments/stylesheader :: head"></th:block>
 </head>
 <body>
 	<!-- Incluyo el fragmento header donde se encuentra el nav(menu) -->
-    <th:block th:include="fragments/header :: header"></th:block>
- 	<section class="welcome_area clearfix" id="home" style="background-image: url(img/bg-img/welcome-bg.png)">
-	<br/><br/><br/><br/>
-
-
-	 <div class="container" style="padding-top: 30px">
-		<div class="page-header">
-	        <h1>Ingrese sus datos para poder registrarse</h1>
-	    </div>
-	    <div class="row">
-	    	<div class="col-md-12">
-                <ul class="nav nav-tabs">
-                    <li class="active"><a href="#tab1" data-toggle="tab">Usuario</a></li>
-                    
-                </ul>
-                <div class="tab-content">
-                	<!--CLIENTE-->
-							<div class="container">
-							    <h1><span class="glyphicon glyphicon-user"></span>Registrar nuevo <b>Usuario</b></h1>
-							    <div class="boxbg" >
-							        <hr/>
-							        <form id="client_form" th:action="@{/usuarioRegistrar}" th:object="${usuario}" method="post">
-							        <table style="width: 100%;" >
-							        	<tr>
-							        		<td><label>Username:</label></td>
-							        		<td><input type="text" th:field="*{username}" name="username" class="form-control" required="required"/><br/></td>
-							        		<td rowspan="5" style="width: 20%"></td>
-							        		<td><label>DNI:</label></td>
-                                            <td><input type="number" th:field="*{dni}" name="DNI" class="form-control" minlength="8" maxlength="8" required="required"/><br/></td>
-							        	</tr>
-							        	<tr>
-							        		<td><label>Contraseña:</label></td>
-							        		<td><input type="password" name="password" class="form-control" required="required"/><br/></td>
-							        		<td><label>Sexo:</label></td>
-							        		<td><select name="sexo" th:field="*{sexo}"  class="form-control">
-							        			<option value="masculino">Masculino</option>
-							        			<option value="femenino">Femenino</option>
-							        			</select>
-							        			<br/>
-							        		</td>
-							        	</tr>
-							        	<tr>
-							        		<td><label>Repetir Contraseña:</label></td>
-							        		<td><input type="password" name="passwordRepeat"  class="form-control" required="required"/><br/></td>
-							        		<td><label>Fecha Nacimiento:</label></td>
-							        		<td><input type="date" name="fecha" th:field="*{fechaNacimiento}"  class="form-control" required="required"/><br/></td>
-							        	</tr>  
-							        	<tr>
-							        		<td><label>Nombre Completo:</label></td>	
-							        		<td><input type="text" name="nombre" th:field="*{nombreCompleto}"  class="form-control" required="required"/><br/></td>
-							       			<td><label>Acerca de mi:</label></td>
-							        		<td><input type="text" name="descripcion" th:field="*{descripcion}"  class="form-control"/><br/></td>
-							        	</tr>   	
-							        	<tr>
-							        		<td><label>Direccion:</label></td>
-							        		<td><input type="text" name="direccion" class="form-control" /><br/></td>
-							        	</tr>
-							        	<tr>
-							        		<td><label>Ciudad:</label></td>
-							        		<td><select th:field="*{ciudad}"  class="form-control">
-							        			<option th:each="u : ${ciudades}"
-							        					th:text="${u.nombre}"
-							        					th:value="${u.idciudad}">
-							        			</option>
-							        			</select>
-							        			<br/>
-							        		</td>
-							        	</tr>
-							        </table>
-							        <hr>
-							        <center>
-							        	<input type="submit" class="btn btn-primary" name="action" value="Registrar Usuario"/>
-							        </center>
-							        </hr>
-							        </form>
-							    </div>
+	<th:block th:include="fragments/header :: header"></th:block>
+	<section class="mosh-clients-area section_padding_100 clearfix">
+		<div class="container">
+			<div class="page-header">
+				<h1>Ingrese sus datos para poder registrarse</h1>
+			</div>
+			<hr style="border: 20px;" />
+		<hr style="border: 20px;" />
+			<div class="row">
+				<div class="col-md-12">
+					<div class="tab-content">
+						<!--CLIENTE-->
+						<div class="container">
+							<div class="boxbg">
+								<hr />
+								<form id="client_form" th:action="@{/usuarioRegistrar}"
+									th:object="${usuario}" method="post">
+									<table style="width: 100%;">
+										<tr>
+											<td><label>Username:</label></td>
+											<td><input type="text" th:field="*{username}"
+												name="username" class="form-control" required="required" /><br /></td>
+											<td rowspan="5" style="width: 20%"></td>
+											<td><label>DNI:</label></td>
+											<td><input type="number" th:field="*{dni}" name="DNI"
+												class="form-control" minlength="8" maxlength="8"
+												required="required" /><br /></td>
+										</tr>
+										<tr>
+											<td><label>ContraseÃ±a:</label></td>
+											<td><input type="password" name="password"
+												class="form-control" required="required" /><br /></td>
+											<td><label>Sexo:</label></td>
+											<td><select name="sexo" th:field="*{sexo}"
+												class="form-control">
+													<option value="masculino">Masculino</option>
+													<option value="femenino">Femenino</option>
+											</select> <br /></td>
+										</tr>
+										<tr>
+											<td><label>Repetir ContraseÃ±a:</label></td>
+											<td><input type="password" name="passwordRepeat"
+												class="form-control" required="required" /><br /></td>
+											<td><label>Fecha Nacimiento:</label></td>
+											<td><input type="date" name="fecha"
+												th:field="*{fechaNacimiento}" class="form-control"
+												required="required" /><br /></td>
+										</tr>
+										<tr>
+											<td><label>Nombre Completo:</label></td>
+											<td><input type="text" name="nombre"
+												th:field="*{nombreCompleto}" class="form-control"
+												required="required" /><br /></td>
+											<td><label>Acerca de mi:</label></td>
+											<td><input type="text" name="descripcion"
+												th:field="*{descripcion}" class="form-control" /><br /></td>
+										</tr>
+										<tr>
+											<td><label>Direccion:</label></td>
+											<td><input type="text" name="direccion"
+												class="form-control" /><br /></td>
+										</tr>
+										<tr>
+											<td><label>Ciudad:</label></td>
+											<td><select th:field="*{ciudad}" class="form-control">
+													<option th:each="u : ${ciudades}" th:text="${u.nombre}"
+														th:value="${u.idciudad}"></option>
+											</select> <br /></td>
+										</tr>
+									</table>
+									<hr>
+										<center><input type="submit" class="btn btn-primary" style="width: 20%;padding: 10px;" name="action"
+											value="Registrar Usuario" /></center>
+									</hr>
+								</form>
 							</div>
-                   
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<th:block th:include="fragments/down :: down"></th:block>
 
-                    </div>
-                </div>
-	        </div>
-	     </div>
-        
-        
-        
-        </section>
-        <br/>
-	<br/>
-	<th:block th:include="fragments/down :: down"></th:block> 
-        
-    </body>
+</body>
 </html>

@@ -76,9 +76,10 @@ public class UsuarioController {
 		return "index_registrar";
 	}
 
-	@RequestMapping(value = "/usuario_configuracion", method = RequestMethod.GET)
+	@RequestMapping(value = "/usuario_configuracion")
 	public String actualizarUsuario(Model model,HttpSession session, ModelMap modelMap) {
-		modelMap.addAttribute("usuario", session.getAttribute("usuarioSesion"));
+		modelMap.addAttribute("usersession", session.getAttribute("usuarioSesion"));
+		model.addAttribute("usuario", new Usuario());
 		return "usuario_configuracion";
 	}
 	
@@ -94,8 +95,8 @@ public class UsuarioController {
 			usuarioService.saveUsuario(usuario);
 			Usuario usersession = usuarioService.findByUsernameAndPassword(usuario.getUsername(),
 					usuario.getPassword());
-			session.setAttribute("usuarioSesion", usersession);
-			modelMap.addAttribute("usersession", session.getAttribute("usuarioSesion"));
+			session.setAttribute("usersession", usersession);
+			modelMap.addAttribute("usersession", session.getAttribute("usersession"));
 			return "usuario_sesion";
 		} catch (Exception e) {
 			return "/";
@@ -107,7 +108,6 @@ public class UsuarioController {
 		modelMap.addAttribute("usersession", session.getAttribute("usuarioSesion"));
 		List<ClassM> listPerfiles = new ArrayList<ClassM>();
 		listPerfiles=findPerfiles((Usuario)session.getAttribute("usuarioSesion"));		
-		
 		model.addAttribute("useraux", listPerfiles);		
 		
 		return "usuario_perfiles";
@@ -127,9 +127,9 @@ public class UsuarioController {
 		return "usuario_sesion";
 	}
 	@RequestMapping(value = "logout", method = RequestMethod.POST)
-	public String logout(Model model,ModelMap modelMap) {	
+	public String logout(Model model,ModelMap modelMap, HttpSession session) {	
 		Usuario usuario=new Usuario();
-		modelMap.remove("usuario",usuario);
+		session.invalidate();
 		model.addAttribute("usuario",usuario );	
 		return "index";
 	}

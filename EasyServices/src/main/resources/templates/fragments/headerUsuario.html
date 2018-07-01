@@ -19,7 +19,8 @@
 						<div class="menu_area h-100">
 							<nav class="navbar h-100 navbar-expand-lg align-items-center">
 								<!-- Logo -->
-								<ul class="navbar-nav animated" id="nav">
+								<li ><a class="navbar-brand" href="#" th:href="@{/}"><img src="../img/logopr.png" alt="logo" width="75"/></a></li>
+									<ul class="navbar-nav animated" id="nav">
 									<li class="nav-item"><a class="nav-link"
 										th:text="${'Bienvenido '+usersession.nombreCompleto}"></a></li>
 								</ul>

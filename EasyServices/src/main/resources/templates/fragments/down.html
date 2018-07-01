@@ -58,6 +58,14 @@
 		    } );
 		} );		
 		</script>
+		<div th:if="${confirmacion}">
+   <div>Welcome, Guest</div>
+		<script th:inline="javascript" >
+      $(document).ready(function() {
+        $("#exampleModalCenter").modal("show");
+      });
+    </script>
+</div>
 	</div>
 </body>
 </html>

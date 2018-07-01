@@ -1,59 +1,79 @@
 <!DOCTYPE html>
-<html>
+<html xmlns:th="http://www.thymeleaf.org">
 <head>
 <title>Configuracion</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <th:block th:include="fragments/stylesheader :: head"></th:block>
 </head>
 <body>
 	<!-- Incluyo el fragmento header donde se encuentra el nav(menu) -->
-    <th:block th:include="fragments/headerUsuario :: headerUsuario"></th:block>
- 	<section class="mosh-features-area section_padding_conf">	
-	<div id="main_content">
-	<div class="page-header">
-			<div class="container">
-	        <h1>Configuracion</h1>
-	        </div>
-        </div>
-            <form th:action="@{/usuario}" method="POST" th:object="${usuario}">
-            <input type="hidden" id="hdnIdUsuario" th:field="*{idusuario}" />
-            <input type="hidden" id="hdnUsername" th:field="*{username}" />
-            <input type="hidden" id="hdnCiudad" th:field="*{ciudad}" />
-            <input type="hidden" id="hdnFechaNacimiento" th:field="*{fechaNacimiento}" />
-            <input type="hidden" id="hdnSexo" th:field="*{sexo}" />
-                <center>
-                    <table>
-                        <tr>
-                            <td style="padding: 10px;">Contraseña:</td>
-                            <td><input type="password" name="password" class="form-control" required="required"/></td>
-                        </tr>
-                        <tr>
-                            <td style="padding: 10px;">Nombre Completo:</td>
-                            <td><input type="text" name="nombre" class="form-control" th:field="*{nombreCompleto}" required="required"/></td>
-                        </tr>
-                        <tr>
-                            <td style="padding: 10px;">DNI:</td>
-                            <td><input type="number" name="dni" class="form-control" th:field="*{dni}" minlength="9" maxlength="9" required="required"/></td>
-                        </tr>
-                        <tr>
-                            <td style="padding: 10px;">Descripcion:</td>
-                            <td><input type="text" name="descripcion" class="form-control" th:field="*{descripcion}" required="required"/></td>
-                        </tr>
-                        <tr>
-                            <td colspan="2">
-                                <center>
-                                <input type="submit" name="action" value="Guardar Configuracion" class="btn btn-success" />
-                                <input type="button" class="btn btn-default" onclick="location.href='/usuario_sesion/'" value="Cancelar" />
-                                </center>
-                            </td>
-                        </tr>
-                    </table>
-                </center>
-            </form>
-	</div>
-	
-	 </section>
-        <br/>
-	<br/>
-	<th:block th:include="fragments/down :: down"></th:block> 
+	<th:block th:include="fragments/headerUsuario :: headerUsuario"></th:block>
+	<section align="center"
+		class="mosh-clients-area section_padding_100 clearfix">
+<br></br>
+		<hr style="border: 20px;" />
+		<div id="main_content">
+			<div class="page-header">
+				<div class="container">
+					<h1>Configuracion</h1>
+					<hr style="border: 20px;" />
+				</div><br></br>
+			</div>
+			<form th:action="@{/usuario}" method="POST" th:object="${usuario}">
+				<input type="hidden" id="hdnIdUsuario" th:field="*{idusuario}" /> <input
+					type="hidden" id="hdnUsername" th:field="*{username}" /> <input
+					type="hidden" id="hdnCiudad" th:field="*{ciudad}" /> <input
+					type="hidden" id="hdnFechaNacimiento" th:field="*{fechaNacimiento}" />
+				<input type="hidden" id="hdnSexo" th:field="*{sexo}" />
+
+
+				<hr style="border: 20px;" />
+				<center>
+					<table>
+						<tr>
+							<td style="padding: 10px;">ContraseÃ±a:</td>
+							<td><input type="password" name="password"
+								class="form-control" required="required" /></td>
+						</tr>
+						<tr>
+							<td style="padding: 10px;">Nombre Completo:</td>
+							<td><input type="text" name="nombre" class="form-control"
+								th:field="*{nombreCompleto}" required="required" /></td>
+						</tr>
+						<tr>
+							<td style="padding: 10px;">DNI:</td>
+							<td><input type="number" name="dni" class="form-control"
+								th:field="*{dni}" minlength="9" maxlength="9"
+								required="required" /></td>
+						</tr>
+						<tr>
+							<td style="padding: 10px;">Descripcion:</td>
+							<td><input type="text" name="descripcion"
+								class="form-control" th:field="*{descripcion}"
+								required="required" /></td>
+						</tr>
+						<tr>
+							<td colspan="2">
+
+								<hr style="border: 20px;" />
+								<center>
+									<input type="submit" name="action"
+										value="Guardar Configuracion" class="btn btn-success" /> <input
+										type="button" class="btn btn-default"
+										onclick="location.href='/usuario_sesion/'" value="Cancelar" />
+								</center>
+							</td>
+
+							<hr style="border: 20px;" />
+						</tr>
+					</table>
+				</center>
+			</form>
+		</div>
+
+	</section>
+	<br />
+	<br />
+	<th:block th:include="fragments/down :: down"></th:block>
 </body>
 </html>

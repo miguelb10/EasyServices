@@ -1,37 +1,23 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
-<head>
 <title>Easy Services</title>
+<head>
 <th:block th:include="fragments/stylesheader :: head"></th:block>
 </head>
 <body>
 	<!-- Incluyo el fragmento header donde se encuentra el nav(menu) -->
 	<th:block th:include="fragments/headerCliente :: headerCliente"></th:block>
-	<section class="mosh-features-area section_padding_100">
+	<section class="mosh-clients-area section_padding_100 clearfix">
 
 		<hr style="border: 15px;" />
 		<hr style="border: 2px;" />
 		<div class="container">
-			<div class="panel-body">
-				<form role="form" th:action="@{/entidades}" method="post">
-					<div class="row">
-						<div class="col-sm-3">
-							<label for="name">Buscar por nombre:</label>
-						</div>
-						<div class="col-sm-6">
-							<input type="text" class="form-control" id="pais" name="pais" />
-						</div>
-						<div class="col-sm-3">
-							<input type="submit" value="Buscar" class="btn btn-success" />
-						</div>
-					</div>
-				</form>
-			</div>
+			<h1 align="center">Servicios</h1>
 		</div>
 		<hr style="border: 15px;" />
 		<hr style="border: 2px;" />
 		<div class="container">
-			<table class="table table-bordered">
+			<table id="example" class="table table-striped table-bordered" style="width:100%">
 				<thead>
 					<tr>
 						<th>Codigo</th>

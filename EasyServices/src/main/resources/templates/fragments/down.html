@@ -48,11 +48,16 @@
 		<script src="../static/js/plugins.js" th:src="@{/js/plugins.js}"></script>
 		<!-- Active js -->
 		<script src="../static/js/active.js" th:src="@{/js/active.js}"></script>
-		<!-- Active js -->
-		<script src="../static/js/jquery.dataTables.min.js"
-			th:src="@{/js/jquery.dataTables.min.js}"></script>
-		<script src="../static/js/dataTables.bootstrap4.min.js"
-			th:src="@{/js/dataTables.bootstrap4.min.js}"></script>
+		<script src="../static/js/jquery.dataTables.min.js" th:src="@{/js/jquery.dataTables.min.js}"></script>
+		
+		<script src="../static/js/dataTables.bootstrap4.min.js" th:src="@{/js/dataTables.bootstrap4.min.js}"></script>
+		<script th:inline="javascript">
+		$(document).ready(function() {
+		    $('#example').DataTable( {
+		        "order": [[ 3, "desc" ]]
+		    } );
+		} );		
+		</script>
 	</div>
 </body>
 </html>

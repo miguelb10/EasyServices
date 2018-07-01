@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html xmlns:th="http://www.thymeleaf.org">
 <head>
 <title>Insert title here</title>
 	<!-- En este fragmento solo coloco los CSS y JS de bootstrap y jquery-->
@@ -22,7 +22,9 @@
     <link href="../static/css/responsive.css" th:href="@{/css/responsive.css}" rel="stylesheet" media="screen" />
     
     <!-- Responsive CSS -->
-    <link href="../static/css/dataTables.bootstrap4.min.css" th:href="@{/css/dataTables.bootstrap4.min.css}" rel="stylesheet" media="screen" />
+    <link href="../static/css/jquery.dataTables.min.css" th:href="@{/css/jquery.dataTables.min.css}" rel="stylesheet" media="screen" />
+    
+    <link href="../static/css/bootstrap.css" th:href="@{/css/bootstrap.css}" rel="stylesheet" media="screen" />
 	<script>
 		$(function(){ closeSession() {
 			window.location.href="index.html";
